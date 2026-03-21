@@ -27,6 +27,18 @@
 
     <style>
         :root { --tp-ff-fontawesome: "Font Awesome 6 Free"; }
+        /* 모바일 히어로 타이틀 크기 조정 */
+        @media (max-width: 767px) {
+            .tp-hero-title {
+                font-size: 36px !important;
+                line-height: 1.25 !important;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1199px) {
+            .tp-hero-title {
+                font-size: 52px !important;
+            }
+        }
         /* has-dropdown 기본 아이콘 숨기고 화살표로 교체 */
         .tp-header-dropdown nav ul li.has-dropdown::after {
             font-family: none !important;
@@ -324,7 +336,7 @@
                                 <p style="color: rgba(255,255,255,0.55); font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px;">WHO WE ARE</p>
                                 <p style="color: #ffffff; font-size: 20px; line-height: 1.85; font-weight: 300;">
                                     TCC INS는 단순히 솔루션을 납품하는 회사가 아닙니다.<br>
-                                    기업 내부의 모든 업무 흐름 사람, 데이터, 현장, 시스템을<br>
+                                    기업 내부의 모든 업무 흐름 — 사람, 데이터, 현장, 시스템 — 을<br>
                                     하나로 연결하는 <strong style="color:#ffffff; font-weight:600;">'통합 디지털 파트너'</strong>입니다.
                                 </p>
                             </div>
