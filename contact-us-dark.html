@@ -110,6 +110,24 @@ input[type=number] {
 
     <style>
         :root { --tp-ff-fontawesome: "Font Awesome 6 Free"; }
+        /* 입력폼 테두리 강조 */
+        .tp-contact-form-input input,
+        .tp-contact-form-input textarea,
+        .tp-contact-form-input select {
+            border: 1px solid rgba(255,255,255,0.2) !important;
+            background: rgba(255,255,255,0.04) !important;
+            transition: border-color 0.2s;
+        }
+        .tp-contact-form-input input:focus,
+        .tp-contact-form-input textarea:focus,
+        .tp-contact-form-input select:focus {
+            border-color: rgba(255,255,255,0.5) !important;
+            outline: none;
+        }
+        .tp-contact-form-input input::placeholder,
+        .tp-contact-form-input textarea::placeholder {
+            color: rgba(255,255,255,0.2) !important;
+        }
         /* preloader 강제 숨김 (JS 없을 때 화면 가리는 문제 해결) */
         #preloader { display: none !important; }
         /* has-dropdown 화살표 교체 */
@@ -428,148 +446,237 @@ input[type=number] {
 
                                 <div class="col-lg-6">
                                   <div class="tp-contact-us-wrap">
-                                    <h4 class="tp-contact-us-title mb-55">문의하기</h4>
+                                    <h4 class="tp-contact-us-title mb-10">문의하기</h4>
+                                    <p style="color: rgba(255,255,255,0.5); font-size: 14px; margin-bottom: 36px;">3분이면 충분합니다. 연락처만 남겨주셔도 괜찮아요.</p>
 
                                     <form id="inquiry-form" action="assets/mail.php" method="POST">
                                       <div class="row">
-                                        <!-- 회사명 -->
+
+                                        <!-- STEP 1: 솔루션 선택 -->
+                                        <div class="col-lg-12 mb-20">
+                                          <label style="display:block; margin-bottom: 12px; font-size: 13px; color: rgba(255,255,255,0.5); letter-spacing: 0.1em; text-transform: uppercase;">어떤 솔루션이 궁금하신가요?</label>
+                                          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                            <button type="button" class="sol-btn" data-val="Groupware &amp; Infra Biz"
+                                              style="padding: 10px 20px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: rgba(255,255,255,0.7); font-size: 13px; cursor: pointer; transition: all 0.2s;"
+                                              onmouseover="this.style.borderColor='#fff'; this.style.color='#fff'"
+                                              onmouseout="if(!this.classList.contains('active')){this.style.borderColor='rgba(255,255,255,0.2)'; this.style.color='rgba(255,255,255,0.7)'}">
+                                              Groupware &amp; Infra
+                                            </button>
+                                            <button type="button" class="sol-btn" data-val="Smart Factory Biz"
+                                              style="padding: 10px 20px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: rgba(255,255,255,0.7); font-size: 13px; cursor: pointer; transition: all 0.2s;"
+                                              onmouseover="this.style.borderColor='#fff'; this.style.color='#fff'"
+                                              onmouseout="if(!this.classList.contains('active')){this.style.borderColor='rgba(255,255,255,0.2)'; this.style.color='rgba(255,255,255,0.7)'}">
+                                              Smart Factory
+                                            </button>
+                                            <button type="button" class="sol-btn" data-val="둘 다"
+                                              style="padding: 10px 20px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: rgba(255,255,255,0.7); font-size: 13px; cursor: pointer; transition: all 0.2s;"
+                                              onmouseover="this.style.borderColor='#fff'; this.style.color='#fff'"
+                                              onmouseout="if(!this.classList.contains('active')){this.style.borderColor='rgba(255,255,255,0.2)'; this.style.color='rgba(255,255,255,0.7)'}">
+                                              둘 다
+                                            </button>
+                                            <button type="button" class="sol-btn" data-val="아직 모르겠어요"
+                                              style="padding: 10px 20px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: rgba(255,255,255,0.7); font-size: 13px; cursor: pointer; transition: all 0.2s;"
+                                              onmouseover="this.style.borderColor='#fff'; this.style.color='#fff'"
+                                              onmouseout="if(!this.classList.contains('active')){this.style.borderColor='rgba(255,255,255,0.2)'; this.style.color='rgba(255,255,255,0.7)'}">
+                                              아직 모르겠어요
+                                            </button>
+                                          </div>
+                                          <input type="hidden" name="solution" id="solution-val">
+                                        </div>
+
+                                        <!-- 필수: 회사명 -->
                                         <div class="col-lg-6">
                                           <div class="tp-contact-form-input mb-20">
-                                            <label>회사명*</label>
-                                            <input name="company_name" type="text" required>
+                                            <label>회사명 <span style="color:#e84040;">*</span></label>
+                                            <input name="company_name" type="text" placeholder="TCC INS" required>
                                           </div>
                                         </div>
 
-                                        <!-- 회사 위치 -->
+                                        <!-- 필수: 연락처 -->
                                         <div class="col-lg-6">
                                           <div class="tp-contact-form-input mb-20">
-                                            <label>회사 위치*</label>
-                                            <input name="company_location" type="text" required>
+                                            <label>연락처 <span style="color:#e84040;">*</span></label>
+                                            <input name="phone" type="tel" placeholder="010-0000-0000" required>
                                           </div>
                                         </div>
 
-                                        <!-- 직원수 -->
-                                        <div class="col-lg-6">
+                                        <!-- 필수: 문의 내용 -->
+                                        <div class="col-lg-12">
                                           <div class="tp-contact-form-input mb-20">
-                                            <label>직원수*</label>
-                                            <input name="employee_count" type="number" min="1" required>
+                                            <label>문의 내용 <span style="color:#e84040;">*</span></label>
+                                            <textarea name="message" rows="4" placeholder="궁금하신 점을 자유롭게 적어주세요." required></textarea>
                                           </div>
                                         </div>
 
-                                                <!-- 업종 -->
-                                                <div class="col-lg-6">
-                                                  <div class="tp-contact-form-input mb-20">
-                                                    <label>업종*</label>
-                                                    <input name="industry" type="text" required>
-                                                  </div>
-                                                </div>
+                                        <!-- 추가 정보 토글 -->
+                                        <div class="col-lg-12 mb-20">
+                                          <button type="button" id="toggle-extra"
+                                            style="background: none; border: none; color: rgba(255,255,255,0.4); font-size: 13px; cursor: pointer; padding: 0; display: flex; align-items: center; gap: 6px;">
+                                            <span id="toggle-icon">＋</span> 더 정확한 제안을 원하시면 추가 정보를 입력해주세요
+                                          </button>
+                                        </div>
 
-                                                <!-- 성명 -->
-                                                <div class="col-lg-6">
-                                                  <div class="tp-contact-form-input mb-20">
-                                                    <label>성명*</label>
-                                                    <input name="name" type="text" required>
-                                                  </div>
-                                                </div>
+                                        <!-- 추가 정보 (숨김) -->
+                                        <div id="extra-fields" style="display: none; width: 100%;">
+                                          <div class="row">
+                                            <div class="col-lg-6">
+                                              <div class="tp-contact-form-input mb-20">
+                                                <label>성명</label>
+                                                <input name="name" type="text" placeholder="홍길동">
+                                              </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <div class="tp-contact-form-input mb-20">
+                                                <label>이메일</label>
+                                                <input name="email" type="email" placeholder="example@company.com">
+                                              </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <div class="tp-contact-form-input mb-20">
+                                                <label>직급</label>
+                                                <input name="position" type="text" placeholder="과장">
+                                              </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <div class="tp-contact-form-input mb-20">
+                                                <label>업종</label>
+                                                <input name="industry" type="text" placeholder="제조업">
+                                              </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <div class="tp-contact-form-input mb-20">
+                                                <label>직원수</label>
+                                                <input name="employee_count" type="number" min="1" placeholder="100">
+                                              </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                              <div class="tp-contact-form-input mb-20">
+                                                <label>유입경로</label>
+                                                <select name="referral_source">
+                                                  <option value="">선택하세요</option>
+                                                  <option value="검색엔진">검색엔진</option>
+                                                  <option value="지인소개">지인 소개</option>
+                                                  <option value="SNS">SNS</option>
+                                                  <option value="광고">광고</option>
+                                                  <option value="기타">기타</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
 
-                                                <!-- 직급 -->
-                                                <div class="col-lg-6">
-                                                  <div class="tp-contact-form-input mb-20">
-                                                    <label>직급*</label>
-                                                    <input name="position" type="text" required>
-                                                  </div>
-                                                </div>
+                                        <!-- 개인정보 동의 -->
+                                        <div class="col-lg-12 mb-20">
+                                          <div class="form-check">
+                                            <input type="checkbox" id="agree" class="form-check-input">
+                                            <label for="agree" class="form-check-label">
+                                              개인정보 수집 및 이용에 동의합니다. <span style="color:#e84040;">*</span>
+                                            </label>
+                                          </div>
+                                        </div>
 
-                                                <!-- 연락처 -->
-                                                <div class="col-lg-6">
-                                                  <div class="tp-contact-form-input mb-20">
-                                                    <label>연락처*</label>
-                                                    <input name="phone" type="tel" pattern="[0-9\-]+" required>
-                                                  </div>
-                                                </div>
+                                        <!-- 버튼 -->
+                                        <div class="col-lg-12">
+                                          <div class="tp-contact-form-btn">
+                                            <button id="submit-btn" class="w-100" type="submit" disabled style="opacity: 0.5; cursor: not-allowed;">
+                                              <span>
+                                                <span class="text-1">문의하기</span>
+                                                <span class="text-2">문의하기</span>
+                                              </span>
+                                            </button>
+                                            <p class="ajax-response mt-5"></p>
+                                          </div>
+                                        </div>
 
-                                                <!-- 이메일 -->
-                                                <div class="col-lg-6">
-                                                  <div class="tp-contact-form-input mb-20">
-                                                    <label>이메일*</label>
-                                                    <input name="email" type="email" required>
-                                                  </div>
-                                                </div>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
 
-                                                <!-- 유입경로 -->
-                                                        <div class="col-lg-12">
-                                                          <div class="tp-contact-form-input mb-20">
-                                                            <label>유입경로*</label>
-                                                            <div class="custom-select-wrapper">
-                                                              <select name="referral_source" required>
-                                                                <option value="">선택하세요</option>
-                                                                <option value="검색엔진">검색엔진</option>
-                                                                <option value="지인소개">지인 소개</option>
-                                                                <option value="SNS">SNS</option>
-                                                                <option value="광고">광고</option>
-                                                                <option value="기타">기타</option>
-                                                              </select>
-                                                              <span class="custom-arrow">▼</span>
-                                                            </div>
-                                                         </div>
-                                                        </div>
-
-                                                        <!-- ✅ JS 초기화 (한 번만 추가하면 됨) -->
-                                                        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-                                                          $(document).ready(function() {
-                                                            if ($('.nice-select').length) {
-                                                              $('.nice-select').niceSelect();
-                                                            }
-                                                          });
-                                                        </script>
-
-                                                        <!-- 문의 내용 -->
-                                                        <div class="col-lg-12">
-                                                          <div class="tp-contact-form-input mb-20">
-                                                            <label>문의 내용*</label>
-                                                            <textarea name="message" rows="5" required></textarea>
-                                                          </div>
-                                                        </div>
-
-                                                        <!-- 개인정보 동의 -->
-                                                        <div class="col-lg-12 mb-20">
-                                                          <div class="form-check">
-                                                            <input type="checkbox" id="agree" class="form-check-input">
-                                                            <label for="agree" class="form-check-label">
-                                                              개인정보 수집 및 이용에 동의합니다.*
-                                                            </label>
-                                                          </div>
-                                                        </div>
-
-                                                        <!-- 버튼 -->
-                                                        <div class="col-lg-12">
-                                                          <div class="tp-contact-form-btn">
-                                                            <button id="submit-btn" class="w-100" type="submit" disabled>
-                                                              <span>
-                                                                <span class="text-1">문의하기</span>
-                                                                <span class="text-2">문의하기</span>
-                                                              </span>
-                                                            </button>
-                                                            <p class="ajax-response mt-5"></p>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                    </form>
-                                                  </div>
-                                                </div>
-
-<!-- ✅ JS 스크립트 -->
 <script>
-  // 개인정보 동의 체크 시 버튼 활성화
-  const agreeCheckbox = document.getElementById('agree');
-  const submitBtn = document.getElementById('submit-btn');
-
-  agreeCheckbox.addEventListener('change', function() {
-    submitBtn.disabled = !this.checked;
-    submitBtn.style.opacity = this.checked ? '1' : '0.5';
-    submitBtn.style.cursor = this.checked ? 'pointer' : 'not-allowed';
+  // 솔루션 버튼 선택
+  document.querySelectorAll('.sol-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.sol-btn').forEach(function(b) {
+        b.classList.remove('active');
+        b.style.borderColor = 'rgba(255,255,255,0.2)';
+        b.style.color = 'rgba(255,255,255,0.7)';
+        b.style.background = 'transparent';
+      });
+      this.classList.add('active');
+      this.style.borderColor = '#fff';
+      this.style.color = '#fff';
+      this.style.background = 'rgba(255,255,255,0.08)';
+      document.getElementById('solution-val').value = this.getAttribute('data-val');
+    });
   });
+
+  // 추가 정보 토글
+  document.getElementById('toggle-extra').addEventListener('click', function() {
+    var extra = document.getElementById('extra-fields');
+    var icon = document.getElementById('toggle-icon');
+    if (extra.style.display === 'none') {
+      extra.style.display = 'block';
+      icon.textContent = '－';
+    } else {
+      extra.style.display = 'none';
+      icon.textContent = '＋';
+    }
+  });
+
+  // 개인정보 동의 시 버튼 활성화
+  document.getElementById('agree').addEventListener('change', function() {
+    var btn = document.getElementById('submit-btn');
+    btn.disabled = !this.checked;
+    btn.style.opacity = this.checked ? '1' : '0.5';
+    btn.style.cursor = this.checked ? 'pointer' : 'not-allowed';
+  });
+
+  // 폼 제출 시 팝업
+  document.getElementById('inquiry-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('success-popup').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  });
+
+  // 팝업 닫기
+  function closePopup() {
+    document.getElementById('success-popup').style.display = 'none';
+    document.body.style.overflow = '';
+    document.getElementById('inquiry-form').reset();
+    document.querySelectorAll('.sol-btn').forEach(function(b) {
+      b.classList.remove('active');
+      b.style.borderColor = 'rgba(255,255,255,0.2)';
+      b.style.color = 'rgba(255,255,255,0.7)';
+      b.style.background = 'transparent';
+    });
+    document.getElementById('solution-val').value = '';
+    var btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.style.opacity = '0.5';
+    btn.style.cursor = 'not-allowed';
+  }
 </script>
+
+<!-- 성공 팝업 -->
+<div id="success-popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.75); z-index:99999; align-items:center; justify-content:center;">
+  <div style="background:#1b1b1d; border:1px solid rgba(255,255,255,0.1); padding:60px 48px; max-width:480px; width:90%; text-align:center; position:relative;">
+    <!-- 닫기 버튼 -->
+    <button onclick="closePopup()" style="position:absolute; top:20px; right:20px; background:none; border:none; color:rgba(255,255,255,0.4); font-size:20px; cursor:pointer; line-height:1;">✕</button>
+    <!-- 체크 아이콘 -->
+    <div style="width:64px; height:64px; border-radius:50%; background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; margin:0 auto 28px;">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+    <h3 style="color:#fff; font-size:22px; font-weight:600; margin-bottom:14px;">문의가 접수되었습니다</h3>
+    <p style="color:rgba(255,255,255,0.55); font-size:15px; line-height:1.8; margin-bottom:36px;">빠른 시일 내에 담당자가 연락드리겠습니다.<br>감사합니다.</p>
+    <button onclick="closePopup()" style="padding:14px 40px; background:#fff; color:#0e0f11; font-size:14px; font-weight:600; border:none; cursor:pointer; transition:background 0.2s;"
+      onmouseover="this.style.background='rgba(255,255,255,0.85)'" onmouseout="this.style.background='#fff'">
+      확인
+    </button>
+  </div>
+</div>
 
 
                                 <!-- 원본은 숨기는거야
