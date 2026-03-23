@@ -210,7 +210,7 @@
                     <div class="container container-1720">
                         <div class="row gx-20">
                             <div class="col-lg-12">
-                                <div class="tp-portfolio-details-1-thumb-1 mb-20">
+                                <div class="tp-portfolio-details-1-thumb-1 mb-20" style="overflow: hidden; border-radius: 12px;">
                                     <img data-speed=".8" src="assets/img/portfolio/portfolio-details-1/portfolio-details-1.jpg" alt="">
                                 </div>
                             </div>
@@ -304,7 +304,7 @@
                             </div>
                             <div class="col-lg-6 tp_fade_anim" data-delay=".5">
                                 <div style="padding-left: 48px;">
-                                    <img data-speed=".8" src="assets/img/portfolio/portfolio-details-1/portfolio-details-3-1.jpg" alt="" style="width: 100%;">
+                                    <img data-speed=".8" src="assets/img/portfolio/portfolio-details-1/portfolio-details-3-1.jpg" alt="" style="width: 100%; border-radius: 12px;">
                                 </div>
                             </div>
                         </div>
@@ -316,7 +316,7 @@
                     <div class="container container-1720">
                         <div class="row align-items-center">
                             <div class="col-lg-6 tp_fade_anim" data-delay=".3">
-                                <img data-speed=".8" src="assets/img/portfolio/portfolio-details-1/portfolio-details-4.jpg" alt="" style="width: 100%;">
+                                <img data-speed=".8" src="assets/img/portfolio/portfolio-details-1/portfolio-details-4.jpg" alt="" style="width: 100%; border-radius: 12px;">
                             </div>
                             <div class="col-lg-6 tp_fade_anim" data-delay=".5">
                                 <div style="padding-left: 48px;">
@@ -335,85 +335,103 @@
 
 
                 <!-- ⑤ 도입 사례 -->
-                <div style="background-color: #0e0f11; padding: 100px 0;">
+                <div style="background-color: #111113; padding: 100px 0;">
                     <div class="container container-1720">
-                        <div style="margin-bottom: 60px;">
-                            <p style="color: rgba(255,255,255,0.4); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 14px;">Case Study</p>
-                            <h2 style="color: #fff; font-size: 38px; font-weight: 600;">실제 도입 사례</h2>
+                        <div style="margin-bottom: 60px; display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+                            <div>
+                                <p style="color: #3b82f6; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 14px;">Case Study</p>
+                                <h2 style="color: #fff; font-size: 38px; font-weight: 600; margin: 0;">실제 도입 사례</h2>
+                            </div>
+                            <p style="color: rgba(255,255,255,0.4); font-size: 14px; margin: 0;">125개 기업이 선택한 검증된 파트너</p>
                         </div>
-                        <div class="row" style="margin: 0;">
+                        <div class="row" style="margin: 0; gap: 0;">
 
-                            <!-- 우리그룹웨어 화상 -->
-                            <div class="col-lg-4" style="padding: 0;">
-                                <div style="background: #111113; padding: 40px 36px; height: 100%; border-right: 1px solid rgba(255,255,255,0.06); transition: background 0.3s;"
-                                     onmouseover="this.style.background='#1a1a1c'" onmouseout="this.style.background='#111113'">
-                                    <p style="color: #3b82f6; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px;">제조</p>
-                                    <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 16px; line-height: 1.4;">HS 화성</h4>
-                                    <p style="color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.8; margin-bottom: 28px;">기존 그룹웨어 시스템을 고도화하여 화상회의, 전자결재, 협업 도구를 하나의 플랫폼으로 통합. 임직원 업무 효율 향상 및 원격 근무 환경 구축.</p>
-                                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px;">그룹웨어</span>
-                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px;">화상회의</span>
-                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px;">전자결재</span>
+                            <!-- HS 화성 -->
+                            <div class="col-lg-4" style="padding: 12px;">
+                                <div style="background: #0e0f11; border: 1px solid rgba(59,130,246,0.2); border-top: 3px solid #3b82f6; padding: 36px 32px; height: 100%; transition: all 0.3s; border-radius: 0 0 4px 4px;"
+                                     onmouseover="this.style.borderColor='rgba(59,130,246,0.6)'; this.style.background='#1a1a1c'"
+                                     onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'; this.style.background='#0e0f11'">
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+                                        <span style="background: rgba(59,130,246,0.15); color: #3b82f6; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px;">제조</span>
+                                    </div>
+                                    <h4 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 14px;">HS 화성</h4>
+                                    <p style="color: rgba(255,255,255,0.55); font-size: 14px; line-height: 1.8; margin-bottom: 24px;">기존 그룹웨어 시스템을 고도화하여 화상회의, 전자결재, 협업 도구를 하나의 플랫폼으로 통합. 임직원 업무 효율 향상 및 원격 근무 환경 구축.</p>
+                                    <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px; display: flex; gap: 8px; flex-wrap: wrap;">
+                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px; border-radius: 2px;">그룹웨어</span>
+                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px; border-radius: 2px;">화상회의</span>
+                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px; border-radius: 2px;">전자결재</span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- 새마을금고중앙회 -->
-                            <div class="col-lg-4" style="padding: 0;">
-                                <div style="background: #111113; padding: 40px 36px; height: 100%; border-right: 1px solid rgba(255,255,255,0.06); transition: background 0.3s;"
-                                     onmouseover="this.style.background='#1a1a1c'" onmouseout="this.style.background='#111113'">
-                                    <p style="color: #3b82f6; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px;">금융</p>
-                                    <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 16px; line-height: 1.4;">새마을금고중앙회</h4>
-                                    <p style="color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.8; margin-bottom: 28px;">금융기관 보안 정책에 부합하는 그룹웨어 환경 구축. 전국 지점 간 안정적인 협업 시스템과 문서 관리 체계를 표준화하여 업무 연속성 확보.</p>
-                                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px;">그룹웨어</span>
-                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px;">보안</span>
-                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px;">문서관리</span>
+                            <div class="col-lg-4" style="padding: 12px;">
+                                <div style="background: #0e0f11; border: 1px solid rgba(59,130,246,0.2); border-top: 3px solid #3b82f6; padding: 36px 32px; height: 100%; transition: all 0.3s; border-radius: 0 0 4px 4px;"
+                                     onmouseover="this.style.borderColor='rgba(59,130,246,0.6)'; this.style.background='#1a1a1c'"
+                                     onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'; this.style.background='#0e0f11'">
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+                                        <span style="background: rgba(59,130,246,0.15); color: #3b82f6; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px;">금융</span>
+                                    </div>
+                                    <h4 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 14px;">새마을금고중앙회</h4>
+                                    <p style="color: rgba(255,255,255,0.55); font-size: 14px; line-height: 1.8; margin-bottom: 24px;">금융기관 보안 정책에 부합하는 그룹웨어 환경 구축. 전국 지점 간 안정적인 협업 시스템과 문서 관리 체계를 표준화하여 업무 연속성 확보.</p>
+                                    <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px; display: flex; gap: 8px; flex-wrap: wrap;">
+                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px; border-radius: 2px;">그룹웨어</span>
+                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px; border-radius: 2px;">보안</span>
+                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px; border-radius: 2px;">문서관리</span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- 송현홀딩스 -->
-                            <div class="col-lg-4" style="padding: 0;">
-                                <div style="background: #111113; padding: 40px 36px; height: 100%; transition: background 0.3s;"
-                                     onmouseover="this.style.background='#1a1a1c'" onmouseout="this.style.background='#111113'">
-                                    <p style="color: #3b82f6; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px;">지주회사</p>
-                                    <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 16px; line-height: 1.4;">송현홀딩스</h4>
-                                    <p style="color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.8; margin-bottom: 28px;">그룹 계열사 전반에 걸친 통합 그룹웨어 및 인프라 환경 구축. 계열사 간 데이터 연동과 통합 IT 운영체계를 마련하여 그룹 전체의 디지털 업무 표준화 달성.</p>
-                                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px;">그룹웨어</span>
-                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px;">인프라</span>
-                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px;">통합운영</span>
+                            <div class="col-lg-4" style="padding: 12px;">
+                                <div style="background: #0e0f11; border: 1px solid rgba(59,130,246,0.2); border-top: 3px solid #3b82f6; padding: 36px 32px; height: 100%; transition: all 0.3s; border-radius: 0 0 4px 4px;"
+                                     onmouseover="this.style.borderColor='rgba(59,130,246,0.6)'; this.style.background='#1a1a1c'"
+                                     onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'; this.style.background='#0e0f11'">
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+                                        <span style="background: rgba(59,130,246,0.15); color: #3b82f6; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px;">지주회사</span>
+                                    </div>
+                                    <h4 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 14px;">송현홀딩스</h4>
+                                    <p style="color: rgba(255,255,255,0.55); font-size: 14px; line-height: 1.8; margin-bottom: 24px;">그룹 계열사 전반에 걸친 통합 그룹웨어 및 인프라 환경 구축. 계열사 간 데이터 연동과 통합 IT 운영체계를 마련하여 그룹 전체의 디지털 업무 표준화 달성.</p>
+                                    <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px; display: flex; gap: 8px; flex-wrap: wrap;">
+                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px; border-radius: 2px;">그룹웨어</span>
+                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px; border-radius: 2px;">인프라</span>
+                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px; border-radius: 2px;">통합운영</span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- 코맥스 -->
-                            <div class="col-lg-4" style="padding: 0; margin-top: 1px;">
-                                <div style="background: #111113; padding: 40px 36px; height: 100%; border-right: 1px solid rgba(255,255,255,0.06); border-top: 1px solid rgba(255,255,255,0.06); transition: background 0.3s;"
-                                     onmouseover="this.style.background='#1a1a1c'" onmouseout="this.style.background='#111113'">
-                                    <p style="color: #3b82f6; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px;">제조 · IT</p>
-                                    <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 16px; line-height: 1.4;">코맥스</h4>
-                                    <p style="color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.8; margin-bottom: 28px;">스마트홈 솔루션 기업의 사내 IT 인프라 고도화. 그룹웨어 및 서버·네트워크 인프라를 재구축하여 개발·영업·지원 조직 간 협업 효율 개선.</p>
-                                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px;">인프라</span>
-                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px;">그룹웨어</span>
-                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px;">네트워크</span>
+                            <div class="col-lg-4" style="padding: 12px;">
+                                <div style="background: #0e0f11; border: 1px solid rgba(59,130,246,0.2); border-top: 3px solid #3b82f6; padding: 36px 32px; height: 100%; transition: all 0.3s; border-radius: 0 0 4px 4px;"
+                                     onmouseover="this.style.borderColor='rgba(59,130,246,0.6)'; this.style.background='#1a1a1c'"
+                                     onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'; this.style.background='#0e0f11'">
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+                                        <span style="background: rgba(59,130,246,0.15); color: #3b82f6; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px;">제조 · IT</span>
+                                    </div>
+                                    <h4 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 14px;">코맥스</h4>
+                                    <p style="color: rgba(255,255,255,0.55); font-size: 14px; line-height: 1.8; margin-bottom: 24px;">스마트홈 솔루션 기업의 사내 IT 인프라 고도화. 그룹웨어 및 서버·네트워크 인프라를 재구축하여 개발·영업·지원 조직 간 협업 효율 개선.</p>
+                                    <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px; display: flex; gap: 8px; flex-wrap: wrap;">
+                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px; border-radius: 2px;">인프라</span>
+                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px; border-radius: 2px;">그룹웨어</span>
+                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px; border-radius: 2px;">네트워크</span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- 도시가스 -->
-                            <div class="col-lg-4" style="padding: 0; margin-top: 1px;">
-                                <div style="background: #111113; padding: 40px 36px; height: 100%; border-top: 1px solid rgba(255,255,255,0.06); transition: background 0.3s;"
-                                     onmouseover="this.style.background='#1a1a1c'" onmouseout="this.style.background='#111113'">
-                                    <p style="color: #3b82f6; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px;">에너지</p>
-                                    <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 16px; line-height: 1.4;">도시가스</h4>
-                                    <p style="color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.8; margin-bottom: 28px;">에너지 공급 기업의 안정적인 IT 운영환경 구축. 24시간 무중단 운영이 요구되는 업무 특성에 맞춰 고가용성 인프라와 보안 시스템을 설계·구축.</p>
-                                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px;">인프라</span>
-                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px;">보안</span>
-                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px;">고가용성</span>
+                            <div class="col-lg-4" style="padding: 12px;">
+                                <div style="background: #0e0f11; border: 1px solid rgba(59,130,246,0.2); border-top: 3px solid #3b82f6; padding: 36px 32px; height: 100%; transition: all 0.3s; border-radius: 0 0 4px 4px;"
+                                     onmouseover="this.style.borderColor='rgba(59,130,246,0.6)'; this.style.background='#1a1a1c'"
+                                     onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'; this.style.background='#0e0f11'">
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+                                        <span style="background: rgba(59,130,246,0.15); color: #3b82f6; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px;">에너지</span>
+                                    </div>
+                                    <h4 style="color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 14px;">도시가스</h4>
+                                    <p style="color: rgba(255,255,255,0.55); font-size: 14px; line-height: 1.8; margin-bottom: 24px;">에너지 공급 기업의 안정적인 IT 운영환경 구축. 24시간 무중단 운영이 요구되는 업무 특성에 맞춰 고가용성 인프라와 보안 시스템을 설계·구축.</p>
+                                    <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px; display: flex; gap: 8px; flex-wrap: wrap;">
+                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px; border-radius: 2px;">인프라</span>
+                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px; border-radius: 2px;">보안</span>
+                                        <span style="background: rgba(59,130,246,0.12); color: #3b82f6; font-size: 12px; padding: 4px 12px; border-radius: 2px;">고가용성</span>
                                     </div>
                                 </div>
                             </div>
