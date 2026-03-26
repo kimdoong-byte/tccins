@@ -49,6 +49,104 @@
             transform: rotate(-180deg);
             border-top-color: #e84040 !important;
         }
+
+        /* =============================================
+           반응형 미디어쿼리 — she.html
+        ============================================= */
+
+        /* 태블릿 (max-width: 1024px) */
+        @media (max-width: 1024px) {
+            /* 히어로 패딩 */
+            [style*="padding: 160px 0 100px"] {
+                padding: 120px 0 60px !important;
+            }
+            /* 히어로 h1 */
+            .tp-char-animation[style*="font-size: 64px"] {
+                font-size: 44px !important;
+            }
+            /* 섹션 h2 */
+            [style*="font-size: 42px"] {
+                font-size: 32px !important;
+            }
+            /* CTA h2 */
+            [style*="font-size: 44px"] {
+                font-size: 34px !important;
+            }
+            /* 섹션 패딩 */
+            [style*="padding: 100px 0"] {
+                padding: 70px 0 !important;
+            }
+            /* 이미지 측면 여백 */
+            [style*="padding-left: 48px"] {
+                padding-left: 24px !important;
+            }
+            [style*="padding-right: 48px"] {
+                padding-right: 24px !important;
+            }
+        }
+
+        /* 모바일 (max-width: 768px) */
+        @media (max-width: 768px) {
+            /* 히어로 패딩 */
+            [style*="padding: 160px 0 100px"] {
+                padding: 100px 0 40px !important;
+            }
+            /* 히어로 h1 */
+            .tp-char-animation[style*="font-size: 64px"] {
+                font-size: 32px !important;
+                line-height: 1.25 !important;
+            }
+            /* 섹션 h2 */
+            [style*="font-size: 42px"] {
+                font-size: 26px !important;
+            }
+            /* CTA h2 */
+            [style*="font-size: 44px"] {
+                font-size: 26px !important;
+            }
+            /* 섹션 패딩 */
+            [style*="padding: 100px 0"] {
+                padding: 60px 0 !important;
+            }
+            /* col-lg-6 2컬럼 → 1컬럼: 이미지+텍스트 상세 섹션 */
+            .row.align-items-center .col-lg-6 {
+                width: 100% !important;
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+            /* 이미지 측면 여백 제거 */
+            [style*="padding-left: 48px"] {
+                padding-left: 0 !important;
+            }
+            [style*="padding-right: 48px"] {
+                padding-right: 0 !important;
+            }
+            /* 이미지 섹션 아래 여백 */
+            .row.align-items-center .col-lg-6:first-child {
+                margin-bottom: 24px;
+            }
+            /* 핵심 기능 카드 1컬럼 */
+            .row[style*="margin: 0"] .col-lg-4 {
+                width: 100% !important;
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+            /* 카드 border-left 복원 */
+            .row[style*="margin: 0"] .col-lg-4 > div[style*="border-left: none"] {
+                border-left: 1px solid rgba(255,255,255,0.08) !important;
+                border-top: none !important;
+            }
+            /* CTA 패딩 */
+            [style*="background: #0958d9; padding: 100px 0"] {
+                padding: 60px 0 !important;
+            }
+            /* 테이블 글씨 크기 줄이기 */
+            table[style*="width: 100%"] td,
+            table[style*="width: 100%"] th {
+                padding: 14px 10px !important;
+                font-size: 12px !important;
+            }
+        }
     </style>
 </head>
 

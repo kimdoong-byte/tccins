@@ -49,6 +49,94 @@
             transform: rotate(-180deg);
             border-top-color: #0958d9 !important;
         }
+
+        /* =============================================
+           반응형 미디어쿼리 — smart_factory.html
+        ============================================= */
+
+        /* 태블릿 (max-width: 1024px) */
+        @media (max-width: 1024px) {
+            [style*="padding: 160px 0 100px"] {
+                padding: 120px 0 60px !important;
+            }
+            .tp-char-animation[style*="font-size: 64px"] {
+                font-size: 44px !important;
+            }
+            [style*="font-size: 48px"] {
+                font-size: 36px !important;
+            }
+            [style*="font-size: 44px"] {
+                font-size: 34px !important;
+            }
+            [style*="padding: 100px 0"] {
+                padding: 70px 0 !important;
+            }
+            [style*="padding: 100px 0 0"] {
+                padding: 70px 0 0 !important;
+            }
+            [style*="padding-left: 48px"] {
+                padding-left: 24px !important;
+            }
+            [style*="padding-right: 48px"] {
+                padding-right: 24px !important;
+            }
+            /* 탭 네비게이션 패딩 줄이기 */
+            .sf-tab-link {
+                padding: 16px 20px !important;
+                font-size: 13px !important;
+            }
+        }
+
+        /* 모바일 (max-width: 768px) */
+        @media (max-width: 768px) {
+            [style*="padding: 160px 0 100px"] {
+                padding: 100px 0 40px !important;
+            }
+            .tp-char-animation[style*="font-size: 64px"] {
+                font-size: 32px !important;
+                line-height: 1.25 !important;
+            }
+            [style*="font-size: 48px"] {
+                font-size: 28px !important;
+            }
+            [style*="font-size: 44px"] {
+                font-size: 26px !important;
+            }
+            [style*="padding: 100px 0"] {
+                padding: 60px 0 !important;
+            }
+            [style*="padding: 100px 0 0"] {
+                padding: 60px 0 0 !important;
+            }
+            /* 탭 내비게이션 스크롤 가능하게 */
+            #sf-tab-nav .container > div {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .sf-tab-link {
+                padding: 14px 16px !important;
+                font-size: 13px !important;
+                white-space: nowrap;
+            }
+            /* col-lg-6 2컬럼 → 1컬럼 */
+            .row.align-items-center .col-lg-6 {
+                width: 100% !important;
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+            [style*="padding-left: 48px"] {
+                padding-left: 0 !important;
+            }
+            [style*="padding-right: 48px"] {
+                padding-right: 0 !important;
+            }
+            .row.align-items-center .col-lg-6:first-child {
+                margin-bottom: 24px;
+            }
+            [style*="background: #0958d9; padding: 100px 0"] {
+                padding: 60px 0 !important;
+            }
+        }
     </style>
 </head>
 

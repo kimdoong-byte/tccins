@@ -58,6 +58,83 @@
             transform: rotate(-180deg);
             border-top-color: #e84040 !important;
         }
+
+        /* =============================================
+           반응형 미디어쿼리 — index-dark.html
+        ============================================= */
+
+        /* 태블릿 (max-width: 1024px) */
+        @media (max-width: 1024px) {
+            /* Five Pillars 섹션 패딩 */
+            [style*="padding: 120px 0"] {
+                padding: 80px 0 !important;
+            }
+            /* 섹션 h2 타이틀 */
+            [style*="font-size:64px"] {
+                font-size: 44px !important;
+            }
+            /* 필라 h3 타이틀 */
+            [style*="font-size:52px"] {
+                font-size: 36px !important;
+            }
+            /* 그리드 이미지 높이 */
+            [style*="height:520px"] {
+                height: 380px !important;
+            }
+        }
+
+        /* 모바일 (max-width: 768px) */
+        @media (max-width: 768px) {
+            /* 히어로 섹션 — 영상/텍스트 1컬럼, 영상 위 */
+            .tp-hero-area .row {
+                flex-direction: column-reverse;
+            }
+            .tp-hero-area .col-xl-6,
+            .tp-hero-area .col-lg-6 {
+                width: 100% !important;
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+                padding-right: 15px !important;
+                padding-left: 15px !important;
+            }
+            .tp-hero-area .col-xl-6:last-child {
+                margin-bottom: 24px;
+            }
+
+            /* Five Pillars 섹션 패딩 */
+            [style*="padding: 120px 0"] {
+                padding: 60px 0 !important;
+            }
+            /* 섹션 h2 타이틀 */
+            [style*="font-size:64px"] {
+                font-size: 32px !important;
+            }
+            /* 필라 h3 타이틀 */
+            [style*="font-size:52px"] {
+                font-size: 28px !important;
+            }
+            /* 그리드 이미지 높이 */
+            [style*="height:520px"] {
+                height: 240px !important;
+            }
+
+            /* Five Pillars 그리드 — 1컬럼 */
+            .pillar-grid {
+                grid-template-columns: 1fr !important;
+                gap: 32px !important;
+            }
+            /* 이미지 왼쪽 그리드: 모바일에서 이미지 위, 텍스트 아래 (order 변경) */
+            .pillar-grid--img-left > div:first-child {
+                order: -1;
+            }
+            /* 필라 섹션 아이템 패딩 줄이기 */
+            [style*="border-top: 1px solid rgba(255,255,255,0.08); padding: 72px 0"] {
+                padding: 40px 0 !important;
+            }
+            [style*="border-top: 1px solid rgba(255,255,255,0.08); border-bottom"] {
+                padding: 40px 0 !important;
+            }
+        }
     </style>
 </head>
 
@@ -841,7 +918,7 @@
 
                         <!-- 01 AI CCTV — 텍스트 왼쪽, 이미지 오른쪽 -->
                         <div style="border-top: 1px solid rgba(255,255,255,0.08); padding: 72px 0;">
-                            <div style="display:grid; grid-template-columns:1fr 620px; gap:64px; align-items:start;">
+                            <div class="pillar-grid pillar-grid--text-left" style="display:grid; grid-template-columns:1fr 620px; gap:64px; align-items:start;">
                                 <div>
                                     <span style="color:rgba(255,255,255,0.2); font-size:13px; letter-spacing:0.14em; display:block; margin-bottom:24px;">01</span>
                                     <h3 style="color:#fff; font-size:52px; font-weight:800; letter-spacing:-0.03em; margin:0 0 20px; line-height:1;">AI CCTV</h3>
@@ -868,7 +945,7 @@
 
                         <!-- 02 Groupware — 이미지 왼쪽, 텍스트 오른쪽 -->
                         <div style="border-top: 1px solid rgba(255,255,255,0.08); padding: 72px 0;">
-                            <div style="display:grid; grid-template-columns:620px 1fr; gap:64px; align-items:start;">
+                            <div class="pillar-grid pillar-grid--img-left" style="display:grid; grid-template-columns:620px 1fr; gap:64px; align-items:start;">
                                 <div style="border-radius:10px; overflow:hidden; height:520px;">
                                     <img src="assets/img/portfolio/portfolio-details-1/work-01.jpg"
                                          style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.6s ease;"
@@ -895,7 +972,7 @@
 
                         <!-- 03 Smart Factory — 텍스트 왼쪽, 이미지 오른쪽 -->
                         <div style="border-top: 1px solid rgba(255,255,255,0.08); padding: 72px 0;">
-                            <div style="display:grid; grid-template-columns:1fr 620px; gap:64px; align-items:start;">
+                            <div class="pillar-grid pillar-grid--text-left" style="display:grid; grid-template-columns:1fr 620px; gap:64px; align-items:start;">
                                 <div>
                                     <span style="color:rgba(255,255,255,0.2); font-size:13px; letter-spacing:0.14em; display:block; margin-bottom:24px;">03</span>
                                     <h3 style="color:#fff; font-size:52px; font-weight:800; letter-spacing:-0.03em; margin:0 0 20px; line-height:1;">Smart Factory</h3>
@@ -922,7 +999,7 @@
 
                         <!-- 04 SHE — 이미지 왼쪽, 텍스트 오른쪽 -->
                         <div style="border-top: 1px solid rgba(255,255,255,0.08); padding: 72px 0;">
-                            <div style="display:grid; grid-template-columns:620px 1fr; gap:64px; align-items:start;">
+                            <div class="pillar-grid pillar-grid--img-left" style="display:grid; grid-template-columns:620px 1fr; gap:64px; align-items:start;">
                                 <div style="border-radius:10px; overflow:hidden; height:520px;">
                                     <img src="assets/img/portfolio/portfolio-details-1/work-03.jpg"
                                          style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.6s ease;"
@@ -949,7 +1026,7 @@
 
                         <!-- 05 e-Account — 텍스트 왼쪽, 이미지 오른쪽 -->
                         <div style="border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 72px 0;">
-                            <div style="display:grid; grid-template-columns:1fr 620px; gap:64px; align-items:start;">
+                            <div class="pillar-grid pillar-grid--text-left" style="display:grid; grid-template-columns:1fr 620px; gap:64px; align-items:start;">
                                 <div>
                                     <span style="color:rgba(255,255,255,0.2); font-size:13px; letter-spacing:0.14em; display:block; margin-bottom:24px;">05</span>
                                     <h3 style="color:#fff; font-size:52px; font-weight:800; letter-spacing:-0.03em; margin:0 0 20px; line-height:1;">e-Account</h3>

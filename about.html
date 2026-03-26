@@ -47,6 +47,63 @@
             transform: rotate(-180deg);
             border-top-color: #e84040 !important;
         }
+
+        /* =============================================
+           반응형 미디어쿼리 — about.html
+        ============================================= */
+
+        /* 태블릿 (max-width: 1024px) */
+        @media (max-width: 1024px) {
+            [style*="padding: 160px 0 100px"] {
+                padding: 120px 0 60px !important;
+            }
+            .tp-char-animation[style*="font-size: 64px"] {
+                font-size: 44px !important;
+            }
+            [style*="padding: 100px 0"] {
+                padding: 70px 0 !important;
+            }
+            [style*="padding-left: 64px"] {
+                padding-left: 32px !important;
+            }
+        }
+
+        /* 모바일 (max-width: 768px) */
+        @media (max-width: 768px) {
+            [style*="padding: 160px 0 100px"] {
+                padding: 100px 0 40px !important;
+            }
+            .tp-char-animation[style*="font-size: 64px"] {
+                font-size: 32px !important;
+                line-height: 1.25 !important;
+            }
+            [style*="padding: 100px 0"] {
+                padding: 60px 0 !important;
+            }
+            /* CEO 메시지 섹션 — 사진 + 텍스트 1컬럼 */
+            .row.align-items-center.justify-content-center .col-lg-5,
+            .row.align-items-center.justify-content-center .col-lg-6 {
+                width: 100% !important;
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+            [style*="padding-left: 64px"] {
+                padding-left: 0 !important;
+                margin-top: 32px;
+            }
+            /* col-lg-6 2컬럼 → 1컬럼 */
+            .row.align-items-center .col-lg-6 {
+                width: 100% !important;
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+            /* 핵심 가치 카드 1컬럼 */
+            .row[style*="margin: 0"] .col-lg-4 {
+                width: 100% !important;
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+        }
     </style>
 
 </head>

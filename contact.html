@@ -149,6 +149,31 @@ input[type=number] {
             transform: rotate(-180deg);
             border-top-color: #e84040 !important;
         }
+
+        /* =============================================
+           반응형 미디어쿼리 — contact.html
+        ============================================= */
+
+        /* 태블릿 (max-width: 1024px) */
+        @media (max-width: 1024px) {
+            .tp-career-title[style*="font-size: 80px"] {
+                font-size: 52px !important;
+            }
+            .tp-faq-text p[style*="font-size: 40px"] {
+                font-size: 28px !important;
+            }
+        }
+
+        /* 모바일 (max-width: 768px) */
+        @media (max-width: 768px) {
+            .tp-career-title[style*="font-size: 80px"] {
+                font-size: 36px !important;
+                line-height: 1.25 !important;
+            }
+            .tp-faq-text p[style*="font-size: 40px"] {
+                font-size: 22px !important;
+            }
+        }
     </style>
 </head>
 
