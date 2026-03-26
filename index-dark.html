@@ -123,8 +123,11 @@
                 grid-template-columns: 1fr !important;
                 gap: 32px !important;
             }
-            /* 이미지 왼쪽 그리드: 모바일에서 이미지 위, 텍스트 아래 (order 변경) */
+            /* 모바일에서 이미지 항상 위로 */
             .pillar-grid--img-left > div:first-child {
+                order: -1;
+            }
+            .pillar-grid--text-left > div:last-child {
                 order: -1;
             }
             /* 필라 섹션 아이템 패딩 줄이기 */
