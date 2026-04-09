@@ -51,7 +51,7 @@
         }
 
         /* =============================================
-           반응형 미디어쿼리 — aicctv.html
+           반응형 미디어쿼리 — automation_ai.html
         ============================================= */
 
         /* 태블릿 (max-width: 1024px) */
@@ -62,8 +62,8 @@
             .tp-char-animation[style*="font-size: 64px"] {
                 font-size: 44px !important;
             }
-            [style*="font-size: 42px"] {
-                font-size: 32px !important;
+            [style*="font-size: 38px"] {
+                font-size: 30px !important;
             }
             [style*="font-size: 44px"] {
                 font-size: 34px !important;
@@ -71,16 +71,21 @@
             [style*="padding: 100px 0"] {
                 padding: 70px 0 !important;
             }
-            [style*="padding-left: 48px"] {
+            [style*="padding-left: 56px"] {
                 padding-left: 24px !important;
             }
-            [style*="padding-right: 48px"] {
+            [style*="padding-right: 56px"] {
                 padding-right: 24px !important;
+            }
+            /* 3D 맵핑 수치 카드 2열로 */
+            .mapping-metrics {
+                grid-template-columns: repeat(2, 1fr) !important;
             }
         }
 
         /* 모바일 (max-width: 768px) */
         @media (max-width: 768px) {
+            /* Hero */
             [style*="padding: 160px 0 100px"] {
                 padding: 100px 0 40px !important;
             }
@@ -88,8 +93,11 @@
                 font-size: 32px !important;
                 line-height: 1.25 !important;
             }
-            [style*="font-size: 42px"] {
+            [style*="font-size: 38px"] {
                 font-size: 26px !important;
+            }
+            [style*="font-size: 36px"] {
+                font-size: 24px !important;
             }
             [style*="font-size: 44px"] {
                 font-size: 26px !important;
@@ -97,27 +105,92 @@
             [style*="padding: 100px 0"] {
                 padding: 60px 0 !important;
             }
-            .row.align-items-center .col-lg-6 {
+
+            /* 섹션 패딩 */
+            [style*="padding: 100px 0;"] {
+                padding: 60px 0 !important;
+            }
+
+            /* 이미지 3열 그리드 → 1열 */
+            [style*="grid-template-columns: repeat(3, 1fr)"] {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* 컨설팅 4열 그리드 → 1열 */
+            [style*="grid-template-columns: repeat(4, 1fr)"] {
+                grid-template-columns: 1fr 1fr !important;
+            }
+
+            /* 추적 카드 3열 → 1열 */
+            [style*="grid-template-columns:1fr 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* 3D 맵핑 수치 카드 4열 → 2열 */
+            [style*="grid-template-columns: repeat(4, 1fr); gap: 12px"] {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            /* 두 컬럼 레이아웃 → 1열로 (col-lg-5/6/7) */
+            .col-lg-5, .col-lg-6, .col-lg-7 {
                 width: 100% !important;
                 max-width: 100% !important;
                 flex: 0 0 100% !important;
             }
-            [style*="padding-left: 48px"] {
+
+            /* 이미지 컬럼 여백 제거 */
+            [style*="padding-left: 56px"] {
                 padding-left: 0 !important;
             }
-            [style*="padding-right: 48px"] {
+            [style*="padding-right: 56px"] {
                 padding-right: 0 !important;
             }
-            .row.align-items-center .col-lg-6:first-child {
-                margin-bottom: 24px;
+
+            /* 이미지 먼저 나온 뒤 텍스트 순서 조정 */
+            .row.align-items-start .col-lg-5:last-child,
+            .row.align-items-start .col-lg-6:last-child {
+                margin-top: 32px;
             }
-            .row[style*="margin: 0"] .col-lg-4 {
-                width: 100% !important;
-                max-width: 100% !important;
-                flex: 0 0 100% !important;
+            .row.align-items-center .col-lg-6:last-child {
+                margin-top: 32px;
             }
-            [style*="background: #0958d9; padding: 100px 0"] {
+            .row.align-items-start .col-lg-7:first-child {
+                margin-bottom: 32px;
+            }
+
+            /* 스마트 스캔: 텍스트 먼저, 이미지 나중 */
+            .row.align-items-start .col-lg-7.tp_fade_anim {
+                order: 2;
+            }
+            .row.align-items-start .col-lg-5.tp_fade_anim {
+                order: 1;
+            }
+
+            /* 컨설팅 4열 → 2열, 라운드 유지 */
+            [style*="border-radius: 16px; overflow: hidden;"][style*="grid-template-columns: repeat(4, 1fr)"] {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            /* CTA 섹션 */
+            [style*="background: #0958d9"] {
                 padding: 60px 0 !important;
+            }
+            [style*="font-size: 44px"][style*="margin-bottom: 18px"] {
+                font-size: 28px !important;
+            }
+        }
+
+        /* 소형 모바일 (max-width: 480px) */
+        @media (max-width: 480px) {
+            /* 컨설팅 2열 → 1열 */
+            [style*="grid-template-columns: repeat(4, 1fr)"] {
+                grid-template-columns: 1fr !important;
+            }
+            .tp-char-animation[style*="font-size: 64px"] {
+                font-size: 26px !important;
+            }
+            [style*="font-size: 38px"] {
+                font-size: 22px !important;
             }
         }
     </style>
@@ -289,7 +362,7 @@
                         <div class="row align-items-start">
                             <div class="col-lg-5 tp_fade_anim" data-delay=".3">
                                 <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;">스마트 스캔</p>
-                                <h2 style="color: #fff; font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 20px;">차가 들어오는 순간,<br>입고가 시작됩니다.</h2>
+                                <h2 style="color: #fff; font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 20px;">진입과 동시에,<br>입고가 자동 인식됩니다.</h2>
                                 <p style="color: rgba(255,255,255,0.82); font-size: 15px; line-height: 1.9; margin-bottom: 32px;">OCR 인식으로 입고·출고를 실시간으로 기록합니다.<br> 코일, 박스, 파렛트 등 다양한 형태의 재고를 카메라가 자동 스캔하고,<br> 촬영 이미지와 함께 데이터베이스에 저장합니다.</p>
                                 <!-- 키워드 태그 -->
                                 <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 36px;">
@@ -300,8 +373,6 @@
                                 </div>
                                 <!-- 프로세스 플로우 -->
                                 <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px;">
-                                    <span style="padding:8px 16px; background:#1a1b1f; border:1px solid rgba(255,255,255,0.22); border-radius:6px; color:#fff; font-size:13px;">차량 진입</span>
-                                    <span style="color:rgba(255,255,255,0.4); font-size:14px;">→</span>
                                     <span style="padding:8px 16px; background:#1a1b1f; border:1px solid rgba(255,255,255,0.22); border-radius:6px; color:#fff; font-size:13px;">OCR 인식</span>
                                     <span style="color:rgba(255,255,255,0.4); font-size:14px;">→</span>
                                     <span style="padding:8px 16px; background:#1a1b1f; border:1px solid rgba(255,255,255,0.22); border-radius:6px; color:#fff; font-size:13px;">이미지 촬영</span>
@@ -316,6 +387,36 @@
                                     <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 16/10; background:#0e0f11;">
                                         <img src="assets/img/portfolio/portfolio-details-1/aoto_1.jpg" alt="스마트 스캔" style="width:100%; height:100%; object-fit:cover;">
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ③-1 우리 창고도 될까요? -->
+                <div style="background-color: #0e0f11; padding: 100px 0;">
+                    <div class="container container-1720">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 tp_fade_anim" data-delay=".3">
+                                <div style="padding-right: 56px;">
+                                    <div style="border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background:#111113;">
+                                        <img src="assets/img/portfolio/portfolio-details-1/aoto_5.jpg" alt="다양한 창고 현장" style="width:100%; height:100%; object-fit:cover;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 tp_fade_anim" data-delay=".5">
+                                <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;">어떤 현장이든</p>
+                                <h2 style="color: #fff; font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 20px;">창고의 종류는 달라도,<br>솔루션은 하나입니다.</h2>
+                                <p style="color: rgba(255,255,255,0.82); font-size: 15px; line-height: 1.9; margin-bottom: 36px;">카메라가 품목을 가리지 않습니다.<br>AI 비전은 형태와 패턴을 스스로 학습해, 현장에 맞게 설정하면<br>어떤 품목이든 자동 인식이 가능합니다.</p>
+                                <!-- 업종 태그 -->
+                                <div style="display:flex; flex-wrap:wrap; gap:10px;">
+                                    <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">코일 창고</span>
+                                    <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">박스 창고</span>
+                                    <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">마트 물류</span>
+                                    <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">의류 창고</span>
+                                    <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">선박 창고</span>
+                                    <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">냉동·냉장 창고</span>
+                                    <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">제조 공장</span>
                                 </div>
                             </div>
                         </div>
@@ -344,7 +445,7 @@
                             </div>
                             <div style="background:#111113; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.22);">
                                 <div style="aspect-ratio:16/10; overflow:hidden;">
-                                    <img src="assets/img/portfolio/portfolio-details-1/aoto_3.jpg" alt="지게차 추적" style="width:100%; height:100%; object-fit:cover;">
+                                    <img src="assets/img/portfolio/portfolio-details-1/aoto_3-2.jpg" alt="지게차 추적" style="width:100%; height:100%; object-fit:cover;">
                                 </div>
                                 <div style="padding:32px 36px;">
                                     <p style="color:rgba(255,255,255,0.55); font-size:11px; letter-spacing:0.15em; text-transform:uppercase; margin:0 0 10px;">지게차</p>
@@ -354,7 +455,7 @@
                             </div>
                             <div style="background:#111113; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.22);">
                                 <div style="aspect-ratio:16/10; overflow:hidden;">
-                                    <img src="assets/img/portfolio/portfolio-details-1/aoto_4.jpg" alt="작업자 추적" style="width:100%; height:100%; object-fit:cover;">
+                                    <img src="assets/img/portfolio/portfolio-details-1/aoto_4-1.jpg" alt="작업자 추적" style="width:100%; height:100%; object-fit:cover;">
                                 </div>
                                 <div style="padding:32px 36px;">
                                     <p style="color:rgba(255,255,255,0.55); font-size:11px; letter-spacing:0.15em; text-transform:uppercase; margin:0 0 10px;">작업자</p>
@@ -383,10 +484,10 @@
                                 <p style="color: rgba(255,255,255,0.82); font-size: 15px; line-height: 1.9; margin-bottom: 36px;">추적된 이동 물체와 재고 데이터를 기반으로 현장 내부를 3차원 공간으로 자동 재현합니다.<br> 어디에 무엇이 있는지 입체 맵 위에서 실시간으로 확인하고,<br> 해당 정보를 MES 등 연동된 타 시스템에 자동으로 전송합니다. <br>사람이 개입하지 않아도 현장이 스스로 돌아갑니다.</p>
                                 <!-- 4가지 핵심 수치 -->
                                 <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:8px;">
-                                    <span style="padding:7px 16px; background:rgba(79,163,232,0.12); border:1px solid rgba(79,163,232,0.35); border-radius:20px; color:#4fa3e8; font-size:13px;">3D 실시간 공간 자동 맵핑</span>
-                                    <span style="padding:7px 16px; background:rgba(79,163,232,0.12); border:1px solid rgba(79,163,232,0.35); border-radius:20px; color:#4fa3e8; font-size:13px;">자동 위치 좌표 실시간 생성</span>
-                                    <span style="padding:7px 16px; background:rgba(79,163,232,0.12); border:1px solid rgba(79,163,232,0.35); border-radius:20px; color:#4fa3e8; font-size:13px;">MES 등 타 시스템 자동 연동</span>
-                                    <span style="padding:7px 16px; background:rgba(79,163,232,0.12); border:1px solid rgba(79,163,232,0.35); border-radius:20px; color:#4fa3e8; font-size:13px;">무인 24시간 자율 운영</span>
+                                    <span style="padding:7px 16px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:13px;">3D 실시간 공간 자동 맵핑</span>
+                                    <span style="padding:7px 16px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:13px;">자동 위치 좌표 실시간 생성</span>
+                                    <span style="padding:7px 16px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:13px;">MES 등 타 시스템 자동 연동</span>
+                                    <span style="padding:7px 16px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:13px;">무인 24시간 자율 운영</span>
                                 </div>
                             </div>
                         </div>
@@ -399,45 +500,45 @@
                         <div style="margin-bottom: 56px;">
                             <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;">현장 맞춤 컨설팅</p>
                             <h2 style="color: #fff; font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 20px;">현장마다 답이 다릅니다.<br>저희가 직접 찾아드립니다.</h2>
-                            <p style="color: rgba(255,255,255,0.82); font-size: 15px; line-height: 1.9; margin: 0; max-width: 640px;">모든 현장은 환경과 조건이 다릅니다. AI 비전 외에도 UWB 실내 위치 측위, 지게차 위치 관리, IoT 연동 등 다양한 기술을 현장 조건에 맞게 조합하여 최적의 솔루션을 제안합니다.</p>
+                            <p style="color: rgba(255,255,255,0.82); font-size: 15px; line-height: 1.9; margin: 0; max-width: 640px;">모든 현장은 환경과 조건이 다릅니다. AI 비전 외에도 UWB 실내 위치 측위, 지게차 위치 관리,<br>IoT 연동 등 다양한 기술을 현장 조건에 맞게 조합하여 최적의 솔루션을 제안합니다.</p>
                         </div>
                         <!-- 기술 태그 -->
                         <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom: 64px;">
-                            <span style="padding:8px 18px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.22); border-radius:24px; color:rgba(255,255,255,0.88); font-size:13px;">AI 비전 (카메라 기반)</span>
-                            <span style="padding:8px 18px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.22); border-radius:24px; color:rgba(255,255,255,0.88); font-size:13px;">UWB 실내 위치 측위</span>
-                            <span style="padding:8px 18px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.22); border-radius:24px; color:rgba(255,255,255,0.88); font-size:13px;">지게차 위치 관리</span>
-                            <span style="padding:8px 18px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.22); border-radius:24px; color:rgba(255,255,255,0.88); font-size:13px;">IoT 센서 융합</span>
-                            <span style="padding:8px 18px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.22); border-radius:24px; color:rgba(255,255,255,0.88); font-size:13px;">현장 맞춤 커스터마이징</span>
+                            <span style="padding:8px 18px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:24px; color:#7ab8ff; font-size:13px;">AI 비전 (카메라 기반)</span>
+                            <span style="padding:8px 18px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:24px; color:#7ab8ff; font-size:13px;">UWB 실내 위치 측위</span>
+                            <span style="padding:8px 18px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:24px; color:#7ab8ff; font-size:13px;">지게차 위치 관리</span>
+                            <span style="padding:8px 18px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:24px; color:#7ab8ff; font-size:13px;">IoT 센서 융합</span>
+                            <span style="padding:8px 18px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:24px; color:#7ab8ff; font-size:13px;">현장 맞춤 커스터마이징</span>
                         </div>
                         <!-- 컨설팅 프로세스 -->
-                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid rgba(255,255,255,0.12); border-left: 1px solid rgba(255,255,255,0.12);">
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid rgba(255,255,255,0.12); border-left: 1px solid rgba(255,255,255,0.12); border-radius: 16px; overflow: hidden;">
                             <div style="padding: 36px 32px; border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12);">
                                 <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
                                     <span style="color:#7ab8ff; font-size:12px; font-weight:700; letter-spacing:0.15em;">01</span>
                                     <span style="color:#fff; font-size:16px; font-weight:600; line-height:1.4;">현장 방문 및 환경 분석</span>
                                 </div>
-                                <p style="color:rgba(255,255,255,0.5); font-size:13px; line-height:1.7; margin:0;">현장 구조, 장비, 운영 방식을 직접 확인하고 문제점을 파악합니다.</p>
+                                <p style="color:rgba(255,255,255,0.5); font-size:13px; line-height:1.7; margin:0;">현장 구조, 장비, 운영 방식을 직접 확인하고<br> 문제점을 파악합니다.</p>
                             </div>
                             <div style="padding: 36px 32px; border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12);">
                                 <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
                                     <span style="color:#7ab8ff; font-size:12px; font-weight:700; letter-spacing:0.15em;">02</span>
                                     <span style="color:#fff; font-size:16px; font-weight:600; line-height:1.4;">최적 기술 조합 제안</span>
                                 </div>
-                                <p style="color:rgba(255,255,255,0.5); font-size:13px; line-height:1.7; margin:0;">비전, UWB, IoT 등 현장에 맞는 기술을 선별하여 솔루션을 설계합니다.</p>
+                                <p style="color:rgba(255,255,255,0.5); font-size:13px; line-height:1.7; margin:0;">비전, UWB, IoT 등 현장에 맞는 기술을 선별하여<br> 솔루션을 설계합니다.</p>
                             </div>
                             <div style="padding: 36px 32px; border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12);">
                                 <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
                                     <span style="color:#7ab8ff; font-size:12px; font-weight:700; letter-spacing:0.15em;">03</span>
                                     <span style="color:#fff; font-size:16px; font-weight:600; line-height:1.4;">파일럿 적용 및 검증</span>
                                 </div>
-                                <p style="color:rgba(255,255,255,0.5); font-size:13px; line-height:1.7; margin:0;">실제 환경에 시범 적용하여 효과를 측정하고 안정성을 검증합니다.</p>
+                                <p style="color:rgba(255,255,255,0.5); font-size:13px; line-height:1.7; margin:0;">실제 환경에 시범 적용하여<br> 효과를 측정하고 안정성을 검증합니다.</p>
                             </div>
                             <div style="padding: 36px 32px; border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12);">
                                 <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
                                     <span style="color:#7ab8ff; font-size:12px; font-weight:700; letter-spacing:0.15em;">04</span>
                                     <span style="color:#fff; font-size:16px; font-weight:600; line-height:1.4;">본 구축 및 운영 지원</span>
                                 </div>
-                                <p style="color:rgba(255,255,255,0.5); font-size:13px; line-height:1.7; margin:0;">전체 시스템을 구축하고 안정적인 운영을 위한 지속적인 지원을 제공합니다.</p>
+                                <p style="color:rgba(255,255,255,0.5); font-size:13px; line-height:1.7; margin:0;">전체 시스템을 구축하고 안정적인 운영을 위한<br> 지속적인 지원을 제공합니다.</p>
                             </div>
                         </div>
                     </div>
