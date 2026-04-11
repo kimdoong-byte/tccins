@@ -9,11 +9,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.png">
 
-    <!-- CSS here -->
-    <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.css">
@@ -23,594 +20,380 @@
     <link rel="stylesheet" href="assets/css/atropos.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
-    <!-- CSS here -->
-    <!-- CSS here -->
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         :root { --tp-ff-fontawesome: "Font Awesome 6 Free"; }
-        /* has-dropdown 화살표 교체 */
         .tp-header-dropdown nav ul li.has-dropdown::after {
-            font-family: none !important;
-            font-size: 0 !important;
-            content: "" !important;
-            display: inline-block !important;
-            width: 0 !important;
-            height: 0 !important;
-            border-left: 4px solid transparent !important;
-            border-right: 4px solid transparent !important;
+            font-family: none !important; font-size: 0 !important; content: "" !important;
+            display: inline-block !important; width: 0 !important; height: 0 !important;
+            border-left: 4px solid transparent !important; border-right: 4px solid transparent !important;
             border-top: 5px solid rgba(255,255,255,0.8) !important;
-            vertical-align: middle !important;
-            margin-left: 5px !important;
-            margin-bottom: 1px !important;
+            vertical-align: middle !important; margin-left: 5px !important; margin-bottom: 1px !important;
         }
         .tp-header-dropdown nav ul li.has-dropdown:hover::after {
-            transform: rotate(-180deg);
-            border-top-color: #e84040 !important;
+            transform: rotate(-180deg); border-top-color: #e84040 !important;
         }
-
-        /* =============================================
-           반응형 미디어쿼리 — she.html
-        ============================================= */
-
-        /* 태블릿 (max-width: 1024px) */
         @media (max-width: 1024px) {
-            /* 히어로 패딩 */
-            [style*="padding: 160px 0 100px"] {
-                padding: 120px 0 60px !important;
-            }
-            /* 히어로 h1 */
-            .tp-char-animation[style*="font-size: 64px"] {
-                font-size: 44px !important;
-            }
-            /* 섹션 h2 */
-            [style*="font-size: 42px"] {
-                font-size: 32px !important;
-            }
-            /* CTA h2 */
-            [style*="font-size: 44px"] {
-                font-size: 34px !important;
-            }
-            /* 섹션 패딩 */
-            [style*="padding: 100px 0"] {
-                padding: 70px 0 !important;
-            }
-            /* 이미지 측면 여백 */
-            [style*="padding-left: 48px"] {
-                padding-left: 24px !important;
-            }
-            [style*="padding-right: 48px"] {
-                padding-right: 24px !important;
-            }
+            [style*="padding: 160px 0 100px"] { padding: 120px 0 60px !important; }
+            .tp-char-animation[style*="font-size: 64px"] { font-size: 44px !important; }
+            [style*="font-size: 38px"] { font-size: 30px !important; }
+            [style*="font-size: 44px"] { font-size: 34px !important; }
+            [style*="padding: 100px 0"] { padding: 70px 0 !important; }
+            [style*="padding-left: 56px"] { padding-left: 24px !important; }
+            [style*="padding-right: 56px"] { padding-right: 24px !important; }
         }
-
-        /* 모바일 (max-width: 768px) */
         @media (max-width: 768px) {
-            /* 히어로 패딩 */
-            [style*="padding: 160px 0 100px"] {
-                padding: 100px 0 40px !important;
-            }
-            /* 히어로 h1 */
-            .tp-char-animation[style*="font-size: 64px"] {
-                font-size: 32px !important;
-                line-height: 1.25 !important;
-            }
-            /* 섹션 h2 */
-            [style*="font-size: 42px"] {
-                font-size: 26px !important;
-            }
-            /* CTA h2 */
-            [style*="font-size: 44px"] {
-                font-size: 26px !important;
-            }
-            /* 섹션 패딩 */
-            [style*="padding: 100px 0"] {
-                padding: 60px 0 !important;
-            }
-            /* col-lg-6 2컬럼 → 1컬럼: 이미지+텍스트 상세 섹션 */
-            .row.align-items-center .col-lg-6 {
-                width: 100% !important;
-                max-width: 100% !important;
-                flex: 0 0 100% !important;
-            }
-            /* 이미지 측면 여백 제거 */
-            [style*="padding-left: 48px"] {
-                padding-left: 0 !important;
-            }
-            [style*="padding-right: 48px"] {
-                padding-right: 0 !important;
-            }
-            /* 이미지 섹션 아래 여백 */
-            .row.align-items-center .col-lg-6:first-child {
-                margin-bottom: 24px;
-            }
-            /* 핵심 기능 카드 1컬럼 */
-            .row[style*="margin: 0"] .col-lg-4 {
-                width: 100% !important;
-                max-width: 100% !important;
-                flex: 0 0 100% !important;
-            }
-            /* 카드 border-left 복원 */
-            .row[style*="margin: 0"] .col-lg-4 > div[style*="border-left: none"] {
-                border-left: 1px solid rgba(255,255,255,0.25) !important;
-                border-top: none !important;
-            }
-            /* CTA 패딩 */
-            [style*="background: #0958d9; padding: 100px 0"] {
-                padding: 60px 0 !important;
-            }
-            /* 테이블 글씨 크기 줄이기 */
-            table[style*="width: 100%"] td,
-            table[style*="width: 100%"] th {
-                padding: 14px 10px !important;
-                font-size: 12px !important;
-            }
+            [style*="padding: 160px 0 100px"] { padding: 100px 0 40px !important; }
+            .tp-char-animation[style*="font-size: 64px"] { font-size: 32px !important; line-height: 1.25 !important; }
+            [style*="font-size: 38px"] { font-size: 26px !important; }
+            [style*="font-size: 36px"] { font-size: 24px !important; }
+            [style*="font-size: 44px"] { font-size: 26px !important; }
+            [style*="padding: 100px 0"] { padding: 60px 0 !important; }
+            [style*="grid-template-columns: repeat(3, 1fr)"] { grid-template-columns: 1fr !important; }
+            [style*="grid-template-columns: repeat(4, 1fr)"] { grid-template-columns: 1fr 1fr !important; }
+            [style*="grid-template-columns:1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
+            .col-lg-5, .col-lg-6, .col-lg-7 { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
+            [style*="padding-left: 56px"] { padding-left: 0 !important; }
+            [style*="padding-right: 56px"] { padding-right: 0 !important; }
+            .row.align-items-center .col-lg-6:last-child { margin-top: 32px; }
+            .row.align-items-start .col-lg-5:last-child, .row.align-items-start .col-lg-6:last-child { margin-top: 32px; }
+            .row.align-items-start .col-lg-7:first-child { margin-bottom: 32px; }
+            [style*="background: #0958d9"] { padding: 60px 0 !important; }
+            [style*="font-size: 44px"][style*="margin-bottom: 18px"] { font-size: 28px !important; }
+            [style*="border-radius: 16px; overflow: hidden;"][style*="grid-template-columns: repeat(4, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+        @media (max-width: 480px) {
+            [style*="grid-template-columns: repeat(4, 1fr)"] { grid-template-columns: 1fr !important; }
+            .tp-char-animation[style*="font-size: 64px"] { font-size: 26px !important; }
+            [style*="font-size: 38px"] { font-size: 22px !important; }
         }
     </style>
 </head>
 
-<body class="tp-magic-cursor">   
+<body class="tp-magic-cursor">
 
-    <!-- Begin magic cursor -->
-    <div id="magic-cursor" class="cursor-white-bg">
-        <div id="ball"></div>
-    </div>
-    <!-- End magic cursor -->
+    <div id="magic-cursor" class="cursor-white-bg"><div id="ball"></div></div>
+    <div id="preloader"><div class="preloader"><span></span><span></span></div></div>
+    <div class="back-to-top-wrapper"><button id="back_to_top" type="button" class="back-to-top-btn"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
 
-    <!-- preloader -->
-
-    <!-- preloader -->
-    <div id="preloader">
-        <div class="preloader">
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-    <!-- preloader end  -->
-    <!-- preloader end  -->
-
-    <!-- back to top start -->
-    <!-- back to top start -->
-    <div class="back-to-top-wrapper">
-        <button id="back_to_top" type="button" class="back-to-top-btn">
-            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </button>
-    </div>
-    <!-- back to top end -->
-    <!-- back to top end -->
-
-    <!-- header area start -->
-    <!-- header area start -->
+    <!-- Header -->
     <div id="header-sticky" class="tp-header-area tp-header-ptb tp-header-blur sticky-black-bg header-transparent tp-header-border">
         <div class="container container-1750">
             <div class="row align-items-center">
-                <div class="col-xl-2 col-lg-6 col-6">
-                    <div class="tp-header-logo">
-                        <a href="index-dark.html">
-                            <img data-width="120" class="logo-white" src="assets/img/logo/logo-white.png" alt="">
-                            <img data-width="120" class="logo-black d-none" src="assets/img/logo/logo-black.png" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-7 d-none d-xl-block">
-                    <div class="tp-header-box text-center">
-                        <div class="tp-header-menu tp-header-dropdown dropdown-black-bg">
-                            <nav class="tp-mobile-menu-active">
-                                <ul>
-                                    <li>
-                                        <a href="about.html">About</a>
-                                    </li>
-                                    <li>
-                                        <a href="aicctv.html">AI CCTV</a>
-                                    </li>
-                                    <li>
-                                        <a href="automation_ai.html">물류 자동화 솔루션</a>
-                                    </li>
-                                    <li>
-                                        <a href="groupware.html">Groupware</a>
-                                    </li>
-                                    <li>
-                                        <a href="smart_factory.html">Smart Factory</a>
-                                    </li>
-                                    <li>
-                                        <a href="she.html">SHE (안전보건환경)</a>
-                                    </li>
-                                    <li>
-                                        <a href="e_account.html">e-Account</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-6 col-6">
-                    <div class="tp-header-right d-flex align-items-center justify-content-end">
-                        <div class="tp-header-btn-box ml-25 d-none d-md-flex">
-                            <a href="contact.html" class="tp-btn-black btn-red-bg">
-                                <span class="tp-btn-black-filter-blur">
-                                    <svg width="0" height="0">
-                                        <defs>
-                                            <filter id="buttonFilter">
-                                                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"></feGaussianBlur>
-                                                <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"></feColorMatrix>
-                                                <feComposite in="SourceGraphic" in2="buttonFilter" operator="atop"></feComposite>
-                                                <feBlend in="SourceGraphic" in2="buttonFilter"></feBlend>
-                                            </filter>
-                                        </defs>
-                                    </svg>
-                                </span>
-                                <span class="tp-btn-black-filter d-inline-flex align-items-center" style="filter: url(#buttonFilter)">
-                                    <span class="tp-btn-black-text">Contact</span>
-                                    <span class="tp-btn-black-circle">
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 9L9 1M9 1H1M9 1V9" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="tp-header-bar ml-20 d-xl-none">
-                            <button class="tp-offcanvas-open-btn">
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <div class="col-xl-2 col-lg-6 col-6"><div class="tp-header-logo"><a href="index-dark.html"><img data-width="120" class="logo-white" src="assets/img/logo/logo-white.png" alt=""><img data-width="120" class="logo-black d-none" src="assets/img/logo/logo-black.png" alt=""></a></div></div>
+                <div class="col-xl-7 d-none d-xl-block"><div class="tp-header-box text-center"><div class="tp-header-menu tp-header-dropdown dropdown-black-bg"><nav class="tp-mobile-menu-active"><ul><li><a href="about.html">About</a></li><li><a href="aicctv.html">AI CCTV</a></li><li><a href="automation_ai.html">물류 자동화 솔루션</a></li><li><a href="groupware.html">Groupware</a></li><li><a href="smart_factory.html">Smart Factory</a></li><li><a href="she.html">SHE (안전보건환경)</a></li><li><a href="e_account.html">e-Account</a></li></ul></nav></div></div></div>
+                <div class="col-xl-3 col-lg-6 col-6"><div class="tp-header-right d-flex align-items-center justify-content-end"><div class="tp-header-btn-box ml-25 d-none d-md-flex"><a href="contact.html" class="tp-btn-black btn-red-bg"><span class="tp-btn-black-filter-blur"><svg width="0" height="0"><defs><filter id="buttonFilter"><feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"></feGaussianBlur><feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"></feColorMatrix><feComposite in="SourceGraphic" in2="buttonFilter" operator="atop"></feComposite><feBlend in="SourceGraphic" in2="buttonFilter"></feBlend></filter></defs></svg></span><span class="tp-btn-black-filter d-inline-flex align-items-center" style="filter: url(#buttonFilter)"><span class="tp-btn-black-text">Contact</span><span class="tp-btn-black-circle"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H1M9 1V9" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a></div><div class="tp-header-bar ml-20 d-xl-none"><button class="tp-offcanvas-open-btn"><i></i><i></i><i></i></button></div></div></div>
             </div>
         </div>
     </div>
-    <!-- header area end -->
-    <!-- header area end -->
-
-        <!-- offcanvas start -->
-    <!-- tp-offcanvus-area-start -->
-    <div class="tp-offcanvas-area">
-        <div class="tp-offcanvas-wrapper offcanvas-black-bg">
-            <div class="tp-offcanvas-top d-flex align-items-center justify-content-between">
-                <div class="tp-offcanvas-logo">
-                    <a href="index-dark.html">
-                        <img class="logo-1" data-width="120" src="assets/img/logo/logo-black.png" alt="">
-                        <img class="logo-2" data-width="120" src="assets/img/logo/logo-white.png" alt="">
-                    </a>
-                </div>
-                <div class="tp-offcanvas-close">
-                    <button class="tp-offcanvas-close-btn">
-                        <svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.19141 9.80762L27.5762 28.1924" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M9.19141 28.1924L27.5762 9.80761" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="tp-offcanvas-main">
-                <div class="tp-offcanvas-menu d-xl-none">
-                    <nav></nav>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="tp-offcanvas-area"><div class="tp-offcanvas-wrapper offcanvas-black-bg"><div class="tp-offcanvas-top d-flex align-items-center justify-content-between"><div class="tp-offcanvas-logo"><a href="index-dark.html"><img class="logo-1" data-width="120" src="assets/img/logo/logo-black.png" alt=""><img class="logo-2" data-width="120" src="assets/img/logo/logo-white.png" alt=""></a></div><div class="tp-offcanvas-close"><button class="tp-offcanvas-close-btn"><svg width="37" height="38" viewBox="0 0 37 38" fill="none"><path d="M9.19141 9.80762L27.5762 28.1924" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.19141 28.1924L27.5762 9.80761" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div><div class="tp-offcanvas-main"><div class="tp-offcanvas-menu d-xl-none"><nav></nav></div></div></div></div>
     <div class="body-overlay"></div>
-    <!-- tp-offcanvus-area-end -->
-    <!-- offcanvas end -->
 
-<div id="smooth-wrapper"  data-background="assets/img/blog/blog-masonry/blog-bradcum-bg.png">
-        <div id="smooth-content">
-            <main>
+<div id="smooth-wrapper" data-background="assets/img/blog/blog-masonry/blog-bradcum-bg.png">
+<div id="smooth-content">
+<main>
 
-                <!-- ① HERO -->
-                <div style="padding: 160px 0 100px; background-color: #0e0f11;">
-                    <div class="container container-1720">
-                        <div class="row">
-                            <div class="col-lg-7">
-                                <span style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 20px;">SHE · Safety Health Environment</span>
-                                <h1 class="tp-char-animation" style="color: #fff; font-size: 64px; font-weight: 700; line-height: 1.1; margin-bottom: 28px;">현장 안전의 모든 것을<br>하나의 시스템으로.</h1>
-                                <p style="color: rgba(255,255,255,0.82); font-size: 17px; line-height: 1.9; margin-bottom: 0;">중대재해처벌법 대응부터 환경 보호·지속경영까지,<br>오프라인으로 처리하던 모든 SHE 업무를 하나의 웹 시스템으로 통합합니다.</p>
-                            </div>
-                        </div>
+    <!-- ① HERO -->
+    <div style="padding: 160px 0 100px; background-color: #0e0f11;">
+        <div class="container container-1720">
+            <div class="row">
+                <div class="col-lg-7">
+                    <span style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 20px;">Safety · Health · Environment Management Platform</span>
+                    <h1 class="tp-char-animation" style="color: #fff; font-size: 64px; font-weight: 700; line-height: 1.1; margin-bottom: 28px;">기업의 안전,<br>이제 시스템이 책임집니다.</h1>
+                    <p style="color: rgba(255,255,255,0.82); font-size: 17px; line-height: 1.9; margin-bottom: 0;">중대재해처벌법 대응부터 현장 데이터 기반 의사결정까지,<br>안전·보건·환경을 하나의 플랫폼에서 통합 관리합니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ② 메인 이미지 -->
+    <div class="tp-portfolio-details-1-thumb-ptb pb-40">
+        <div class="container container-1720">
+            <div class="row gx-20">
+                <div class="col-lg-12">
+                    <div style="overflow: hidden; border-radius: 12px;" class="mb-20">
+                        <img data-speed=".8" src="assets/img/portfolio/portfolio-details-1/she_01.jpg" alt="SHE 대시보드" style="width:100%;">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <!-- ② 이미지 3개 -->
-                <div class="tp-portfolio-details-1-thumb-ptb pb-100">
-                    <div class="container container-1720">
-                        <div class="row gx-20">
-                            <div class="col-lg-12">
-                                <div style="overflow: hidden; border-radius: 12px;" class="mb-20">
-                                    <img data-speed=".8" src="assets/img/portfolio/portfolio-details-1/she_01.jpg" alt="SHE 대시보드" style="width:100%;">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div style="overflow: hidden; border-radius: 12px;" class="mb-20">
-                                    <img data-speed=".8" src="assets/img/portfolio/portfolio-details-1/she_02.jpg" alt="SHE 안전관리">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div style="overflow: hidden; border-radius: 12px;" class="mb-20">
-                                    <img data-speed=".8" src="assets/img/portfolio/portfolio-details-1/she_03.jpg" alt="SHE 보건관리">
-                                </div>
-                            </div>
-                        </div>
+    <!-- ③ Pain Point -->
+    <div style="background-color: #111113; padding: 100px 0;">
+        <div class="container container-1720">
+            <div style="margin-bottom: 56px;">
+                <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;">현장의 문제</p>
+                <h2 style="color: #fff; font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 16px;">이런 문제,<br>겪고 계시지 않으신가요?</h2>
+            </div>
+            <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+                <div style="background:#0e0f11; border-radius:16px; padding:36px 32px; border:1px solid rgba(255,255,255,0.1);">
+                    <div style="width:40px; height:40px; margin-bottom:24px;"><img src="assets/img/portfolio/portfolio-details-1/she_01.svg" alt="" style="width:100%; height:100%; object-fit:contain;"></div>
+                    <p style="color:#e84040; font-size:12px; font-weight:700; margin:0 0 16px;">안전교육</p>
+                    <h4 style="color:#fff; font-size:17px; font-weight:700; margin:0 0 12px;">TBM 교육을 했지만,<br>기록은 서랍 어딘가에 있다</h4>
+                    <p style="color:rgba(255,255,255,0.55); font-size:14px; line-height:1.7; margin:0 0 24px;">종이 서명, 누가 했는지도 모르는 체크리스트.<br> 6개월 뒤 감사가 나오면 찾을 수 있을까요?</p>
+                    <p style="color:#fff; font-size:18px; font-weight:700; margin:0; line-height:1.4;">6개월 뒤 감사가 나오면<br>찾을 수 있을까요?</p>
+                </div>
+                <div style="background:#0e0f11; border-radius:16px; padding:36px 32px; border:1px solid rgba(255,255,255,0.1);">
+                    <div style="width:40px; height:40px; margin-bottom:24px;"><img src="assets/img/portfolio/portfolio-details-1/she_02.svg" alt="" style="width:100%; height:100%; object-fit:contain;"></div>
+                    <p style="color:#e84040; font-size:12px; font-weight:700; margin:0 0 16px;">위험관리</p>
+                    <h4 style="color:#fff; font-size:17px; font-weight:700; margin:0 0 12px;">위험요소를 발견했지만,<br>구두로 전달하고 끝났다</h4>
+                    <p style="color:rgba(255,255,255,0.55); font-size:14px; line-height:1.7; margin:0 0 24px;">조치됐다고 했습니다. 하지만 그 이력은 어디에도 남아 있지 않습니다.</p>
+                    <p style="color:#fff; font-size:18px; font-weight:700; margin:0; line-height:1.4;">그 이력, 지금 5분 안에<br>꺼낼 수 있나요?</p>
+                </div>
+                <div style="background:#0e0f11; border-radius:16px; padding:36px 32px; border:1px solid rgba(255,255,255,0.1);">
+                    <div style="width:40px; height:40px; margin-bottom:24px;"><img src="assets/img/portfolio/portfolio-details-1/she_03.svg" alt="" style="width:100%; height:100%; object-fit:contain;"></div>
+                    <p style="color:#e84040; font-size:12px; font-weight:700; margin:0 0 16px;">법적증빙</p>
+                    <h4 style="color:#fff; font-size:17px; font-weight:700; margin:0 0 12px;">13개 항목 체크는 했지만,<br>법은 실제 이행 이력을 요구한다</h4>
+                    <p style="color:rgba(255,255,255,0.55); font-size:14px; line-height:1.7; margin:0 0 24px;">단순 체크가 아니라 실행 + 기록 + 증빙이 동시에 필요합니다.</p>
+                    <p style="color:#fff; font-size:18px; font-weight:700; margin:0; line-height:1.4;">사고가 났을 때<br>경영책임자를 지킬 수 있나요?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ④ 중대재해처벌법 -->
+    <div style="background-color: #0e0f11; padding: 100px 0;">
+        <div class="container container-1720">
+            <div class="row align-items-center">
+                <div class="col-lg-6 tp_fade_anim" data-delay=".3">
+                    <div style="padding-right: 56px;"><div style="border-radius: 12px; overflow: hidden; aspect-ratio: 16/10; background:#111113;"><img src="assets/img/portfolio/portfolio-details-1/she_04.jpg" alt="중대재해처벌법" style="width:100%; height:100%; object-fit:cover;"></div></div>
+                </div>
+                <div class="col-lg-6 tp_fade_anim" data-delay=".5">
+                    <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;">01 · 중대재해처벌법</p>
+                    <h2 style="color: #fff; font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 20px;">체크가 아닌 실제 이행이,<br>법적 증빙입니다.</h2>
+                    <p style="color: rgba(255,255,255,0.82); font-size: 15px; line-height: 1.9; margin-bottom: 32px;">중대재해처벌법 13개 항목을 실시간으로 관리합니다.<br>단순 체크가 아닌 실제 수행 이력이 있어야 이행 완료로 반영됩니다.<br>조직별 대응 현황을 한눈에 파악하고 경영책임자 보고가 즉시 가능합니다.</p>
+                    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                        <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">13개 항목 실시간 준수 관리</span>
+                        <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">이행률 자동 산출</span>
+                        <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">조직별 현황 확인</span>
+                        <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">경영책임자 보고 즉시</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <!-- ③ 핵심 기능 카드 3개 -->
-                <div style="background-color: #111113; padding: 100px 0;">
-                    <div class="container container-1720">
-                        <div style="margin-bottom: 64px; max-width: 760px;">
-                            <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;">Core Features</p>
-                            <h2 style="color: #fff; font-size: 42px; font-weight: 700; margin-bottom: 20px; line-height: 1.2;">종이로 하던 일을<br>시스템이 대신합니다.</h2>
-                            <p style="color: rgba(255,255,255,0.90); font-size: 16px; line-height: 1.8; margin: 0;">작업 전 점검, 위험성 평가, 사고 이력 기록까지<br> 현장에서 수작업으로 처리하던 모든 SHE 업무를 웹 시스템으로 디지털화합니다.</p>
-                        </div>
-                        <div class="row" style="margin: 0;">
-                            <!-- 중대재해처벌법 -->
-                            <div class="col-lg-4" style="padding: 0;">
-                                <div style="padding: 40px 36px; border: 1px solid rgba(255,255,255,0.25); height: 100%;">
-                                    <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.12); border-radius: 8px; display:flex; align-items:center; justify-content:center;">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                                    </div>
-                                    <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 12px;">중대재해처벌법 대응</h4>
-                                    <p style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.8; margin-bottom: 20px;">중처법 준수 현황을 대시보드로 실시간 확인하고,<br> 13개 항목의 점검 리스트를 체계적으로 관리합니다. 법 위반 리스크를 사전에 차단합니다.</p>
-                                    <div style="border-top: 1px solid rgba(255,255,255,0.22); padding-top: 18px;">
-                                        <p style="color: rgba(255,255,255,0.82); font-size: 12px; margin: 0; line-height: 1.8;">중처법 Dashboard · 13개 항목 점검 · 이행 현황 관리</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 안전·보건·환경 관리 -->
-                            <div class="col-lg-4" style="padding: 0;">
-                                <div style="padding: 40px 36px; border: 1px solid rgba(255,255,255,0.25); border-left: none; height: 100%;">
-                                    <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.12); border-radius: 8px; display:flex; align-items:center; justify-content:center;">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                                    </div>
-                                    <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 12px;">안전·보건·환경 통합 관리</h4>
-                                    <p style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.8; margin-bottom: 20px;">안전작업 허가, 위험성 평가, 작업환경 측정, 환경 배출량 관리까지<br>  현장의 모든 SHE 업무를 하나의 화면에서 처리합니다.</p>
-                                    <div style="border-top: 1px solid rgba(255,255,255,0.22); padding-top: 18px;">
-                                        <p style="color: rgba(255,255,255,0.82); font-size: 12px; margin: 0; line-height: 1.8;">안전 관리 · 보건 관리 · 환경 보호 및 관리</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 표준정보·지속경영 -->
-                            <div class="col-lg-4" style="padding: 0;">
-                                <div style="padding: 40px 36px; border: 1px solid rgba(255,255,255,0.25); border-left: none; height: 100%;">
-                                    <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.12); border-radius: 8px; display:flex; align-items:center; justify-content:center;">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                                    </div>
-                                    <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 12px;">표준정보·지속경영 관리</h4>
-                                    <p style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.8; margin-bottom: 20px;">법령 관리, 양식 템플릿, 경영방침, 조직도, 직무수행평가 등<br>  지속경영에 필요한 모든 정보를 체계적으로 관리합니다.</p>
-                                    <div style="border-top: 1px solid rgba(255,255,255,0.22); padding-top: 18px;">
-                                        <p style="color: rgba(255,255,255,0.82); font-size: 12px; margin: 0; line-height: 1.8;">표준 정보 관리 · 지속 경영 관리 · 법령 관리</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <!-- ⑤ TBM 일지 -->
+    <div style="background-color: #111113; padding: 100px 0;">
+        <div class="container container-1720">
+            <div class="row align-items-center">
+                <div class="col-lg-6 tp_fade_anim" data-delay=".3">
+                    <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;">02 · 안전점검 — TBM 일지</p>
+                    <h2 style="color: #fff; font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 20px;">서명 한 번으로<br>교육·확인·증빙이 완료됩니다.</h2>
+                    <p style="color: rgba(255,255,255,0.82); font-size: 15px; line-height: 1.9; margin-bottom: 32px;">TBM 교육부터 서명까지 100% 디지털로 처리합니다.<br>서명 즉시 교육 이수 이력이 자동 저장되고,<br>스마트폰으로 현장에서 바로 서명할 수 있습니다.</p>
+                    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                        <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">종이 서식 완전 제거</span>
+                        <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">법적 증빙 자동 완성</span>
+                        <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">실시간 현황 확인</span>
+                        <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">스마트폰 서명</span>
                     </div>
                 </div>
+                <div class="col-lg-6 tp_fade_anim" data-delay=".5">
+                    <div style="padding-left: 56px;"><div style="border-radius: 12px; overflow: hidden; aspect-ratio: 16/10; background:#0e0f11;"><img src="assets/img/portfolio/portfolio-details-1/she_05.jpg" alt="TBM 일지" style="width:100%; height:100%; object-fit:cover;"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                <!-- ④ 중대재해처벌법 상세 -->
-                <div style="background-color: #0e0f11; padding: 100px 0;">
-                    <div class="container container-1720">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;">01 · 중대재해처벌법</p>
-                                <h3 style="color: #fff; font-size: 36px; font-weight: 700; line-height: 1.3; margin-bottom: 20px;">법 준수 여부,<br>화면에서 바로 확인합니다.</h3>
-                                <p style="color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.9; margin-bottom: 28px;">중대재해처벌법에서 요구하는 13개 안전보건 확보 의무 항목을 대시보드로 실시간 모니터링합니다.<br> 이행 현황을 한눈에 파악하고 미이행 항목을 즉시 조치할 수 있습니다.</p>
-                                <div style="border-top: 1px solid rgba(255,255,255,0.25); padding-top: 20px;">
-                                    <p style="color: rgba(255,255,255,0.82); font-size: 13px; line-height: 1.8; margin: 0;">중처법 대응 현황 Dashboard · 13개 항목 점검 리스트 · 이행 이력 자동 기록</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div style="padding-left: 48px;">
-                                    <div style="border-radius: 8px; overflow: hidden; aspect-ratio: 16/10; background:#1a1a1c;">
-                                        <img src="assets/img/portfolio/portfolio-details-1/she_04.jpg" alt="중대재해처벌법 대시보드" style="width:100%; height:100%; object-fit:cover;">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <!-- ⑥ 작업허가서 -->
+    <div style="background-color: #0e0f11; padding: 100px 0;">
+        <div class="container container-1720">
+            <div class="row align-items-center">
+                <div class="col-lg-5 tp_fade_anim" data-delay=".3">
+                    <div style="padding-right: 56px;"><div style="border-radius: 12px; overflow: hidden; aspect-ratio: 16/10; background:#111113;"><img src="assets/img/portfolio/portfolio-details-1/she_06.jpg" alt="작업허가서" style="width:100%; height:100%; object-fit:cover;"></div></div>
+                </div>
+                <div class="col-lg-7 tp_fade_anim" data-delay=".5">
+                    <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;">03 · 작업허가서</p>
+                    <h2 style="color: #fff; font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 20px;">승인 없이는<br>작업이 시작되지 않습니다.</h2>
+                    <p style="color: rgba(255,255,255,0.82); font-size: 15px; line-height: 1.9; margin-bottom: 32px;">외부업체·자체 작업 모두 허가서 없이는 작업 시작 불가.<br>1차 확인 → 승인 → 현장 확인 → 중간 확인까지<br>단계마다 담당자 서명으로 진행됩니다.</p>
+                    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                        <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">필수 허가 절차 강제화</span>
+                        <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">단계별 승인 프로세스</span>
+                        <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">위험성 평가 연동</span>
+                        <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">전 과정 이력 자동 저장</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <!-- ⑤ 안전·보건 관리 상세 -->
-                <div style="background-color: #111113; padding: 100px 0;">
-                    <div class="container container-1720">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <div style="padding-right: 48px;">
-                                    <div style="border-radius: 8px; overflow: hidden; aspect-ratio: 16/10; background:#1a1a1c;">
-                                        <img src="assets/img/portfolio/portfolio-details-1/she_05.jpg" alt="안전 보건 관리" style="width:100%; height:100%; object-fit:cover;">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;">02 · 안전·보건·환경 관리</p>
-                                <h3 style="color: #fff; font-size: 36px; font-weight: 700; line-height: 1.3; margin-bottom: 20px;">작업 전 점검부터<br>사고 이력까지 모두 기록됩니다.</h3>
-                                <p style="color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.9; margin-bottom: 28px;">안전작업 허가, 위험성 평가, 도급사업 관리, 징표포상 관리, 자율안전 관리까지 현장의 안전 업무 전반을 웹으로 처리합니다.<br>  작업환경 측정과 건강 관리, 환경 배출량 현황까지 한 시스템에서 관리됩니다.</p>
-                                <div style="border-top: 1px solid rgba(255,255,255,0.25); padding-top: 20px;">
-                                    <p style="color: rgba(255,255,255,0.82); font-size: 13px; line-height: 1.8; margin: 0;">안전작업/공사 · 위험성 평가 · 작업환경 측정 · 환경 배출량 관리</p>
-                                </div>
-                            </div>
-                        </div>
+    <!-- ⑦ 시스템 연계 구조 -->
+    <div style="background-color: #111113; padding: 100px 0;">
+        <div class="container container-1720">
+            <div class="row align-items-center">
+                <div class="col-lg-6 tp_fade_anim" data-delay=".3">
+                    <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;">시스템 연계 구조</p>
+                    <h2 style="color: #fff; font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 20px;">기존 시스템과<br>자동으로 연결됩니다.</h2>
+                    <p style="color: rgba(255,255,255,0.82); font-size: 15px; line-height: 1.9; margin-bottom: 32px;">SAP, PLC, 국가법령DB, 방문시스템 등<br>현장에서 이미 사용 중인 시스템과 자동으로 연계됩니다.<br>이중입력이 사라지고 법령 개정도 시스템이 먼저 감지합니다.</p>
+                    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                        <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">SAP 연계 (협력사·구매정보)</span>
+                        <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">국가법령 DB API</span>
+                        <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">환경시스템 PLC 직접 연결</span>
+                        <span style="padding:6px 14px; background:rgba(9,88,217,0.15); border:1px solid rgba(9,88,217,0.4); border-radius:20px; color:#7ab8ff; font-size:12px;">방문시스템 API 연동</span>
                     </div>
                 </div>
+                <div class="col-lg-6 tp_fade_anim" data-delay=".5">
+                    <div style="padding-left: 56px;"><div style="border-radius: 12px; overflow: hidden; aspect-ratio: 16/10; background:#111113;"><img src="assets/img/portfolio/portfolio-details-1/she_07.jpg" alt="시스템 연계" style="width:100%; height:100%; object-fit:cover;"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                <!-- ⑥ Legacy 연동 상세 -->
-                <div style="background-color: #0e0f11; padding: 100px 0;">
-                    <div class="container container-1720">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;">03 · Legacy 연동</p>
-                                <h3 style="color: #fff; font-size: 36px; font-weight: 700; line-height: 1.3; margin-bottom: 20px;">기존 시스템과<br>자동으로 연결됩니다.</h3>
-                                <p style="color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.9; margin-bottom: 28px;">SAP, MES, 용폐수 관리 시스템, 방문객 시스템 등<br>  현장에서 이미 사용 중인 Legacy 시스템과 자동으로 연계됩니다.<br>  데이터를 이중으로 입력할 필요가 없습니다.</p>
-                                <div style="border-top: 1px solid rgba(255,255,255,0.25); padding-top: 20px;">
-                                    <p style="color: rgba(255,255,255,0.82); font-size: 13px; line-height: 1.8; margin: 0;">SAP 연계 · MES 연계 · 용폐수 관리 시스템 · 방문객 시스템</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div style="padding-left: 48px;">
-                                    <div style="border-radius: 8px; overflow: hidden; aspect-ratio: 16/10; background:#1a1a1c;">
-                                        <img src="assets/img/portfolio/portfolio-details-1/she_06.jpg" alt="Legacy 연동" style="width:100%; height:100%; object-fit:cover;">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <!-- ⑧ ISO 45001 PDCA 관리 구조 -->
+    <div style="background-color: #0e0f11; padding: 100px 0;">
+        <div class="container container-1720">
+            <div style="margin-bottom: 56px;">
+                <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;">ISO 45001 기반 PDCA</p>
+                <h2 style="color: #fff; font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 16px;">시스템 사용 자체가,<br>법 대응입니다.</h2>
+                <p style="color: rgba(255,255,255,0.82); font-size: 15px; line-height: 1.9;">안전은 '했다'가 아니라 '증명'해야 합니다. ISO 45001 PDCA 구조로 실행과 기록이 동시에 이루어집니다.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid rgba(255,255,255,0.12); border-left: 1px solid rgba(255,255,255,0.12); border-radius: 16px; overflow: hidden;">
+                <div style="padding: 40px 32px; border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12);">
+                    <span style="display:inline-block; padding:5px 14px; background:rgba(9,88,217,0.2); border-radius:6px; color:#7ab8ff; font-size:13px; font-weight:700; margin-bottom:20px;">PLAN</span>
+                    <h4 style="color:#fff; font-size:18px; font-weight:700; margin:0 0 12px;">위험성 평가</h4>
+                    <p style="color:rgba(255,255,255,0.55); font-size:14px; line-height:1.7; margin:0 0 20px;">유해·위험요인을 현장에서 등록하고<br>위험 수준을 평가합니다.</p>
+                    <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:16px;">
+                        <p style="color:rgba(255,255,255,0.4); font-size:12px; line-height:1.6; margin:0;">위험성 평가 모듈 · 담당자 지정<br>기한 관리 · 전후 사진 증빙</p>
                     </div>
                 </div>
-
-                <!-- ⑦ 기능 소개 섹션 -->
-                <div style="background-color: #111113; padding: 100px 0;">
-                    <div class="container container-1720">
-                        <div style="margin-bottom: 64px; max-width: 760px;">
-                            <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;">Features</p>
-                            <h2 style="color: #fff; font-size: 42px; font-weight: 700; line-height: 1.2; margin-bottom: 20px;">이런 기능을 제공합니다.</h2>
-                            <p style="color: rgba(255,255,255,0.90); font-size: 16px; line-height: 1.8; margin: 0;">중대재해처벌법 대응부터 Legacy 시스템 연계까지, 현장에 필요한 모든 SHE 기능을 하나의 플랫폼에서 제공합니다.</p>
-                        </div>
-
-                        <!-- 기능 목록 테이블 -->
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <thead>
-                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.35);">
-                                    <th style="color: rgba(255,255,255,0.82); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 20px; text-align: left; width: 60px;">No.</th>
-                                    <th style="color: rgba(255,255,255,0.82); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 20px; text-align: left; width: 200px;">기능</th>
-                                    <th style="color: rgba(255,255,255,0.82); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 20px; text-align: left;">세부 내용</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.22);">
-                                    <td style="color: #4d94ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">01</td>
-                                    <td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">중대재해처벌법</td>
-                                    <td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">현황 Dashboard · 13개 항목 점검</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.22);">
-                                    <td style="color: #4d94ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">02</td>
-                                    <td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">안전 관리</td>
-                                    <td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">안전작업/공사 · 위험성 평가 · 안전점검 · 재해현황 관리</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.22);">
-                                    <td style="color: #4d94ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">03</td>
-                                    <td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">보건 관리</td>
-                                    <td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">작업환경 측정 · 건강 관리 · 근골격계 관리 · 직무스트레스</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.22);">
-                                    <td style="color: #4d94ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">04</td>
-                                    <td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">환경 보호 및 관리</td>
-                                    <td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">폐수처리장 · 배출량 관리 · 약품관리대장</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.22);">
-                                    <td style="color: #4d94ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">05</td>
-                                    <td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">표준 정보 관리</td>
-                                    <td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">법령 관리 · 양식 템플릿 관리</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.22);">
-                                    <td style="color: #4d94ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">06</td>
-                                    <td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">지속 경영 관리</td>
-                                    <td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">경영방침 · 예산 관리 · 직무수행평가 · 시정현황</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.22);">
-                                    <td style="color: #4d94ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">07</td>
-                                    <td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">관리자</td>
-                                    <td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">메뉴 관리 · 조직 관리 · 코드 관리 · 권한 관리 · 스케줄링(I/F) 모니터링 · 알람 기능(E-Mail, SMS, Web) · 공지사항</td>
-                                </tr>
-                                <tr>
-                                    <td style="color: #4d94ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">08</td>
-                                    <td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">Legacy 연계</td>
-                                    <td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">SAP 연계 (협력사정보, 구매요청정보) · MES 연계 (폐수처리 Data Sheet) · 용폐수관리 시스템 연계 · 방문객 시스템 연계 (방문예약 및 출입정보)</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div style="padding: 40px 32px; border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12);">
+                    <span style="display:inline-block; padding:5px 14px; background:rgba(34,197,94,0.15); border-radius:6px; color:#22c55e; font-size:13px; font-weight:700; margin-bottom:20px;">DO</span>
+                    <h4 style="color:#fff; font-size:18px; font-weight:700; margin:0 0 12px;">작업허가 / TBM</h4>
+                    <p style="color:rgba(255,255,255,0.55); font-size:14px; line-height:1.7; margin:0 0 20px;">승인 없이는 작업 불가.<br>서명 한 번으로 교육·증빙 완료.</p>
+                    <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:16px;">
+                        <p style="color:rgba(255,255,255,0.4); font-size:12px; line-height:1.6; margin:0;">작업허가서 · TBM 일지<br>단계별 승인 · 디지털 서명</p>
                     </div>
                 </div>
-
-                <!-- ⑧ CTA -->
-                <div style="background: #0958d9; padding: 100px 0;">
-                    <div class="container container-1720 text-center">
-                        <p style="color: rgba(255,255,255,0.88); font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px;">지금 경험해보세요</p>
-                        <h2 style="color: #fff; font-size: 44px; font-weight: 700; margin-bottom: 18px; line-height: 1.2;">우리 현장에 맞는<br>SHE 시스템이 궁금하신가요?</h2>
-                        <p style="color: rgba(255,255,255,0.9); font-size: 16px; margin-bottom: 44px;">현장 상황을 알려주시면 최적의 구성을 제안드립니다.</p>
-                        <a href="contact.html" style="display:inline-flex; align-items:center; gap:10px; padding:18px 48px; background:#fff; color:#0958d9; font-size:16px; font-weight:700; text-decoration:none; transition:all 0.3s;"
-                           onmouseover="this.style.background='#0e0f11'; this.style.color='#fff'" onmouseout="this.style.background='#fff'; this.style.color='#0958d9'">
-                            도입 상담 신청 &nbsp;→
-                        </a>
+                <div style="padding: 40px 32px; border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12);">
+                    <span style="display:inline-block; padding:5px 14px; background:rgba(234,179,8,0.15); border-radius:6px; color:#eab308; font-size:13px; font-weight:700; margin-bottom:20px;">CHECK</span>
+                    <h4 style="color:#fff; font-size:18px; font-weight:700; margin:0 0 12px;">점검 · 모니터링</h4>
+                    <p style="color:rgba(255,255,255,0.55); font-size:14px; line-height:1.7; margin:0 0 20px;">현장 점검, 배출량 감시,<br>건강검진 결과 자동 분류.</p>
+                    <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:16px;">
+                        <p style="color:rgba(255,255,255,0.4); font-size:12px; line-height:1.6; margin:0;">현장 점검 체크리스트 · PLC 연동<br>건강관리 · 직무스트레스</p>
                     </div>
                 </div>
+                <div style="padding: 40px 32px; border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12);">
+                    <span style="display:inline-block; padding:5px 14px; background:rgba(232,64,64,0.15); border-radius:6px; color:#e84040; font-size:13px; font-weight:700; margin-bottom:20px;">ACT</span>
+                    <h4 style="color:#fff; font-size:18px; font-weight:700; margin:0 0 12px;">개선 조치</h4>
+                    <p style="color:rgba(255,255,255,0.55); font-size:14px; line-height:1.7; margin:0 0 20px;">개선 요청부터 완료까지<br>전 과정을 추적·관리합니다.</p>
+                    <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:16px;">
+                        <p style="color:rgba(255,255,255,0.4); font-size:12px; line-height:1.6; margin:0;">개선요청 · 이행관리<br>승인 이력 전 과정 관리</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            </main>
-            </main>
+    <!-- ⑩ 전체 기능 구성표 -->
+    <div style="background-color: #111113; padding: 100px 0;">
+        <div class="container container-1720">
+            <div style="margin-bottom: 64px; max-width: 760px;">
+                <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;">Features</p>
+                <h2 style="color: #fff; font-size: 38px; font-weight: 700; line-height: 1.2; margin-bottom: 20px;">6개 영역, 99개 화면의<br>실제 기능을 제공합니다.</h2>
+                <p style="color: rgba(255,255,255,0.90); font-size: 16px; line-height: 1.8; margin: 0;">중대재해처벌법 대응부터 Legacy 시스템 연계까지, 현장에 필요한 모든 SHE 기능을 하나의 플랫폼에서 제공합니다.</p>
+            </div>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead><tr style="border-bottom: 1px solid rgba(255,255,255,0.35);"><th style="color: rgba(255,255,255,0.82); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 20px; text-align: left; width: 60px;">No.</th><th style="color: rgba(255,255,255,0.82); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 20px; text-align: left; width: 200px;">영역</th><th style="color: rgba(255,255,255,0.82); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 20px; text-align: left;">주요 기능</th></tr></thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.12);"><td style="color: #7ab8ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">01</td><td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">중대재해처벌법</td><td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">Dashboard · 경영방침 · 안전보건 전담조직 · 유해위험 확인·개선 · 관리책임자 평가 · 재발방지 대책 · 법령 이행 점검 · 수급인 평가</td></tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.12);"><td style="color: #7ab8ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">02</td><td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">안전 관리</td><td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">작업허가서 · TBM 일지 · 위험성 평가 · 개선요청 · 순회점검 · 안전교육 · 위원회 · 재해현황 · 도급관리 · 자율안전관리</td></tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.12);"><td style="color: #7ab8ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">03</td><td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">보건 관리</td><td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">건강검진 · 뇌심혈관 고위험군 · 근골격계 · 작업환경 측정 · 직무스트레스 · 유해요인 · 중증 조사표</td></tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.12);"><td style="color: #7ab8ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">04</td><td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">환경 보호 및 관리</td><td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">폐수처리장 · Data Sheet · 수질/대기 자가측정 · 폐기물 관리 · 약품관리대장</td></tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.12);"><td style="color: #7ab8ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">05</td><td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">지속경영 관리</td><td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">예산관리 · 조직도 · 직무수행평가 · 시정현황 · 준수평가 · 경영방침</td></tr>
+                    <tr><td style="color: #7ab8ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">06</td><td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">표준정보 · 관리자</td><td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">법령관리 · 양식 템플릿 · 권한·메뉴 · 조직·코드 · 스케줄링 · SMS·Email 알림 · 공지사항</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-            <footer>
+    <!-- ⑩ AI 현장 감시 -->
+    <div style="background-color: #0e0f11; padding: 100px 0;">
+        <div class="container container-1720">
+            <div style="margin-bottom: 56px;">
+                <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;">AI 현장 감시 시스템</p>
+                <h2 style="color: #fff; font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 16px;">사람이 보는 곳에만 안전이 있던<br>시대는 끝났습니다.</h2>
+                <p style="color: rgba(255,255,255,0.82); font-size: 15px; line-height: 1.9;">24시간 AI가 현장 전체를 동시에 감시합니다.</p>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px;">
+                <div style="background:#0e0f11; border-radius:16px; padding:36px 32px; border:1px solid rgba(255,255,255,0.1); border-top:3px solid #e84040;">
+                    <span style="color:#e84040; font-size:42px; font-weight:800; line-height:1; display:block; margin-bottom:12px;">1</span>
+                    <h4 style="color:#fff; font-size:18px; font-weight:700; margin:0 0 8px;">화재 자동 감지</h4>
+                    <p style="color:rgba(255,255,255,0.55); font-size:13px; margin:0 0 20px;">CCTV 영상에서 화염·연기 패턴 실시간 분석</p>
+                    <p style="color:rgba(255,255,255,0.75); font-size:14px; line-height:1.7; margin:0;">· 감지 즉시 담당자 SMS 앱 알림 자동 발송<br>· 다단계 판별 알고리즘으로 오경보 최소화<br>· 24시간 무인 모니터링 가능</p>
+                </div>
+                <div style="background:#0e0f11; border-radius:16px; padding:36px 32px; border:1px solid rgba(255,255,255,0.1); border-top:3px solid #eab308;">
+                    <span style="color:#eab308; font-size:42px; font-weight:800; line-height:1; display:block; margin-bottom:12px;">2</span>
+                    <h4 style="color:#fff; font-size:18px; font-weight:700; margin:0 0 8px;">낙상·쓰러짐 감지</h4>
+                    <p style="color:rgba(255,255,255,0.55); font-size:13px; margin:0 0 20px;">작업자 자세 이상패턴 AI 자동 인식</p>
+                    <p style="color:rgba(255,255,255,0.75); font-size:14px; line-height:1.7; margin:0;">· 쓰러짐 감지 후 즉시 응급 알림 발송<br>· 독립 작업 구역·야간 무인 현장 특히 효과적<br>· 골든타임 내 빠른 대응 체계 구축</p>
+                </div>
+                <div style="background:#0e0f11; border-radius:16px; padding:36px 32px; border:1px solid rgba(255,255,255,0.1); border-top:3px solid #f97316;">
+                    <span style="color:#f97316; font-size:42px; font-weight:800; line-height:1; display:block; margin-bottom:12px;">3</span>
+                    <h4 style="color:#fff; font-size:18px; font-weight:700; margin:0 0 8px;">위험 행동 감지</h4>
+                    <p style="color:rgba(255,255,255,0.55); font-size:13px; margin:0 0 20px;">안전 수칙 위반·이상 행동 자동 탐지</p>
+                    <p style="color:rgba(255,255,255,0.75); font-size:14px; line-height:1.7; margin:0;">· 안전모·안전조끼 미착용 자동 감지<br>· 위험구역 무단 진입 실시간 알림<br>· 반복 위반자 이력 자동 기록·관리</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                <!-- footer area start -->
-                 <!-- ====== TCC INS Footer ====== -->
+    <!-- ⑭ CTA -->
+    <div style="background: #0958d9; padding: 100px 0;">
+        <div class="container container-1720 text-center">
+            <p style="color: rgba(255,255,255,0.88); font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px;">지금 경험해보세요</p>
+            <h2 style="color: #fff; font-size: 44px; font-weight: 700; margin-bottom: 18px; line-height: 1.2;">우리 현장에 맞는<br>SHE 시스템이 궁금하신가요?</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 16px; margin-bottom: 44px;">현장 상황을 알려주시면 최적의 구성을 제안드립니다.</p>
+            <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+                <a href="contact.html" style="display:inline-flex; align-items:center; gap:10px; padding:18px 48px; background:#fff; color:#0958d9; font-size:16px; font-weight:700; text-decoration:none; border-radius:4px; transition:all 0.3s;" onmouseover="this.style.background='#0e0f11'; this.style.color='#fff'" onmouseout="this.style.background='#fff'; this.style.color='#0958d9'">
+                    도입 상담 신청 &nbsp;→
+                </a>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
 <footer class="tp-footer-area pt-80 pb-40" style="background-color: #1b1b1d;">
   <div class="container">
     <div class="row align-items-center justify-content-between">
-      
-      <!-- 로고 영역 -->
-      <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
-        <div class="tp-footer-logo">
-          <a href="index.html">
-            <img src="assets/img/logo/logo-white.png" alt="TCC INS Logo">
-          </a>
-        </div>
-      </div>
-
-      <!-- Contact 영역 -->
-      <div class="col-md-6 text-center text-md-end">
-        <div class="tp-footer-contact">
-          <h4 class="text-white mb-2">Contact</h4>
-          <a href="/cdn-cgi/l/email-protection#7b080e0b0b14090f3b0f1818121508551814551009" class="d-block text-white-50 mb-1"><span class="__cf_email__" data-cfemail="2d5e585d5d425f596d594e4e44435e034e4203465f">[email&#160;protected]</span></a>
-          <a href="tel:+820226391756" class="d-block text-white-50 mb-1">+82-02-2639-1756</a>
-          <span class="d-block text-white-50">서울특별시 중구 세종대로 110 TCCINS 타워</span>
-        </div>
-      </div>
-
+      <div class="col-md-6 text-center text-md-start mb-4 mb-md-0"><div class="tp-footer-logo"><a href="index.html"><img src="assets/img/logo/logo-white.png" alt="TCC INS Logo"></a></div></div>
+      <div class="col-md-6 text-center text-md-end"><div class="tp-footer-contact"><h4 class="text-white mb-2">Contact</h4><a href="/cdn-cgi/l/email-protection#1b7f6c777e7e5b6f7878727568357874357069" class="d-block text-white-50 mb-1"><span class="__cf_email__" data-cfemail="83e7f4efe6e6c3f7e0e0eaedf0ade0ecade8f1">[email&#160;protected]</span></a><a href="tel:+820226391756" class="d-block text-white-50 mb-1">+82-02-2639-1756</a><span class="d-block text-white-50">서울특별시 중구 세종대로 110 TCCINS 타워</span></div></div>
     </div>
-
-    <!-- Copyright -->
-    <div class="row mt-4">
-      <div class="col text-center text-white-50 small">
-        © 2025 TCC INS. All rights reserved.
-      </div>
-    </div>
+    <div class="row mt-4"><div class="col text-center text-white-50 small">© 2025 TCC INS. All rights reserved.</div></div>
   </div>
 </footer>
-                <!-- footer area end -->
+</footer>
 
-            </footer>
+</div>
+</div>
 
-        </div>
-    </div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/vendor/jquery.js"></script>
+<script src="assets/js/bootstrap-bundle.js"></script>
+<script src="assets/js/swiper-bundle.js"></script>
+<script src="assets/js/plugin.js"></script>
+<script src="assets/js/three.js"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/scroll-magic.js"></script>
+<script src="assets/js/hover-effect.umd.js"></script>
+<script src="assets/js/magnific-popup.js"></script>
+<script src="assets/js/parallax-slider.js"></script>
+<script src="assets/js/nice-select.js"></script>
+<script src="assets/js/purecounter.js"></script>
+<script src="assets/js/isotope-pkgd.js"></script>
+<script src="assets/js/imagesloaded-pkgd.js"></script>
+<script src="assets/js/ajax-form.js"></script>
+<script src="assets/js/Observer.min.js"></script>
+<script src="assets/js/splitting.min.js"></script>
+<script src="assets/js/webgl.js"></script>
+<script src="assets/js/parallax-scroll.js"></script>
+<script src="assets/js/atropos.js"></script>
+<script src="assets/js/slider-active.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/tp-cursor.js"></script>
+<script src="assets/js/portfolio-slider-1.js"></script>
 
-
-    <!-- JS here -->
-
-    <!-- JS here -->
-
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/vendor/jquery.js"></script>
-    <script src="assets/js/bootstrap-bundle.js"></script>
-    <script src="assets/js/swiper-bundle.js"></script>
-    <script src="assets/js/plugin.js"></script>
-    <script src="assets/js/three.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/scroll-magic.js"></script>
-    <script src="assets/js/hover-effect.umd.js"></script>
-    <script src="assets/js/magnific-popup.js"></script>
-    <script src="assets/js/parallax-slider.js"></script>
-    <script src="assets/js/nice-select.js"></script>
-    <script src="assets/js/purecounter.js"></script>
-    <script src="assets/js/isotope-pkgd.js"></script>
-    <script src="assets/js/imagesloaded-pkgd.js"></script>
-    <script src="assets/js/ajax-form.js"></script>
-    <script src="assets/js/Observer.min.js"></script>
-    <script src="assets/js/splitting.min.js"></script>
-    <script src="assets/js/webgl.js"></script>
-    <script src="assets/js/parallax-scroll.js"></script>
-    <script src="assets/js/atropos.js"></script>
-    <script src="assets/js/slider-active.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/tp-cursor.js"></script>
-    <script src="assets/js/portfolio-slider-1.js"></script>
-    <script type="module" src="assets/js
+</body>
+</html>
