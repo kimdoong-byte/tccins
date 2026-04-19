@@ -169,6 +169,24 @@
             [style*="padding-left: 40px"] { padding-left: 0 !important; }
             [style*="padding-right: 40px"] { padding-right: 0 !important; }
         }
+
+        /* 모듈 섹션 오프너 - 큰 숫자 */
+        .sf-module-num {
+            font-size: 88px;
+            font-weight: 700;
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+            color: rgba(9,88,217,0.95);
+        }
+        @media (max-width: 991px) {
+            .sf-module-num { font-size: 72px; }
+        }
+        @media (max-width: 768px) {
+            .sf-module-num { font-size: 60px; }
+        }
+        @media (max-width: 480px) {
+            .sf-module-num { font-size: 48px; }
+        }
     </style>
 </head>
 
@@ -223,23 +241,23 @@
                             <nav class="tp-mobile-menu-active">
                                 <ul>
                                     <li>
-                                        <a href="about.html">About</a>
+                                        <a href="about.html">회사소개</a>
                                     </li>
                                     <li style="display:none;"><a href="aicctv.html">AI CCTV</a></li>
                                     <li>
-                                        <a href="automation_ai.html">물류 자동화 솔루션</a>
+                                        <a href="smart_factory.html">스마트팩토리</a>
                                     </li>
                                     <li>
-                                        <a href="groupware.html">Groupware</a>
+                                        <a href="automation_ai.html">영상 기반 AI 재고관리</a>
                                     </li>
                                     <li>
-                                        <a href="smart_factory.html">Smart Factory</a>
+                                        <a href="she.html">스마트 SHE</a>
                                     </li>
                                     <li>
-                                        <a href="she.html">SHE (안전보건환경)</a>
+                                        <a href="groupware.html">연결형 그룹웨어</a>
                                     </li>
                                     <li>
-                                        <a href="e_account.html">E-Accounting</a>
+                                        <a href="e_account.html">회계·정산 자동화</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -327,32 +345,111 @@
                      ============================== -->
 
                 <!-- ① HERO -->
-                <div style="padding: 160px 0 100px; background-color: #0e0f11;">
+                <div style="padding: 160px 0 80px; background-color: #0e0f11;">
                     <div class="container container-1720">
                         <div class="row">
-                            <div class="col-lg-7">
-                                <span style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 20px;">Smart Factory · HMI · Big Data · DAQ</span>
-                                <h1 class="tp-char-animation" style="color: #fff; font-size: 64px; font-weight: 700; line-height: 1.1; margin-bottom: 28px;">공장의 모든 신호를<br>하나의 화면으로.</h1>
-                                <p style="color: rgba(255,255,255,0.82); font-size: 17px; line-height: 1.9; margin-bottom: 0;">설비 가동 상태부터 원시 센서 신호까지, 현장 데이터를 실시간으로 수집·시각화·제어합니다.<br>TCC INS의 스마트 팩토리 솔루션은 HMI, 빅데이터, DAQ를 제공합니다.</p>
+                            <div class="col-lg-10">
+                                <span style="color: rgba(255,255,255,0.6); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; display: block; margin-bottom: 20px;">InsTegra Platform · Smart Factory</span>
+                                <h1 class="tp-char-animation" style="color: #fff; font-size: 68px; font-weight: 700; line-height: 1.1; margin-bottom: 28px;">보이지 않던 공장을,<br>한눈에 펼칩니다.</h1>
+                                <p style="color: rgba(255,255,255,0.78); font-size: 18px; line-height: 1.8; margin-bottom: 64px; max-width: 720px;">흩어진 설비 데이터와 복잡한 공정 제어를 하나의 화면으로 가시화합니다.<br>어려웠던 공장 운영이 쉬워지고, 누구나 바로 실행할 수 있습니다.</p>
+                            </div>
+                        </div>
+
+                        <!-- 메인 타이틀 하단 이미지 -->
+                        <div class="row">
+                            <div class="col-lg-12 tp_fade_anim" data-delay=".4" data-duration="1" data-fade-offset="80">
+                                <div style="overflow: hidden; border-radius: 12px; background: #1a1a1c;">
+                                    <img src="assets/img/portfolio/portfolio-details-1/InsTegraPlatform_01.jpg" alt="InsTegra Platform" style="width:100%; height:auto; display:block;">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- ② 솔루션 탭 내비게이션 (sticky) -->
-                <div id="sf-tab-nav" style="position: sticky; top: 0; z-index: 100; background: #0a0b0d; border-bottom: 1px solid rgba(255,255,255,0.28);">
+                <!-- ①-B 플랫폼 × 3가지 변화 (통합 섹션) -->
+                <div style="background-color: #111113; padding: 120px 0; border-top: 1px solid rgba(255,255,255,0.06);">
+                    <div class="container container-1720">
+
+                        <!-- 섹션 헤더 -->
+                        <div style="max-width: 760px; margin-bottom: 64px;">
+                            <p style="color: rgba(255,255,255,0.55); font-size:11px; letter-spacing:0.2em; text-transform:uppercase; margin:0 0 12px;">What Changes</p>
+                            <h2 style="color: #fff; font-size: 40px; font-weight: 700; margin-bottom: 16px; line-height: 1.25;">어려운 공장 운영이, 3가지로 쉬워집니다.</h2>
+                            <p style="color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.8; margin: 0;">숨어있던 설비 데이터, 이해하기 어려웠던 공정, 사람이 직접 해야 했던 판단 모두 가시화하고 단순화합니다.</p>
+                        </div>
+
+                        <!-- 3가지 변화 카드 -->
+                        <div class="row" style="margin: 0;">
+                            <!-- 변화 01 -->
+                            <div class="col-lg-4" style="padding: 0 10px;">
+                                <div style="padding: 32px 28px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; display: flex; flex-direction: column;">
+                                    <span style="color: rgba(77,148,255,0.95); font-size:12px; letter-spacing:0.14em; font-weight:700; margin-bottom: 14px;">Change 01</span>
+                                    <h3 style="color:#fff; font-size: 24px; font-weight: 700; margin-bottom: 14px; line-height: 1.35;">숨어있던 설비 데이터가, 한눈에 보입니다.</h3>
+                                    <p style="color: rgba(255,255,255,0.65); font-size: 14.5px; line-height: 1.8; margin: 0 0 auto;">제조사마다 다른 프로토콜, 장소마다 흩어진 이력<br>이제 모두 하나의 대시보드에서 실시간으로 펼쳐집니다.</p>
+                                    <!-- 기여 모듈 태그 -->
+                                    <div style="display: flex; gap: 6px; flex-wrap: wrap; padding-top: 24px; margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.08);">
+                                        <span style="padding: 5px 10px; background: rgba(9,88,217,0.18); color: #7ab8ff; font-size: 11px; letter-spacing: 0.03em; border-radius: 4px; font-weight: 600;">01 Capture</span>
+                                        <span style="padding: 5px 10px; background: rgba(9,88,217,0.18); color: #7ab8ff; font-size: 11px; letter-spacing: 0.03em; border-radius: 4px; font-weight: 600;">02 SCADA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 변화 02 -->
+                            <div class="col-lg-4" style="padding: 0 10px;">
+                                <div style="padding: 32px 28px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; display: flex; flex-direction: column;">
+                                    <span style="color: rgba(77,148,255,0.95); font-size:12px; letter-spacing:0.14em; font-weight:700; margin-bottom: 14px;">Change 02</span>
+                                    <h3 style="color:#fff; font-size: 24px; font-weight: 700; margin-bottom: 14px; line-height: 1.35;">어려운 공정 분석이, 쉬운 설명이 됩니다.</h3>
+                                    <p style="color: rgba(255,255,255,0.65); font-size: 14.5px; line-height: 1.8; margin: 0 0 auto;">숫자와 그래프만 늘어놓던 모니터링은 그만.<br>공정의 '행동'을 AI가 읽어, 누구나 이해할 수 있는 말로 설명합니다.</p>
+                                    <div style="display: flex; gap: 6px; flex-wrap: wrap; padding-top: 24px; margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.08);">
+                                        <span style="padding: 5px 10px; background: rgba(9,88,217,0.18); color: #7ab8ff; font-size: 11px; letter-spacing: 0.03em; border-radius: 4px; font-weight: 600;">03 Analyzer</span>
+                                        <span style="padding: 5px 10px; background: rgba(9,88,217,0.18); color: #7ab8ff; font-size: 11px; letter-spacing: 0.03em; border-radius: 4px; font-weight: 600;">04 AI</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 변화 03 -->
+                            <div class="col-lg-4" style="padding: 0 10px;">
+                                <div style="padding: 32px 28px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; display: flex; flex-direction: column;">
+                                    <span style="color: rgba(77,148,255,0.95); font-size:12px; letter-spacing:0.14em; font-weight:700; margin-bottom: 14px;">Change 03</span>
+                                    <h3 style="color:#fff; font-size: 24px; font-weight: 700; margin-bottom: 14px; line-height: 1.35;">복잡한 판단은, AI가 대신합니다.</h3>
+                                    <p style="color: rgba(255,255,255,0.65); font-size: 14.5px; line-height: 1.8; margin: 0 0 auto;">사람이 직접 따지던 제어 로직은 AI가 가시화하고 판단합니다.<br>검증된 결정만 안전 구조 위에서 자동 실행되어, 운영이 단순해집니다.</p>
+                                    <div style="display: flex; gap: 6px; flex-wrap: wrap; padding-top: 24px; margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.08);">
+                                        <span style="padding: 5px 10px; background: rgba(9,88,217,0.18); color: #7ab8ff; font-size: 11px; letter-spacing: 0.03em; border-radius: 4px; font-weight: 600;">04 AI</span>
+                                        <span style="padding: 5px 10px; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.75); font-size: 11px; letter-spacing: 0.03em; border-radius: 4px; font-weight: 600;">L2 Safety</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <style>
+                    @media (max-width: 991px) {
+                        .sf-module-grid {
+                            grid-template-columns: repeat(2, 1fr) !important;
+                        }
+                    }
+                    @media (max-width: 480px) {
+                        .sf-module-grid {
+                            grid-template-columns: 1fr !important;
+                        }
+                    }
+                </style>
+
+
+                <!-- ② 모듈 탭 내비게이션 (sticky) -->
+                <div id="sf-tab-nav" style="position: sticky; top: 0; z-index: 100; background: #0a0b0d; border-bottom: 1px solid rgba(255,255,255,0.14);">
                     <div class="container container-1720">
                         <div style="display: flex; gap: 0;">
-                            <a href="#sf-hmi" class="sf-tab-link sf-tab-active" style="display:inline-flex; align-items:center; padding:22px 40px; color:#fff; font-size:15px; font-weight:700; letter-spacing:0.04em; text-decoration:none; border-bottom:3px solid #0958d9; transition:all 0.25s;">
-                                HMI
+                            <a href="#sf-capture" class="sf-tab-link sf-tab-active" style="display:inline-flex; align-items:center; padding:22px 32px; color:#fff; font-size:14px; font-weight:700; letter-spacing:0.04em; text-decoration:none; border-bottom:3px solid #0958d9; transition:all 0.25s;">
+                                <span style="opacity:0.55; margin-right:8px; font-size:11px;">01</span> Capture
                             </a>
-                            <a href="#sf-bigdata" class="sf-tab-link" style="display:inline-flex; align-items:center; padding:22px 40px; color: rgba(255,255,255,0.85); font-size:15px; font-weight:700; letter-spacing:0.04em; text-decoration:none; border-bottom:3px solid transparent; transition:all 0.25s;"
-                               onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="if(!this.classList.contains('sf-tab-active'))this.style.color='rgba(255,255,255,0.4)'">
-                                Big Data
+                            <a href="#sf-scada" class="sf-tab-link" style="display:inline-flex; align-items:center; padding:22px 32px; color: rgba(255,255,255,0.5); font-size:14px; font-weight:700; letter-spacing:0.04em; text-decoration:none; border-bottom:3px solid transparent; transition:all 0.25s;">
+                                <span style="opacity:0.55; margin-right:8px; font-size:11px;">02</span> SCADA
                             </a>
-                            <a href="#sf-daq" class="sf-tab-link" style="display:inline-flex; align-items:center; padding:22px 40px; color: rgba(255,255,255,0.85); font-size:15px; font-weight:700; letter-spacing:0.04em; text-decoration:none; border-bottom:3px solid transparent; transition:all 0.25s;"
-                               onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="if(!this.classList.contains('sf-tab-active'))this.style.color='rgba(255,255,255,0.4)'">
-                                DAQ
+                            <a href="#sf-analyzer" class="sf-tab-link" style="display:inline-flex; align-items:center; padding:22px 32px; color: rgba(255,255,255,0.5); font-size:14px; font-weight:700; letter-spacing:0.04em; text-decoration:none; border-bottom:3px solid transparent; transition:all 0.25s;">
+                                <span style="opacity:0.55; margin-right:8px; font-size:11px;">03</span> Analyzer
+                            </a>
+                            <a href="#sf-ai" class="sf-tab-link" style="display:inline-flex; align-items:center; padding:22px 32px; color: rgba(255,255,255,0.5); font-size:14px; font-weight:700; letter-spacing:0.04em; text-decoration:none; border-bottom:3px solid transparent; transition:all 0.25s;">
+                                <span style="opacity:0.55; margin-right:8px; font-size:11px;">04</span> AI
                             </a>
                         </div>
                     </div>
@@ -396,7 +493,7 @@
                 <script>
                 (function(){
                     var tabs = document.querySelectorAll('.sf-tab-link');
-                    var sections = ['sf-hmi','sf-bigdata','sf-daq'];
+                    var sections = ['sf-capture','sf-scada','sf-analyzer','sf-ai'];
                     window.addEventListener('scroll', function(){
                         var scrollY = window.scrollY + 120;
                         sections.forEach(function(id, i){
@@ -419,401 +516,394 @@
                 })();
                 </script>
 
-                <!-- ③ HMI 섹션 -->
-                <div id="sf-hmi" style="background-color: #0e0f11; padding: 0;">
-                    <div style="padding: 100px 0 0;">
+                <!-- ③ Capture 모듈 -->
+                <div id="sf-capture" style="background-color: #0e0f11; padding: 120px 0;">
                     <div class="container container-1720">
+
+                        <!-- 모듈 오프너 -->
+                        <div style="padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 80px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap: 32px;">
+                            <div style="display:flex; align-items:center; gap: 28px; flex-wrap:wrap;">
+                                <span class="sf-module-num">01</span>
+                                <div>
+                                    <p style="color: rgba(255,255,255,0.5); font-size: 12px; letter-spacing: 0.22em; text-transform:uppercase; margin: 0 0 8px;">Module One</p>
+                                    <p style="color: #fff; font-size: 28px; font-weight: 700; margin: 0 0 4px; letter-spacing: -0.01em; line-height: 1.2;">InsTegra Capture</p>
+                                    <p style="color: rgba(255,255,255,0.5); font-size: 14px; margin: 0; letter-spacing: 0.02em;">Data Acquisition</p>
+                                </div>
+                            </div>
+                            <div style="text-align: right;">
+                                <p style="color: rgba(255,255,255,0.3); font-size: 11px; letter-spacing: 0.2em; text-transform:uppercase; margin: 0;">InsTegra Platform</p>
+                                <p style="color: rgba(77,148,255,0.9); font-size: 14px; margin: 10px 0 0; font-weight: 700; letter-spacing: 0.04em;">01 <span style="color:rgba(255,255,255,0.25); font-weight: 500;">/ 04</span></p>
+                            </div>
+                        </div>
+
                         <!-- 섹션 헤더 -->
-                        <div style="margin-bottom: 80px; max-width: 760px;">
-                            <p style="color: rgba(255,255,255,0.82); font-size:11px; letter-spacing:0.2em; text-transform:uppercase; margin:0 0 10px;">Solution 01</p>
-                            <p style="color:#fff; font-size:18px; font-weight:800; letter-spacing:0.04em; margin:0 0 32px;">HMI</p>
-                            <h3 style="color: #fff; font-size: 48px; font-weight: 700; margin-bottom: 24px; line-height: 1.15;">공장 가동 현황,<br>한 화면에서 제어합니다.</h3>
-                            <p style="color: rgba(255,255,255,0.90); font-size: 16px; line-height: 1.8; margin: 0;">설비 상태를 실시간으로 모니터링하고, 에러 발생 위치를 즉시 확인하며, 현장에 가지 않아도 작업 지시를 내릴 수 있습니다.</p>
+                        <div style="max-width: 760px; margin-bottom: 64px;">
+                            <h3 style="color: #fff; font-size: 48px; font-weight: 700; margin-bottom: 20px; line-height: 1.15;">제각각 쓰던 설비,<br>하나의 언어로 펼칩니다.</h3>
+                            <p style="color: rgba(255,255,255,0.75); font-size: 16px; line-height: 1.8; margin: 0;">PLC·센서·MES·ERP 서로 다른 형식으로 흩어져 있던 설비 신호와 비즈니스 데이터를,<br>실시간으로 하나의 플랫폼에 모아 보여드립니다.</p>
                         </div>
 
-                        <!-- 이미지 영역 -->
-                        <div class="row gx-20" style="margin-bottom: 0;">
-                            <div class="col-lg-12">
-                                <div style="overflow: hidden; border-radius: 12px; margin-bottom: 20px; aspect-ratio: 16/7; background: #1a1a1c;">
-                                    <img data-speed=".8" src="assets/img/portfolio/portfolio-details-1/hmi_01.jpg" alt="HMI 대시보드" style="width:100%; height:130%; object-fit:cover; object-position:center;">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div style="overflow: hidden; border-radius: 12px; margin-bottom: 20px; aspect-ratio: 3/2; background: #1a1a1c;">
-                                    <img data-speed=".8" src="assets/img/portfolio/portfolio-details-1/hmi_02.jpg" alt="HMI 공정 모니터링" style="width:100%; height:130%; object-fit:cover; object-position:center;">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div style="overflow: hidden; border-radius: 12px; margin-bottom: 20px; aspect-ratio: 3/2; background: #1a1a1c;">
-                                    <img data-speed=".8" src="assets/img/portfolio/portfolio-details-1/hmi_03.jpg" alt="HMI 작업지시" style="width:100%; height:130%; object-fit:cover; object-position:center;">
-                                </div>
-                            </div>
+                        <!-- 히어로 이미지 -->
+                        <div style="overflow: hidden; border-radius: 12px; background: #1a1a1c; margin-bottom: 80px;">
+                            <img src="assets/img/portfolio/portfolio-details-1/InsTegraPlatform_02.jpg" alt="InsTegra Capture" style="width:100%; height:auto; display:block;">
                         </div>
-                    </div>
 
-                    <!-- HMI 핵심 기능 3개 카드 -->
-                    <div style="background-color: #111113; padding: 100px 0; margin-top: 0;">
-                        <div class="container container-1720">
-                            <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 48px;">Core Features</p>
-                            <div class="row" style="margin: 0 0 0;">
-                                <!-- 실시간 설비 모니터링 -->
-                                <div class="col-lg-4" style="padding: 0;">
-                                    <div style="padding: 40px 36px; border: 1px solid rgba(255,255,255,0.25); height: 100%;">
-                                        <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.12); border-radius: 8px; display:flex; align-items:center; justify-content:center;">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0958d9" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><circle cx="12" cy="10" r="2" fill="#0958d9" stroke="none"/></svg>
-                                        </div>
-                                        <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 12px;">실시간 설비 상태 모니터링</h4>
-                                        <p style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.8; margin-bottom: 20px;">라인별 설비의 가동·정지·에러 상태를 한 화면에서 확인합니다. 이상 발생 시 즉각 알림이 전달되어 빠른 대응이 가능합니다.</p>
-                                        <div style="border-top: 1px solid rgba(255,255,255,0.22); padding-top: 18px;">
-                                            <p style="color: rgba(255,255,255,0.82); font-size: 12px; margin: 0; line-height: 1.8;">가동률 실시간 집계 · 설비별 상태 표시 · 이상 알림</p>
-                                        </div>
+                        <!-- 핵심 기능 3개 -->
+                        <div class="row" style="margin-bottom: 64px;">
+                            <div class="col-lg-4">
+                                <div style="padding: 36px 32px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%;">
+                                    <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.15); border-radius: 10px; display:flex; align-items:center; justify-content:center;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><rect x="2" y="4" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="6" rx="2"/><line x1="6" y1="8" x2="6" y2="8.01"/><line x1="6" y1="17" x2="6" y2="17.01"/></svg>
                                     </div>
+                                    <h4 style="color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 10px;">어떤 프로토콜이든 OK</h4>
+                                    <p style="color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.7; margin: 0 0 16px;">MELSEC·SIEMENS·CIMON·GLOFA·MODBUS·WebSocket까지,<br>제조사·OS 제약 없이 연결됩니다.</p>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 12px; letter-spacing:0.04em; margin: 0;">Windows · macOS · Linux</p>
                                 </div>
-                                <!-- 에러 위치 즉시 감지 -->
-                                <div class="col-lg-4" style="padding: 0;">
-                                    <div style="padding: 40px 36px; border: 1px solid rgba(255,255,255,0.25); border-left: none; height: 100%;">
-                                        <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.12); border-radius: 8px; display:flex; align-items:center; justify-content:center;">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0958d9" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                                        </div>
-                                        <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 12px;">에러 발생 위치 즉시 감지</h4>
-                                        <p style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.8; margin-bottom: 20px;">공정 도면 위에 에러 발생 위치를 시각화합니다. 어느 라인의 어떤 설비에서 무슨 에러가 발생했는지 직관적으로 파악합니다.</p>
-                                        <div style="border-top: 1px solid rgba(255,255,255,0.22); padding-top: 18px;">
-                                            <p style="color: rgba(255,255,255,0.82); font-size: 12px; margin: 0; line-height: 1.8;">에러 코드 분류 · 위치 시각화 · 이력 기록</p>
-                                        </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div style="padding: 36px 32px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%;">
+                                    <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.15); border-radius: 10px; display:flex; align-items:center; justify-content:center;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M6 9v6a3 3 0 0 0 3 3h6"/></svg>
                                     </div>
+                                    <h4 style="color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 10px;">현장과 비즈니스를 한 번에</h4>
+                                    <p style="color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.7; margin: 0 0 16px;">설비 신호(Micro)와 MES·QMS·ERP(Macro)를 실시간으로 엮어,<br>공장의 상황을 비즈니스 맥락으로 이해합니다.</p>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 12px; letter-spacing:0.04em; margin: 0;">Micro × Macro Data</p>
                                 </div>
-                                <!-- 작업 지시 발행 -->
-                                <div class="col-lg-4" style="padding: 0;">
-                                    <div style="padding: 40px 36px; border: 1px solid rgba(255,255,255,0.25); border-left: none; height: 100%;">
-                                        <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.12); border-radius: 8px; display:flex; align-items:center; justify-content:center;">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0958d9" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                                        </div>
-                                        <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 12px;">화면에서 바로 작업 지시</h4>
-                                        <p style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.8; margin-bottom: 20px;">현장에 가지 않아도 HMI 화면에서 작업 지시를 발행하고 완료 여부를 확인합니다. 지시 이력은 자동으로 기록됩니다.</p>
-                                        <div style="border-top: 1px solid rgba(255,255,255,0.22); padding-top: 18px;">
-                                            <p style="color: rgba(255,255,255,0.82); font-size: 12px; margin: 0; line-height: 1.8;">작업 지시 발행 · 완료 확인 · 이력 자동 저장</p>
-                                        </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div style="padding: 36px 32px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%;">
+                                    <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.15); border-radius: 10px; display:flex; align-items:center; justify-content:center;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/></svg>
                                     </div>
+                                    <h4 style="color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 10px;">Lot 단위까지 추적</h4>
+                                    <p style="color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.7; margin: 0 0 16px;">Log 기반 Lot Tracking으로 품질 이슈가 발생했을 때<br>어디서 무엇이 잘못됐는지 빠르게 찾습니다.</p>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 12px; letter-spacing:0.04em; margin: 0;">1 Transaction · Multi Interface</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- HMI 강조 블록 -->
-                    <div style="background: #0e0f11; padding: 80px 0;">
-                        <div class="container container-1720">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6">
-                                    <p style="color: rgba(255,255,255,0.85); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px;">HMI · 원격 제어</p>
-                                    <h3 style="color: #fff; font-size: 32px; font-weight: 700; margin-bottom: 16px; line-height: 1.3;">현장에 가지 않아도 됩니다.</h3>
-                                    <p style="color: rgba(255,255,255,0.90); font-size: 15px; line-height: 1.8; margin: 0;">공장 내 모든 설비의 상태를 PC·태블릿 어디서든 확인하고 제어합니다.<br> 이상 발생 시 담당자에게 즉시 알림이 전달되고, 화면에서 바로 조치를 취할 수 있습니다.</p>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div style="padding-left: 48px;">
-                                        <div style="border-radius: 8px; overflow: hidden; aspect-ratio: 16/10; background: #1a1a1c;">
-                                            <img src="assets/img/portfolio/portfolio-details-1/hmi_04.jpg" alt="HMI 원격 제어" style="width:100%; height:100%; object-fit:cover; object-position:center;">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    </div> <!-- /padding wrapper -->
                 </div>
 
-                <!-- ④ 빅데이터 섹션 -->
-                <div id="sf-bigdata" style="background-color: #111113; padding: 0;">
-                    <div style="padding: 100px 0 0;">
+                <!-- ④ SCADA 모듈 -->
+                <div id="sf-scada" style="background-color: #111113; padding: 120px 0;">
                     <div class="container container-1720">
-                        <!-- 섹션 헤더 -->
-                        <div style="margin-bottom: 80px; max-width: 760px;">
-                            <p style="color: rgba(255,255,255,0.82); font-size:11px; letter-spacing:0.2em; text-transform:uppercase; margin:0 0 10px;">Solution 02</p>
-                            <p style="color:#fff; font-size:18px; font-weight:800; letter-spacing:0.04em; margin:0 0 32px;">Big Data</p>
-                            <h3 style="color: #fff; font-size: 48px; font-weight: 700; margin-bottom: 24px; line-height: 1.15;">공장 안 모든 데이터가<br>실시간 차트가 됩니다.</h3>
-                            <p style="color: rgba(255,255,255,0.90); font-size: 16px; line-height: 1.8; margin: 0;">수백 개의 공정 태그를 실시간으로 수집하고 그래프화합니다.<br> 원하는 지표를 자유롭게 조합해 비교·분석하고 이상 패턴을 사전에 감지합니다.</p>
+
+                        <!-- 모듈 오프너 -->
+                        <div style="padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 80px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap: 32px;">
+                            <div style="display:flex; align-items:center; gap: 28px; flex-wrap:wrap;">
+                                <span class="sf-module-num">02</span>
+                                <div>
+                                    <p style="color: rgba(255,255,255,0.5); font-size: 12px; letter-spacing: 0.22em; text-transform:uppercase; margin: 0 0 8px;">Module Two</p>
+                                    <p style="color: #fff; font-size: 28px; font-weight: 700; margin: 0 0 4px; letter-spacing: -0.01em; line-height: 1.2;">InsTegra SCADA</p>
+                                    <p style="color: rgba(255,255,255,0.5); font-size: 14px; margin: 0; letter-spacing: 0.02em;">Supervisory Control & HMI</p>
+                                </div>
+                            </div>
+                            <div style="text-align: right;">
+                                <p style="color: rgba(255,255,255,0.3); font-size: 11px; letter-spacing: 0.2em; text-transform:uppercase; margin: 0;">InsTegra Platform</p>
+                                <p style="color: rgba(77,148,255,0.9); font-size: 14px; margin: 10px 0 0; font-weight: 700; letter-spacing: 0.04em;">02 <span style="color:rgba(255,255,255,0.25); font-weight: 500;">/ 04</span></p>
+                            </div>
                         </div>
 
-                        <!-- 이미지 영역 -->
-                        <div class="row gx-20" style="margin-bottom: 0;">
-                            <div class="col-lg-12">
-                                <div style="overflow: hidden; border-radius: 12px; margin-bottom: 20px; aspect-ratio: 16/7; background: #1a1a1c;">
-                                    <img data-speed=".8" src="assets/img/portfolio/portfolio-details-1/bdp_01.jpg" alt="빅데이터 대시보드" style="width:100%; height:130%; object-fit:cover; object-position:center;">
+                        <!-- 섹션 헤더 -->
+                        <div style="max-width: 760px; margin-bottom: 64px;">
+                            <h3 style="color: #fff; font-size: 48px; font-weight: 700; margin-bottom: 20px; line-height: 1.15;">눈앞에서 확인하고,<br>바로 실행합니다.</h3>
+                            <p style="color: rgba(255,255,255,0.75); font-size: 16px; line-height: 1.8; margin: 0;">설치 부담 없는 웹 기반 SCADA/HMI로 공장 상태가 브라우저에 펼쳐집니다.<br>어려운 제어는 안전 구조가 대신하고, 누구나 쉽게 운영할 수 있습니다.</p>
+                        </div>
+
+                        <!-- 히어로 이미지 -->
+                        <div style="overflow: hidden; border-radius: 12px; aspect-ratio: 16/9; background: #1a1a1c; margin-bottom: 80px;">
+                            <img src="assets/img/portfolio/portfolio-details-1/hmi_01.jpg" alt="SCADA 대시보드" style="width:100%; height:100%; object-fit:cover; object-position:center;">
+                        </div>
+
+                        <!-- 핵심 기능 3개 -->
+                        <div class="row" style="margin-bottom: 64px;">
+                            <div class="col-lg-4">
+                                <div style="padding: 36px 32px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%;">
+                                    <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.15); border-radius: 10px; display:flex; align-items:center; justify-content:center;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+                                    </div>
+                                    <h4 style="color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 10px;">설치 없는 웹 대시보드</h4>
+                                    <p style="color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.7; margin: 0 0 16px;">클라이언트 설치도, 자리 제한도 없습니다.<br>현장·사무실·출장지 어디서든 같은 화면을 봅니다.</p>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 12px; letter-spacing:0.04em; margin: 0;">Web-based · Zero Install</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div style="padding: 36px 32px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%;">
+                                    <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.15); border-radius: 10px; display:flex; align-items:center; justify-content:center;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><path d="M12 2L4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z"/></svg>
+                                    </div>
+                                    <h4 style="color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 10px;">안전한 L2 기반 제어</h4>
+                                    <p style="color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.7; margin: 0 0 16px;">Setpoint·Mode 변경은 L2 안전 구조를 반드시 거칩니다.<br>자동·수동 제어 상태가 명확히 구분됩니다.</p>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 12px; letter-spacing:0.04em; margin: 0;">L2 Safety · Audit Log</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div style="padding: 36px 32px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%;">
+                                    <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.15); border-radius: 10px; display:flex; align-items:center; justify-content:center;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                    </div>
+                                    <h4 style="color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 10px;">알람·이력 통합 추적</h4>
+                                    <p style="color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.7; margin: 0 0 16px;">발생 → 조치 → 해제 흐름을 자동 기록.<br>사고가 나도 원인까지 되돌아가 추적할 수 있습니다.</p>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 12px; letter-spacing:0.04em; margin: 0;">Alarm · Event · History</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2컬럼 이미지 갤러리 -->
+                        <div class="row gx-24">
+                            <div class="col-lg-6">
+                                <div style="overflow: hidden; border-radius: 12px; aspect-ratio: 5/4; background: #1a1a1c; margin-bottom: 24px;">
+                                    <img src="assets/img/portfolio/portfolio-details-1/hmi_02.jpg" alt="SCADA 공정 모니터링" style="width:100%; height:100%; object-fit:cover; object-position:center;">
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div style="overflow: hidden; border-radius: 12px; margin-bottom: 20px; aspect-ratio: 16/10; background: #1a1a1c;">
-                                    <img data-speed=".8" src="assets/img/portfolio/portfolio-details-1/bdp_02.jpg" alt="빅데이터 차트" style="width:100%; height:130%; object-fit:cover; object-position:center;">
+                                <div style="overflow: hidden; border-radius: 12px; aspect-ratio: 5/4; background: #1a1a1c; margin-bottom: 24px;">
+                                    <img src="assets/img/portfolio/portfolio-details-1/hmi_03.jpg" alt="SCADA 제어 화면" style="width:100%; height:100%; object-fit:cover; object-position:center;">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ⑤ Analyzer 모듈 -->
+                <div id="sf-analyzer" style="background-color: #0e0f11; padding: 120px 0;">
+                    <div class="container container-1720">
+
+                        <!-- 모듈 오프너 -->
+                        <div style="padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 80px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap: 32px;">
+                            <div style="display:flex; align-items:center; gap: 28px; flex-wrap:wrap;">
+                                <span class="sf-module-num">03</span>
+                                <div>
+                                    <p style="color: rgba(255,255,255,0.5); font-size: 12px; letter-spacing: 0.22em; text-transform:uppercase; margin: 0 0 8px;">Module Three</p>
+                                    <p style="color: #fff; font-size: 28px; font-weight: 700; margin: 0 0 4px; letter-spacing: -0.01em; line-height: 1.2;">InsTegra Analyzer</p>
+                                    <p style="color: rgba(255,255,255,0.5); font-size: 14px; margin: 0; letter-spacing: 0.02em;">Analytics & Diagnostics</p>
+                                </div>
+                            </div>
+                            <div style="text-align: right;">
+                                <p style="color: rgba(255,255,255,0.3); font-size: 11px; letter-spacing: 0.2em; text-transform:uppercase; margin: 0;">InsTegra Platform</p>
+                                <p style="color: rgba(77,148,255,0.9); font-size: 14px; margin: 10px 0 0; font-weight: 700; letter-spacing: 0.04em;">03 <span style="color:rgba(255,255,255,0.25); font-weight: 500;">/ 04</span></p>
+                            </div>
+                        </div>
+
+                        <!-- 섹션 헤더 -->
+                        <div style="max-width: 760px; margin-bottom: 64px;">
+                            <h3 style="color: #fff; font-size: 48px; font-weight: 700; margin-bottom: 20px; line-height: 1.15;">보이지 않던 '이유'를,<br>쉬운 말로 풀어냅니다.</h3>
+                            <p style="color: rgba(255,255,255,0.75); font-size: 16px; line-height: 1.8; margin: 0;">숫자만 늘어놓던 분석은 끝. 공정의 움직임(Behavior)을 읽어,<br>왜 그런 결과가 나왔고 어디서 문제가 시작됐는지 누구나 이해할 수 있게 설명합니다.</p>
+                        </div>
+
+                        <!-- 히어로 이미지 -->
+                        <div style="overflow: hidden; border-radius: 12px; aspect-ratio: 16/9; background: #1a1a1c; margin-bottom: 80px;">
+                            <img src="assets/img/portfolio/portfolio-details-1/bdp_01.jpg" alt="Analyzer 대시보드" style="width:100%; height:100%; object-fit:cover; object-position:center;">
+                        </div>
+
+                        <!-- 핵심 기능 3개 -->
+                        <div class="row" style="margin-bottom: 64px;">
+                            <div class="col-lg-4">
+                                <div style="padding: 36px 32px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%;">
+                                    <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.15); border-radius: 10px; display:flex; align-items:center; justify-content:center;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    </div>
+                                    <h4 style="color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 10px;">지금 이 순간의 진단</h4>
+                                    <p style="color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.7; margin: 0 0 16px;">운영 중인 공정과 설비를 실시간 분석해 이상 징후를 조기 감지하고,<br>즉각적인 판단을 지원합니다.</p>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 12px; letter-spacing:0.04em; margin: 0;">Real-time Diagnostics</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div style="padding: 36px 32px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%;">
+                                    <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.15); border-radius: 10px; display:flex; align-items:center; justify-content:center;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><polyline points="22 7 13 16 8 11 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                                    </div>
+                                    <h4 style="color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 10px;">정상 대비 변화를 추적</h4>
+                                    <p style="color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.7; margin: 0 0 16px;">장·단기 이력과 트렌드를 분석해 '평소와 다른 움직임'을 포착합니다.<br>불량·정지 원인의 근거 데이터가 쌓입니다.</p>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 12px; letter-spacing:0.04em; margin: 0;">History · Trend Analysis</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div style="padding: 36px 32px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%;">
+                                    <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.15); border-radius: 10px; display:flex; align-items:center; justify-content:center;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><path d="M9 11H5a2 2 0 0 0-2 2v7h6v-7zm10-6h-4v16h6V7a2 2 0 0 0-2-2zm-5-3h-4v19h4V2z"/></svg>
+                                    </div>
+                                    <h4 style="color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 10px;">작업 단위로 비교</h4>
+                                    <p style="color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.7; margin: 0 0 16px;">작업지시·LOT·제품 단위로 조건·레시피·결과 상관관계를 분석해<br>최적의 표준 조건을 찾아냅니다.</p>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 12px; letter-spacing:0.04em; margin: 0;">Work Order · LOT Context</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2컬럼 이미지 갤러리 -->
+                        <div class="row gx-24">
+                            <div class="col-lg-6">
+                                <div style="overflow: hidden; border-radius: 12px; aspect-ratio: 5/4; background: #1a1a1c; margin-bottom: 24px;">
+                                    <img src="assets/img/portfolio/portfolio-details-1/bdp_02.jpg" alt="Analyzer 트렌드 분석" style="width:100%; height:100%; object-fit:cover; object-position:center;">
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div style="overflow: hidden; border-radius: 12px; margin-bottom: 20px; aspect-ratio: 16/10; background: #1a1a1c;">
-                                    <img data-speed=".8" src="assets/img/portfolio/portfolio-details-1/bdp_03.jpg" alt="빅데이터 비교 분석" style="width:100%; height:130%; object-fit:cover; object-position:center;">
+                                <div style="overflow: hidden; border-radius: 12px; aspect-ratio: 5/4; background: #1a1a1c; margin-bottom: 24px;">
+                                    <img src="assets/img/portfolio/portfolio-details-1/bdp_03.jpg" alt="Analyzer 비교 분석" style="width:100%; height:100%; object-fit:cover; object-position:center;">
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- 빅데이터 핵심 기능 3개 카드 -->
-                    <div style="background-color: #0e0f11; padding: 100px 0; margin-top: 0;">
-                        <div class="container container-1720">
-                            <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 48px;">Core Features</p>
-                            <div class="row" style="margin: 0;">
-                                <!-- 전 공정 실시간 그래프화 -->
-                                <div class="col-lg-4" style="padding: 0;">
-                                    <div style="padding: 40px 36px; border: 1px solid rgba(255,255,255,0.25); height: 100%;">
-                                        <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.15); border-radius: 8px; display:flex; align-items:center; justify-content:center;">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                                        </div>
-                                        <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 12px;">전 공정 데이터 실시간 그래프화</h4>
-                                        <p style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.8; margin-bottom: 20px;">공장 내 가동되는 모든 설비의 데이터를 실시간으로 수집하고 즉시 차트로 시각화합니다. 수백 개의 태그를 동시에 추적합니다.</p>
-                                        <div style="border-top: 1px solid rgba(255,255,255,0.22); padding-top: 18px;">
-                                            <p style="color: rgba(255,255,255,0.82); font-size: 12px; margin: 0; line-height: 1.8;">실시간 태그 수집 · 자동 차트 생성 · 다채널 동시 표시</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 다중 지표 비교 조회 -->
-                                <div class="col-lg-4" style="padding: 0;">
-                                    <div style="padding: 40px 36px; border: 1px solid rgba(255,255,255,0.25); border-left: none; height: 100%;">
-                                        <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.15); border-radius: 8px; display:flex; align-items:center; justify-content:center;">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-                                        </div>
-                                        <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 12px;">다중 지표 비교·조회</h4>
-                                        <p style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.8; margin-bottom: 20px;">기간, 라인, 설비를 자유롭게 조합해 원하는 데이터를 즉시 조회하고 비교합니다. 과거 데이터와 현재 트렌드를 나란히 확인합니다.</p>
-                                        <div style="border-top: 1px solid rgba(255,255,255,0.22); padding-top: 18px;">
-                                            <p style="color: rgba(255,255,255,0.82); font-size: 12px; margin: 0; line-height: 1.8;">기간별 조회 · 설비 간 비교 · 커스텀 대시보드</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 이상 패턴 감지 -->
-                                <div class="col-lg-4" style="padding: 0;">
-                                    <div style="padding: 40px 36px; border: 1px solid rgba(255,255,255,0.25); border-left: none; height: 100%;">
-                                        <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.15); border-radius: 8px; display:flex; align-items:center; justify-content:center;">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                                        </div>
-                                        <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 12px;">이상 패턴 감지 및 추세 분석</h4>
-                                        <p style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.8; margin-bottom: 20px;">데이터 패턴에서 이상 징후를 사전에 감지합니다. 추세 분석을 통해 설비 이상을 예측하고 예방적 유지보수를 지원합니다.</p>
-                                        <div style="border-top: 1px solid rgba(255,255,255,0.22); padding-top: 18px;">
-                                            <p style="color: rgba(255,255,255,0.82); font-size: 12px; margin: 0; line-height: 1.8;">이상 감지 알림 · 추세 예측 · 예방 유지보수 지원</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-
-                    <!-- 빅데이터 강조 블록 -->
-                    <div style="background: #111113; padding: 80px 0;">
-                        <div class="container container-1720">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6">
-                                    <p style="color: rgba(255,255,255,0.85); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px;">Big Data · 실시간 시각화</p>
-                                    <h3 style="color: #fff; font-size: 32px; font-weight: 700; margin-bottom: 16px; line-height: 1.3;">수백 개의 태그,<br>하나의 대시보드로.</h3>
-                                    <p style="color: rgba(255,255,255,0.90); font-size: 15px; line-height: 1.8; margin: 0;">설비마다 쌓이는 방대한 데이터를 하나의 통합 대시보드에서 확인합니다.<br> 원하는 지표를 자유롭게 조합하고, 이상 발생 시 즉각 대응하세요.</p>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div style="padding-left: 48px;">
-                                        <div style="border-radius: 8px; overflow: hidden; aspect-ratio: 16/10; background: #1a1a1c;">
-                                            <img src="assets/img/portfolio/portfolio-details-1/bdp_04.jpg" alt="빅데이터 대시보드" style="width:100%; height:100%; object-fit:cover; object-position:center;">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div> <!-- /padding wrapper -->
                 </div>
 
-                <!-- ⑤ DAQ 섹션 -->
-                <div id="sf-daq" style="background-color: #0e0f11; padding: 0;">
-                    <div style="padding: 100px 0 0;">
+                <!-- ⑥ AI 모듈 -->
+                <div id="sf-ai" style="background-color: #111113; padding: 120px 0;">
                     <div class="container container-1720">
+
+                        <!-- 모듈 오프너 -->
+                        <div style="padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 80px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap: 32px;">
+                            <div style="display:flex; align-items:center; gap: 28px; flex-wrap:wrap;">
+                                <span class="sf-module-num">04</span>
+                                <div>
+                                    <p style="color: rgba(255,255,255,0.5); font-size: 12px; letter-spacing: 0.22em; text-transform:uppercase; margin: 0 0 8px;">Module Four</p>
+                                    <p style="color: #fff; font-size: 28px; font-weight: 700; margin: 0 0 4px; letter-spacing: -0.01em; line-height: 1.2;">InsTegra AI</p>
+                                    <p style="color: rgba(255,255,255,0.5); font-size: 14px; margin: 0; letter-spacing: 0.02em;">LLM & Autonomous Control</p>
+                                </div>
+                            </div>
+                            <div style="text-align: right;">
+                                <p style="color: rgba(255,255,255,0.3); font-size: 11px; letter-spacing: 0.2em; text-transform:uppercase; margin: 0;">InsTegra Platform</p>
+                                <p style="color: rgba(77,148,255,0.9); font-size: 14px; margin: 10px 0 0; font-weight: 700; letter-spacing: 0.04em;">04 <span style="color:rgba(255,255,255,0.25); font-weight: 500;">/ 04</span></p>
+                            </div>
+                        </div>
+
                         <!-- 섹션 헤더 -->
-                        <div style="margin-bottom: 80px; max-width: 760px;">
-                            <p style="color: rgba(255,255,255,0.82); font-size:11px; letter-spacing:0.2em; text-transform:uppercase; margin:0 0 10px;">Solution 03</p>
-                            <p style="color:#fff; font-size:18px; font-weight:800; letter-spacing:0.04em; margin:0 0 32px;">DAQ</p>
-                            <h3 style="color: #fff; font-size: 48px; font-weight: 700; margin-bottom: 24px; line-height: 1.15;">센서 신호를<br>디지털 데이터로 변환합니다.</h3>
-                            <p style="color: rgba(255,255,255,0.90); font-size: 16px; line-height: 1.8; margin: 0;">온도·압력·전압·전류 등 현장의 아날로그 신호를 신호 조절 장치를 통해 정밀하게 디지털화합니다.<br> 수집된 데이터는 HMI와 빅데이터 시스템으로 즉시 전달됩니다.</p>
+                        <div style="max-width: 820px; margin-bottom: 64px;">
+                            <h3 style="color: #fff; font-size: 48px; font-weight: 700; margin-bottom: 20px; line-height: 1.15;">물어보면 보여주고,<br>맡기면 대신합니다.</h3>
+                            <p style="color: rgba(255,255,255,0.75); font-size: 16px; line-height: 1.8; margin: 0;">LLM과 공정 행동 분석 기술이 만나, 어려운 공정을 자연어로 이해합니다.<br>"왜 이번 배치는 불량이 많지?" 같은 질문에 바로 답하고, 검증된 결정은 스스로 실행합니다.</p>
                         </div>
 
-                        <!-- DAQ 플로우 다이어그램 (SVG 인라인) -->
-                        <div style="margin-bottom: 0; background: #111113; border-radius: 12px; padding: 72px 56px;">
-                            <p style="color: rgba(255,255,255,0.85); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 56px; text-align:center;">DAQ 데이터 흐름</p>
-                            <div style="overflow-x: auto;">
-                                <svg viewBox="0 0 1100 280" xmlns="http://www.w3.org/2000/svg" style="width:100%; min-width:700px; display:block; margin:0 auto;">
+                        <!-- 대화형 AI 프리뷰 (Hero 대체) -->
+                        <div style="background: #0e0f11; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 48px 40px; margin-bottom: 80px;">
+                            <p style="color: rgba(77,148,255,0.9); font-size:11px; letter-spacing:0.18em; text-transform:uppercase; margin:0 0 24px;">AI Conversation Preview</p>
 
-                                    <!-- 연결선 -->
-                                    <line x1="196" y1="140" x2="254" y2="140" stroke="rgba(255,255,255,0.18)" stroke-width="2" stroke-dasharray="5,5"/>
-                                    <line x1="430" y1="140" x2="488" y2="140" stroke="rgba(255,255,255,0.18)" stroke-width="2" stroke-dasharray="5,5"/>
-                                    <line x1="664" y1="140" x2="722" y2="140" stroke="rgba(255,255,255,0.18)" stroke-width="2" stroke-dasharray="5,5"/>
-                                    <line x1="898" y1="140" x2="936" y2="140" stroke="rgba(255,255,255,0.15)" stroke-width="2" stroke-dasharray="5,5"/>
-                                    <!-- 분기선 -->
-                                    <line x1="936" y1="100" x2="966" y2="76" stroke="rgba(255,255,255,0.13)" stroke-width="2" stroke-dasharray="5,5"/>
-                                    <line x1="936" y1="180" x2="966" y2="204" stroke="rgba(255,255,255,0.13)" stroke-width="2" stroke-dasharray="5,5"/>
-
-                                    <!-- 화살표 -->
-                                    <polygon points="254,133 240,140 254,147" fill="rgba(255,255,255,0.3)"/>
-                                    <polygon points="488,133 474,140 488,147" fill="rgba(255,255,255,0.3)"/>
-                                    <polygon points="722,133 708,140 722,147" fill="rgba(255,255,255,0.3)"/>
-                                    <polygon points="936,133 922,140 936,147" fill="rgba(255,255,255,0.3)"/>
-
-                                    <!-- 1. 센서 -->
-                                    <rect x="16" y="80" width="180" height="120" rx="8" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="1.5"/>
-                                    <text x="106" y="118" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="11" font-family="Pretendard, sans-serif" letter-spacing="0.12em">SENSOR</text>
-                                    <text x="106" y="148" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="Pretendard, sans-serif">온도 · 압력</text>
-                                    <text x="106" y="172" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="13" font-family="Pretendard, sans-serif">전압 · 전류 · 진동</text>
-
-                                    <!-- 2. 신호 조절 -->
-                                    <rect x="254" y="80" width="176" height="120" rx="8" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="1.5"/>
-                                    <text x="342" y="118" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="11" font-family="Pretendard, sans-serif" letter-spacing="0.12em">CONDITIONING</text>
-                                    <text x="342" y="148" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="Pretendard, sans-serif">신호 조절</text>
-                                    <text x="342" y="172" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="13" font-family="Pretendard, sans-serif">노이즈 필터링</text>
-
-                                    <!-- 3. A/D 변환 (강조) -->
-                                    <rect x="488" y="80" width="176" height="120" rx="8" fill="rgba(9,88,217,0.1)" stroke="rgba(9,88,217,0.5)" stroke-width="1.5"/>
-                                    <text x="576" y="118" text-anchor="middle" fill="rgba(77,148,255,0.85)" font-size="11" font-family="Pretendard, sans-serif" letter-spacing="0.12em">CONVERSION</text>
-                                    <text x="576" y="148" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="Pretendard, sans-serif">A/D 변환</text>
-                                    <text x="576" y="172" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="13" font-family="Pretendard, sans-serif">디지털 변환</text>
-
-                                    <!-- 4. DAQ 시스템 -->
-                                    <rect x="722" y="80" width="176" height="120" rx="8" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="1.5"/>
-                                    <text x="810" y="118" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="11" font-family="Pretendard, sans-serif" letter-spacing="0.12em">DAQ SYSTEM</text>
-                                    <text x="810" y="148" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="Pretendard, sans-serif">데이터 수집</text>
-                                    <text x="810" y="172" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="13" font-family="Pretendard, sans-serif">저장 · 전송</text>
-
-                                    <!-- 5a. HMI -->
-                                    <rect x="966" y="34" width="118" height="84" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.13)" stroke-width="1.5"/>
-                                    <text x="1025" y="68" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="11" font-family="Pretendard, sans-serif" letter-spacing="0.1em">OUTPUT</text>
-                                    <text x="1025" y="96" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="Pretendard, sans-serif">HMI</text>
-
-                                    <!-- 5b. Big Data -->
-                                    <rect x="966" y="162" width="118" height="84" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.13)" stroke-width="1.5"/>
-                                    <text x="1025" y="196" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="11" font-family="Pretendard, sans-serif" letter-spacing="0.1em">OUTPUT</text>
-                                    <text x="1025" y="224" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="Pretendard, sans-serif">Big Data</text>
-                                </svg>
+                            <!-- 질문 -->
+                            <div style="display:flex; gap:14px; margin-bottom: 22px; align-items:flex-start;">
+                                <div style="width:32px; height:32px; border-radius:50%; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                </div>
+                                <div style="flex:1; padding: 14px 20px; background: rgba(255,255,255,0.04); border-radius: 10px;">
+                                    <p style="color: #fff; font-size: 15px; line-height: 1.6; margin: 0;">오늘 오전 2호 라인 불량률이 왜 높았지?</p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- DAQ 핵심 기능 3개 카드 -->
-                    <div style="background-color: #111113; padding: 100px 0; margin-top: 0;">
-                        <div class="container container-1720">
-                            <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 48px;">Core Features</p>
-                            <div class="row" style="margin: 0;">
-                                <!-- 다종 센서 입력 -->
-                                <div class="col-lg-4" style="padding: 0;">
-                                    <div style="padding: 40px 36px; border: 1px solid rgba(255,255,255,0.25); height: 100%;">
-                                        <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(255,255,255,0.05); border-radius: 8px; display:flex; align-items:center; justify-content:center;">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-                                        </div>
-                                        <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 12px;">다종 센서 입력 지원</h4>
-                                        <p style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.8; margin-bottom: 20px;">온도, 압력, 전압, 전류, 진동 등 다양한 종류의 센서 신호를 단일 시스템에서 동시에 수집합니다. 센서 종류에 관계없이 통합 관리됩니다.</p>
-                                        <div style="border-top: 1px solid rgba(255,255,255,0.22); padding-top: 18px;">
-                                            <p style="color: rgba(255,255,255,0.82); font-size: 12px; margin: 0; line-height: 1.8;">온도 · 압력 · 전압 · 전류 · 진동 · 유량</p>
-                                        </div>
-                                    </div>
+                            <!-- AI 답변 -->
+                            <div style="display:flex; gap:14px; align-items:flex-start;">
+                                <div style="width:32px; height:32px; border-radius:50%; background:rgba(9,88,217,0.3); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7ab8ff" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                                 </div>
-                                <!-- 신호 조절 및 노이즈 필터링 -->
-                                <div class="col-lg-4" style="padding: 0;">
-                                    <div style="padding: 40px 36px; border: 1px solid rgba(255,255,255,0.25); border-left: none; height: 100%;">
-                                        <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(255,255,255,0.05); border-radius: 8px; display:flex; align-items:center; justify-content:center;">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                                        </div>
-                                        <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 12px;">신호 조절 및 노이즈 필터링</h4>
-                                        <p style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.8; margin-bottom: 20px;">아날로그 신호를 증폭·필터링·격리하여 정밀한 데이터를 확보합니다.<br> 전기적 노이즈와 간섭을 차단해 신뢰할 수 있는 측정값을 제공합니다.</p>
-                                        <div style="border-top: 1px solid rgba(255,255,255,0.22); padding-top: 18px;">
-                                            <p style="color: rgba(255,255,255,0.82); font-size: 12px; margin: 0; line-height: 1.8;">신호 증폭 · 노이즈 차단 · 전기 격리</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 실시간 디지털 변환 및 연동 -->
-                                <div class="col-lg-4" style="padding: 0;">
-                                    <div style="padding: 40px 36px; border: 1px solid rgba(255,255,255,0.25); border-left: none; height: 100%;">
-                                        <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(255,255,255,0.05); border-radius: 8px; display:flex; align-items:center; justify-content:center;">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-                                        </div>
-                                        <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 12px;">실시간 변환 · 상위 시스템 연동</h4>
-                                        <p style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.8; margin-bottom: 20px;">아날로그 신호를 고속으로 디지털 변환하여 HMI·빅데이터 시스템에 즉시 전달합니다. 데이터 수집부터 활용까지 끊김 없이 연결됩니다.</p>
-                                        <div style="border-top: 1px solid rgba(255,255,255,0.22); padding-top: 18px;">
-                                            <p style="color: rgba(255,255,255,0.82); font-size: 12px; margin: 0; line-height: 1.8;">고속 A/D 변환 · HMI 연동 · 빅데이터 연동</p>
-                                        </div>
-                                    </div>
+                                <div style="flex:1; padding: 14px 20px; background: rgba(9,88,217,0.08); border: 1px solid rgba(9,88,217,0.25); border-radius: 10px;">
+                                    <p style="color: rgba(255,255,255,0.92); font-size: 15px; line-height: 1.8; margin: 0 0 10px;">오전 09:12~10:40 구간에서 <span style="color:#7ab8ff; font-weight:600;">코팅 두께 변동성이 평소 대비 +38%</span> 커졌습니다. 같은 시간 라인 속도는 정상 범위였으나, 전류값이 순간적으로 하락한 구간이 3회 감지됐습니다.</p>
+                                    <p style="color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.7; margin: 0;">▸ 예상 원인: 전원 공급 불안정 또는 전극 마모 의심<br>▸ 권장 조치: 전극 점검 및 Setpoint 미세 조정 (AI 제안 대기 중)</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- DAQ 강조 블록 -->
-                    <div style="background: #0e0f11; padding: 80px 0;">
-                        <div class="container container-1720">
-                            <div class="row align-items-start">
-                                <div class="col-lg-5" style="padding-top: 12px;">
-                                    <p style="color: rgba(255,255,255,0.85); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px;">DAQ · 통합 연결</p>
-                                    <h3 style="color: #fff; font-size: 32px; font-weight: 700; margin-bottom: 20px; line-height: 1.3;">센서에서 대시보드까지,<br>끊김 없이 연결됩니다.</h3>
-                                    <p style="color: rgba(255,255,255,0.90); font-size: 15px; line-height: 1.8; margin: 0;">DAQ가 수집한 원시 신호는 HMI에서 제어에 활용되고, 빅데이터 시스템에서 분석됩니다. 센서부터 의사결정까지 하나의 데이터 파이프라인으로 통합합니다.</p>
-                                </div>
-                                <div class="col-lg-7">
-                                    <div style="padding-left: 48px; display:flex; gap:0; align-items:stretch;">
-
-                                        <!-- DAQ 카드 -->
-                                        <div style="flex:1; padding:40px 32px 36px; background:#1a1b1f; border:1px solid rgba(255,255,255,0.22); border-radius:10px 0 0 10px; position:relative; overflow:hidden;">
-                                            <div style="position:absolute; top:0; left:0; right:0; height:3px; background:rgba(255,255,255,0.45);"></div>
-                                            <p style="color:rgba(255,255,255,0.55); font-size:11px; letter-spacing:0.18em; text-transform:uppercase; margin:0 0 28px;">STEP 01</p>
-                                            <div style="width:44px; height:44px; background:rgba(255,255,255,0.12); border-radius:8px; display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-                                            </div>
-                                            <p style="color: rgba(255,255,255,0.7); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; margin:0 0 8px;">수집</p>
-                                            <p style="color:#fff; font-size:24px; font-weight:800; margin:0 0 14px; letter-spacing:-0.01em;">DAQ</p>
-                                            <p style="color: rgba(255,255,255,0.88); font-size:13px; line-height:1.7; margin:0;">센서 신호를 디지털로 변환해 수집</p>
-                                        </div>
-
-                                        <!-- 화살표 -->
-                                        <div style="display:flex; align-items:center; padding:0 6px; flex-shrink:0;">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                                        </div>
-
-                                        <!-- HMI 카드 -->
-                                        <div style="flex:1; padding:40px 32px 36px; background:#1a1b1f; border:1px solid rgba(9,88,217,0.7); border-radius:0; position:relative; overflow:hidden;">
-                                            <div style="position:absolute; top:0; left:0; right:0; height:3px; background:#0958d9;"></div>
-                                            <p style="color:rgba(77,148,255,0.9); font-size:11px; letter-spacing:0.18em; text-transform:uppercase; margin:0 0 28px;">STEP 02</p>
-                                            <div style="width:44px; height:44px; background:rgba(9,88,217,0.25); border-radius:8px; display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7ab8ff" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                                            </div>
-                                            <p style="color:rgba(77,148,255,0.9); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; margin:0 0 8px;">제어</p>
-                                            <p style="color:#fff; font-size:24px; font-weight:800; margin:0 0 14px; letter-spacing:-0.01em;">HMI</p>
-                                            <p style="color: rgba(255,255,255,0.88); font-size:13px; line-height:1.7; margin:0;">실시간 설비 모니터링 및 작업 지시</p>
-                                        </div>
-
-                                        <!-- 화살표 -->
-                                        <div style="display:flex; align-items:center; padding:0 6px; flex-shrink:0;">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(77,148,255,0.7)" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                                        </div>
-
-                                        <!-- Big Data 카드 -->
-                                        <div style="flex:1; padding:40px 32px 36px; background:#1a1b1f; border:1px solid rgba(9,88,217,0.7); border-radius:0 10px 10px 0; position:relative; overflow:hidden;">
-                                            <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, #0958d9, #7ab8ff);"></div>
-                                            <p style="color:rgba(77,148,255,0.9); font-size:11px; letter-spacing:0.18em; text-transform:uppercase; margin:0 0 28px;">STEP 03</p>
-                                            <div style="width:44px; height:44px; background:rgba(9,88,217,0.25); border-radius:8px; display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7ab8ff" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                                            </div>
-                                            <p style="color:rgba(77,148,255,0.9); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; margin:0 0 8px;">분석</p>
-                                            <p style="color:#fff; font-size:24px; font-weight:800; margin:0 0 14px; letter-spacing:-0.01em;">Big Data</p>
-                                            <p style="color: rgba(255,255,255,0.88); font-size:13px; line-height:1.7; margin:0;">수집 데이터 시각화·비교·이상 감지</p>
-                                        </div>
-
+                        <!-- 핵심 기능 3개 -->
+                        <div class="row" style="margin-bottom: 0;">
+                            <div class="col-lg-4">
+                                <div style="padding: 36px 32px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%;">
+                                    <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.15); border-radius: 10px; display:flex; align-items:center; justify-content:center;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                                     </div>
+                                    <h4 style="color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 10px;">자연어로 공정 분석</h4>
+                                    <p style="color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.7; margin: 0 0 16px;">현업이 질문하면 LLM이 분석 범위를 이해하고,<br>이상 시점·원인 후보·조치 가이드를 리포트 형태로 자동 생성합니다.</p>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 12px; letter-spacing:0.04em; margin: 0;">LLM-Driven Analysis</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div style="padding: 36px 32px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%;">
+                                    <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.15); border-radius: 10px; display:flex; align-items:center; justify-content:center;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                    </div>
+                                    <h4 style="color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 10px;">행동 기반 전조 감지</h4>
+                                    <p style="color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.7; margin: 0 0 16px;">제어 일관성·변동성·안정성을 평가해 미세한 전조 신호를 포착합니다.<br>불량·정지 이전에 리스크를 알려줍니다.</p>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 12px; letter-spacing:0.04em; margin: 0;">Behavior Analysis</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div style="padding: 36px 32px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%;">
+                                    <div style="width: 44px; height: 44px; margin-bottom: 24px; background: rgba(9,88,217,0.15); border-radius: 10px; display:flex; align-items:center; justify-content:center;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                    </div>
+                                    <h4 style="color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 10px;">단계적 자율 제어</h4>
+                                    <p style="color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.7; margin: 0 0 16px;">승인·검증·롤백·감사 로그가 기본 구조.<br>Shadow Mode로 먼저 검증한 뒤 실제 제어에 반영합니다.</p>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 12px; letter-spacing:0.04em; margin: 0;">L2 Safety · Shadow Mode</p>
                                 </div>
                             </div>
                         </div>
+
                     </div>
-                    </div> <!-- /padding wrapper -->
                 </div>
 
-                <!-- ⑥ CTA -->
+                <!-- ⑦ 자율제어 Level 1~4 -->
+                <div style="background-color: #0e0f11; padding: 120px 0;">
+                    <div class="container container-1720">
+
+                        <div style="max-width: 760px; margin-bottom: 72px;">
+                            <p style="color: rgba(255,255,255,0.55); font-size:11px; letter-spacing:0.2em; text-transform:uppercase; margin:0 0 12px;">Automation Levels</p>
+                            <h2 style="color: #fff; font-size: 40px; font-weight: 700; margin-bottom: 16px; line-height: 1.25;">천천히 시작해도 됩니다.</h2>
+                            <p style="color: rgba(255,255,255,0.75); font-size: 16px; line-height: 1.8; margin: 0;">Shadow Mode로 안전하게 검증하고, 공정별·라인별로 자율화 수준을 다르게 적용할 수 있습니다.<br>Level 1에서 시작해 Level 4까지, 준비된 만큼만 자동화하세요.</p>
+                        </div>
+
+                        <!-- Level 4단계 -->
+                        <div class="row" style="margin: 0;">
+                            <div class="col-lg-3" style="padding: 0 12px;">
+                                <div style="padding: 36px 28px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; position:relative; overflow:hidden;">
+                                    <div style="position:absolute; top:0; left:0; right:0; height:3px; background: rgba(255,255,255,0.2);"></div>
+                                    <p style="color: rgba(255,255,255,0.5); font-size: 11px; letter-spacing:0.18em; margin: 0 0 12px;">LEVEL 1</p>
+                                    <h4 style="color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 12px; line-height: 1.3;">의사결정 지원</h4>
+                                    <p style="color: rgba(255,255,255,0.45); font-size: 11px; letter-spacing:0.06em; margin: 0 0 20px;">Decision Support</p>
+                                    <p style="color: rgba(255,255,255,0.7); font-size: 13.5px; line-height: 1.7; margin: 0;">AI는 분석과 제안만. 운영자가 최종 결정하고 실행합니다.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3" style="padding: 0 12px;">
+                                <div style="padding: 36px 28px; background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; position:relative; overflow:hidden;">
+                                    <div style="position:absolute; top:0; left:0; right:0; height:3px; background: rgba(77,148,255,0.5);"></div>
+                                    <p style="color: rgba(77,148,255,0.7); font-size: 11px; letter-spacing:0.18em; margin: 0 0 12px;">LEVEL 2</p>
+                                    <h4 style="color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 12px; line-height: 1.3;">규칙 기반 제어</h4>
+                                    <p style="color: rgba(77,148,255,0.6); font-size: 11px; letter-spacing:0.06em; margin: 0 0 20px;">Rule-Based</p>
+                                    <p style="color: rgba(255,255,255,0.7); font-size: 13.5px; line-height: 1.7; margin: 0;">정해진 룰에 따라 자동 실행. 예외는 알람으로 올라옵니다.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3" style="padding: 0 12px;">
+                                <div style="padding: 36px 28px; background: rgba(9,88,217,0.08); border: 1px solid rgba(9,88,217,0.3); border-radius: 12px; height: 100%; position:relative; overflow:hidden;">
+                                    <div style="position:absolute; top:0; left:0; right:0; height:3px; background: #0958d9;"></div>
+                                    <p style="color: #7ab8ff; font-size: 11px; letter-spacing:0.18em; margin: 0 0 12px;">LEVEL 3</p>
+                                    <h4 style="color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 12px; line-height: 1.3;">AI 보조 제어</h4>
+                                    <p style="color: rgba(122,184,255,0.7); font-size: 11px; letter-spacing:0.06em; margin: 0 0 20px;">AI-Assisted</p>
+                                    <p style="color: rgba(255,255,255,0.85); font-size: 13.5px; line-height: 1.7; margin: 0;">AI가 최적값을 제안하고 사람이 승인하면 제어에 반영됩니다.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3" style="padding: 0 12px;">
+                                <div style="padding: 36px 28px; background: linear-gradient(135deg, rgba(9,88,217,0.15), rgba(122,184,255,0.08)); border: 1px solid rgba(9,88,217,0.4); border-radius: 12px; height: 100%; position:relative; overflow:hidden;">
+                                    <div style="position:absolute; top:0; left:0; right:0; height:3px; background: linear-gradient(90deg, #0958d9, #7ab8ff);"></div>
+                                    <p style="color: #7ab8ff; font-size: 11px; letter-spacing:0.18em; margin: 0 0 12px;">LEVEL 4</p>
+                                    <h4 style="color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 12px; line-height: 1.3;">자율 제어</h4>
+                                    <p style="color: rgba(122,184,255,0.75); font-size: 11px; letter-spacing:0.06em; margin: 0 0 20px;">Autonomous</p>
+                                    <p style="color: rgba(255,255,255,0.9); font-size: 13.5px; line-height: 1.7; margin: 0;">공정이 스스로 최적화. 운영자는 예외 상황과 감독에 집중합니다.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 안전 메시지 -->
+                        <div style="margin-top: 48px; padding: 24px 32px; background: rgba(255,255,255,0.03); border-radius: 10px; display:flex; align-items:center; gap: 16px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7ab8ff" stroke-width="2" style="flex-shrink:0;"><path d="M12 2L4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z"/><polyline points="9 12 11 14 15 10"/></svg>
+                            <p style="color: rgba(255,255,255,0.8); font-size: 14px; line-height: 1.7; margin: 0;">
+                                모든 단계는 <span style="color:#7ab8ff; font-weight:600;">L2 기반 안전 제어 구조</span> 위에서 실행됩니다. PLC 제어는 안전장치를 절대 우회하지 않으며, 모든 결정은 감사 로그로 남습니다.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ⑧ CTA -->
                 <div style="background: #0958d9; padding: 100px 0;">
                     <div class="container container-1720 text-center">
-                        <p style="color: rgba(255,255,255,0.88); font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px;">지금 경험해보세요</p>
-                        <h2 style="color: #fff; font-size: 44px; font-weight: 700; margin-bottom: 18px; line-height: 1.2;">우리 공장에 맞는<br>솔루션이 궁금하신가요?</h2>
-                        <p style="color: rgba(255,255,255,0.9); font-size: 16px; margin-bottom: 44px;">현장 상황을 알려주시면 최적의 구성을 제안드립니다.</p>
+                        <p style="color: rgba(255,255,255,0.88); font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px;">Start Simple, Scale Smart</p>
+                        <h2 style="color: #fff; font-size: 44px; font-weight: 700; margin-bottom: 18px; line-height: 1.2;">우리 공장의 '보이지 않던 것'부터,<br>어디서 열어볼까요?</h2>
+                        <p style="color: rgba(255,255,255,0.9); font-size: 16px; margin-bottom: 44px;">네 개 모듈 중 필요한 것부터, 천천히 쉽게 시작할 수 있습니다.</p>
                         <a href="contact.html" style="display:inline-flex; align-items:center; gap:10px; padding:18px 48px; background:#fff; color:#0958d9; font-size:16px; font-weight:700; text-decoration:none; transition:all 0.3s;"
                            onmouseover="this.style.background='#0e0f11'; this.style.color='#fff'" onmouseout="this.style.background='#fff'; this.style.color='#0958d9'">
                             도입 상담 신청 &nbsp;→

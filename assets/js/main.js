@@ -558,6 +558,33 @@
 		});
 	}
 
+	// 27.5 Auto-apply tp_fade_anim to main content blocks (uniform fade-in across pages)
+	try {
+		var autoFadeTargets = document.querySelectorAll(
+			'main [class*="col-lg-"]:not(.tp_fade_anim),' +
+			'main [class*="col-xl-"]:not(.tp_fade_anim),' +
+			'main [class*="col-md-"]:not(.tp_fade_anim),' +
+			'main [class*="container"] > div:not(.row):not(.tp_fade_anim)'
+		);
+		var appliedCount = 0;
+		autoFadeTargets.forEach(function(el) {
+			// Skip header/sticky nav elements (specific selectors, not sticky-ancestor check)
+			if (el.closest('#header-sticky, .tp-header-area, header, [id$="-tab-nav"], nav.tp-mobile-menu-active')) return;
+			// Skip if element itself has a text/char animation class (avoid double-animation)
+			if (el.classList.contains('tp-char-animation') || el.classList.contains('tp_text_anim') || el.classList.contains('tp_title_anim')) return;
+			// Skip if element contains a text/char animation descendant
+			if (el.querySelector('.tp-char-animation, .tp_text_anim, .tp_title_anim')) return;
+			el.classList.add('tp_fade_anim');
+			if (!el.hasAttribute('data-delay')) {
+				var siblings = el.parentElement.children;
+				var idx = Array.prototype.indexOf.call(siblings, el);
+				el.setAttribute('data-delay', (0.15 + Math.min(idx, 3) * 0.15).toFixed(2));
+			}
+			appliedCount++;
+		});
+		if (window.console) console.log('[auto-fade] applied to ' + appliedCount + ' / ' + autoFadeTargets.length + ' elements');
+	} catch(e) { if (window.console) console.warn('[auto-fade] failed:', e); }
+
 	// 28. fade-class-active //
 	if ($(".tp_fade_anim").length > 0) {
 		gsap.utils.toArray(".tp_fade_anim").forEach((item) => {
