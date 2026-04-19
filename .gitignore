@@ -1,0 +1,8 @@
+# Claude Code 작업용 worktree
+.claude/worktrees/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
