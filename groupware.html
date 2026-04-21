@@ -58,101 +58,119 @@
 
         /* 태블릿 (max-width: 1024px) */
         @media (max-width: 1024px) {
-            [style*="padding: 160px 0 100px"] {
-                padding: 120px 0 60px !important;
+            /* Hero */
+            h1.tp-char-animation[style*="font-size: 72px"] {
+                font-size: 52px !important;
             }
-            .tp-char-animation[style*="font-size: 64px"] {
-                font-size: 44px !important;
+            /* 섹션 헤딩 */
+            [style*="font-size: 42px"] { font-size: 32px !important; }
+            [style*="font-size: 44px"] { font-size: 34px !important; }
+            [style*="font-size: 56px"] { font-size: 42px !important; }
+            [style*="font-size: 38px"] { font-size: 30px !important; }
+            /* 섹션 패딩 */
+            [style*="padding: 100px 0"] { padding: 70px 0 !important; }
+            [style*="padding: 120px 0"] { padding: 90px 0 !important; }
+            /* 컨테이너 상단 패딩 */
+            [style*="padding-top: 160px"] { padding-top: 120px !important; }
+        }
+
+        /* 태블릿~모바일 분기 (max-width: 991px) */
+        @media (max-width: 991px) {
+            /* ── 텍스트/이미지 2-col row 처리 ── */
+            .row.align-items-center { display: flex; flex-wrap: wrap; }
+            /* 이미지가 오른쪽(padding-left)인 경우 → 모바일에서 위로 */
+            .row.align-items-center [style*="padding-left: 60px"],
+            .row.align-items-center [style*="padding-left: 56px"],
+            .row.align-items-center [style*="padding-left: 48px"] {
+                order: -1 !important;
             }
-            [style*="font-size: 42px"] {
-                font-size: 32px !important;
+            /* col-lg 전체 풀너비 (main 스코프 — 헤더 col-lg-6 제외) */
+            main .col-lg-5, main .col-lg-6, main .col-lg-7 {
+                width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important;
             }
-            [style*="font-size: 44px"] {
-                font-size: 34px !important;
+            /* 스택 여백 */
+            main .row.align-items-center .col-lg-5,
+            main .row.align-items-center .col-lg-6,
+            main .row.align-items-center .col-lg-7 { margin-bottom: 32px; }
+            main .row.align-items-center .col-lg-5:last-child,
+            main .row.align-items-center .col-lg-6:last-child,
+            main .row.align-items-center .col-lg-7:last-child { margin-bottom: 0; }
+
+            /* ── 패키지 카드 그리드: 뱃지(-16px)가 위로 삐져나올 공간 확보 ── */
+            [style*="grid-template-columns: 1fr 1fr"][style*="max-width: 1160px"] {
+                padding-top: 20px !important;
+                gap: 40px !important;
             }
-            [style*="padding: 100px 0"] {
-                padding: 70px 0 !important;
-            }
-            [style*="padding-left: 48px"] {
+            /* 카드 좌우 패딩 축소 */
+            [style*="border-radius: 32px"][style*="padding: 52px 48px"] {
                 padding-left: 24px !important;
-            }
-            [style*="padding-right: 48px"] {
                 padding-right: 24px !important;
+            }
+            /* 이미지 사이드 패딩 제거 */
+            [style*="padding-left: 60px"]  { padding-left: 0 !important; }
+            [style*="padding-left: 56px"]  { padding-left: 0 !important; }
+            [style*="padding-left: 48px"]  { padding-left: 0 !important; }
+            [style*="padding-left: 40px"]  { padding-left: 0 !important; }
+            [style*="padding-right: 60px"] { padding-right: 0 !important; }
+            [style*="padding-right: 56px"] { padding-right: 0 !important; }
+            [style*="padding-right: 48px"] { padding-right: 0 !important; }
+            [style*="padding-right: 40px"] { padding-right: 0 !important; }
+
+            /* ── 2-col → 1-col 그리드 (Core Value, 패키지) ── */
+            [style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
             }
         }
 
         /* 모바일 (max-width: 768px) */
         @media (max-width: 768px) {
-            [style*="padding: 160px 0 100px"] {
-                padding: 100px 0 40px !important;
+            /* Hero */
+            h1.tp-char-animation[style*="font-size: 72px"] {
+                font-size: 36px !important;
+                line-height: 1.2 !important;
             }
-            .tp-char-animation[style*="font-size: 64px"] {
-                font-size: 32px !important;
-                line-height: 1.25 !important;
+            [style*="font-size: 24px"][style*="font-weight: 600"] {
+                font-size: 18px !important;
             }
-            [style*="font-size: 42px"] {
-                font-size: 26px !important;
+            /* 섹션 헤딩 */
+            [style*="font-size: 42px"] { font-size: 26px !important; }
+            [style*="font-size: 44px"] { font-size: 26px !important; }
+            [style*="font-size: 38px"] { font-size: 24px !important; }
+            [style*="font-size: 56px"] { font-size: 32px !important; line-height: 1.2 !important; }
+            /* 섹션 패딩 */
+            [style*="padding: 100px 0"] { padding: 60px 0 !important; }
+            [style*="padding: 120px 0"] { padding: 70px 0 !important; }
+            [style*="padding-top: 160px"] { padding-top: 100px !important; }
+            [style*="padding-bottom: 100px"] { padding-bottom: 60px !important; }
+            [style*="padding-bottom: 60px"] { padding-bottom: 40px !important; }
+
+            /* ── 4-col → 2-col 기능 그리드 ── */
+            [style*="grid-template-columns: repeat(4, 1fr)"] {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 16px !important;
             }
-            [style*="font-size: 44px"] {
-                font-size: 26px !important;
-            }
-            [style*="padding: 100px 0"] {
-                padding: 60px 0 !important;
-            }
-            .row.align-items-center .col-lg-6 {
-                width: 100% !important;
-                max-width: 100% !important;
-                flex: 0 0 100% !important;
-            }
-            [style*="padding-left: 48px"] {
-                padding-left: 0 !important;
-            }
-            [style*="padding-right: 48px"] {
-                padding-right: 0 !important;
-            }
-            .row.align-items-center .col-lg-6:first-child {
-                margin-bottom: 24px;
-            }
-            .row[style*="margin: 0"] .col-lg-4 {
-                width: 100% !important;
-                max-width: 100% !important;
-                flex: 0 0 100% !important;
-            }
-            [style*="background: #3b82f6; padding: 100px 0"] {
-                padding: 60px 0 !important;
+
+            /* ── 변화 섹션 여백 ── */
+            [style*="padding: 120px 0"] { padding: 60px 0 !important; }
+
+            /* ── CTA 섹션 패딩 (div만 타겟 — span.background는 제외) ── */
+            div[style*="background: #3b82f6"][style*="padding: 100px 0"] { padding: 60px 0 !important; }
+
+            /* ── col-lg-4 전체 풀너비 ── */
+            .col-lg-4 {
+                width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important;
             }
         }
 
-        @media (max-width: 991px) {
-            /* 이미지 항상 상단, 텍스트 하단 */
-            .row.align-items-center {
-                display: flex;
-                flex-wrap: wrap;
+        /* 소형 모바일 (max-width: 480px) */
+        @media (max-width: 480px) {
+            /* 4-col → 1-col */
+            [style*="grid-template-columns: repeat(4, 1fr)"] {
+                grid-template-columns: 1fr !important;
             }
-            /* padding-left가 있는 컬럼 = 이미지가 오른쪽인 경우 → 모바일에서 이미지를 위로 */
-            .row.align-items-center [style*="padding-left: 56px"],
-            .row.align-items-center [style*="padding-left: 48px"] {
-                order: -1 !important;
+            h1.tp-char-animation[style*="font-size: 72px"] {
+                font-size: 30px !important;
             }
-            /* col-lg 전체 풀 너비 */
-            .col-lg-5, .col-lg-6, .col-lg-7 { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
-            /* 이미지 컬럼 하단 여백 */
-            .row.align-items-center .col-lg-5,
-            .row.align-items-center .col-lg-6,
-            .row.align-items-center .col-lg-7 {
-                margin-bottom: 32px;
-            }
-            .row.align-items-center .col-lg-5:last-child,
-            .row.align-items-center .col-lg-6:last-child,
-            .row.align-items-center .col-lg-7:last-child {
-                margin-bottom: 0;
-            }
-            [style*="padding-left: 56px"] { padding-left: 0 !important; }
-            [style*="padding-right: 56px"] { padding-right: 0 !important; }
-            [style*="padding-left: 48px"] { padding-left: 0 !important; }
-            [style*="padding-right: 48px"] { padding-right: 0 !important; }
-            [style*="padding-left: 40px"] { padding-left: 0 !important; }
-            [style*="padding-right: 40px"] { padding-right: 0 !important; }
         }
     </style>
 

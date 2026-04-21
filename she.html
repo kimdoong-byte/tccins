@@ -72,17 +72,17 @@
             .row.align-items-center [style*="padding-left: 48px"] {
                 order: -1 !important;
             }
-            /* col-lg 전체 풀 너비 */
-            .col-lg-5, .col-lg-6, .col-lg-7 { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
+            /* col-lg 전체 풀 너비 (main 스코프 — 헤더 col-lg-6 제외) */
+            main .col-lg-5, main .col-lg-6, main .col-lg-7 { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
             /* 이미지 컬럼 하단 여백 */
-            .row.align-items-center .col-lg-5,
-            .row.align-items-center .col-lg-6,
-            .row.align-items-center .col-lg-7 {
+            main .row.align-items-center .col-lg-5,
+            main .row.align-items-center .col-lg-6,
+            main .row.align-items-center .col-lg-7 {
                 margin-bottom: 32px;
             }
-            .row.align-items-center .col-lg-5:last-child,
-            .row.align-items-center .col-lg-6:last-child,
-            .row.align-items-center .col-lg-7:last-child {
+            main .row.align-items-center .col-lg-5:last-child,
+            main .row.align-items-center .col-lg-6:last-child,
+            main .row.align-items-center .col-lg-7:last-child {
                 margin-bottom: 0;
             }
             [style*="padding-left: 56px"] { padding-left: 0 !important; }
