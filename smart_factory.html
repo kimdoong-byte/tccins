@@ -158,29 +158,17 @@
         }
 
         @media (max-width: 991px) {
-            /* 이미지 항상 상단, 텍스트 하단 */
-            .row.align-items-center {
-                display: flex;
-                flex-wrap: wrap;
-            }
-            /* padding-left가 있는 컬럼 = 이미지가 오른쪽인 경우 → 모바일에서 이미지를 위로 */
-            .row.align-items-center [style*="padding-left: 56px"],
-            .row.align-items-center [style*="padding-left: 48px"] {
-                order: -1 !important;
-            }
-            /* col-lg 전체 풀 너비 (main 스코프 — 헤더 col-lg-6 제외) */
+            /* 텍스트 먼저, 이미지 나중 */
+            .row.align-items-center { display: flex; flex-wrap: wrap; }
+            /* col-lg 전체 풀너비 (main 스코프 — 헤더 col-lg-6 제외) */
             main .col-lg-5, main .col-lg-6, main .col-lg-7 { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
-            /* 이미지 컬럼 하단 여백 */
+            /* 기본 여백 */
             main .row.align-items-center .col-lg-5,
             main .row.align-items-center .col-lg-6,
-            main .row.align-items-center .col-lg-7 {
-                margin-bottom: 32px;
-            }
+            main .row.align-items-center .col-lg-7 { margin-bottom: 32px; }
             main .row.align-items-center .col-lg-5:last-child,
             main .row.align-items-center .col-lg-6:last-child,
-            main .row.align-items-center .col-lg-7:last-child {
-                margin-bottom: 0;
-            }
+            main .row.align-items-center .col-lg-7:last-child { margin-bottom: 0; }
             [style*="padding-left: 56px"] { padding-left: 0 !important; }
             [style*="padding-right: 56px"] { padding-right: 0 !important; }
             [style*="padding-left: 48px"] { padding-left: 0 !important; }
@@ -478,29 +466,17 @@
                 .sf-tab-link.sf-tab-active span { color: rgba(255,255,255,0.8) !important; }
             
         @media (max-width: 991px) {
-            /* 이미지 항상 상단, 텍스트 하단 */
-            .row.align-items-center {
-                display: flex;
-                flex-wrap: wrap;
-            }
-            /* padding-left가 있는 컬럼 = 이미지가 오른쪽인 경우 → 모바일에서 이미지를 위로 */
-            .row.align-items-center [style*="padding-left: 56px"],
-            .row.align-items-center [style*="padding-left: 48px"] {
-                order: -1 !important;
-            }
-            /* col-lg 전체 풀 너비 (main 스코프 — 헤더 col-lg-6 제외) */
+            /* 텍스트 먼저, 이미지 나중 */
+            .row.align-items-center { display: flex; flex-wrap: wrap; }
+            /* col-lg 전체 풀너비 (main 스코프 — 헤더 col-lg-6 제외) */
             main .col-lg-5, main .col-lg-6, main .col-lg-7 { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
-            /* 이미지 컬럼 하단 여백 */
+            /* 기본 여백 */
             main .row.align-items-center .col-lg-5,
             main .row.align-items-center .col-lg-6,
-            main .row.align-items-center .col-lg-7 {
-                margin-bottom: 32px;
-            }
+            main .row.align-items-center .col-lg-7 { margin-bottom: 32px; }
             main .row.align-items-center .col-lg-5:last-child,
             main .row.align-items-center .col-lg-6:last-child,
-            main .row.align-items-center .col-lg-7:last-child {
-                margin-bottom: 0;
-            }
+            main .row.align-items-center .col-lg-7:last-child { margin-bottom: 0; }
             [style*="padding-left: 56px"] { padding-left: 0 !important; }
             [style*="padding-right: 56px"] { padding-right: 0 !important; }
             [style*="padding-left: 48px"] { padding-left: 0 !important; }

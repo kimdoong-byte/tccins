@@ -28,6 +28,23 @@
 
     <style>
         :root { --tp-ff-fontawesome: "Font Awesome 6 Free"; }
+        /* 효과 완전 제거 */
+        .hover-reveal-item .hover-reveal,
+        .hover-reveal-item .hover-reveal-inner,
+        .hover-reveal-item .hover-reveal-img {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+        }
+        .tp-award-item.hover-reveal-item:hover .tp-award-year,
+        .tp-award-item.hover-reveal-item:hover .tp-award-text,
+        .tp-award-item.hover-reveal-item:hover * {
+            color: inherit !important;
+        }
+        .tp-award-item.hover-reveal-item:hover {
+            background: transparent !important;
+        }
+
         /* has-dropdown 화살표 교체 */
         .tp-header-dropdown nav ul li.has-dropdown::after {
             font-family: none !important;
@@ -97,12 +114,7 @@
                 max-width: 100% !important;
                 flex: 0 0 100% !important;
             }
-            /* 핵심 가치 카드 1컬럼 */
-            .row[style*="margin: 0"] .col-lg-4 {
-                width: 100% !important;
-                max-width: 100% !important;
-                flex: 0 0 100% !important;
-            }
+            /* 핵심 가치 카드: Bootstrap col-md-4 사용으로 자동 반응 — 별도 규칙 불필요 */
         }
     </style>
 
@@ -420,26 +432,26 @@
                             <p style="color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 14px;">Core Values</p>
                             <h2 style="color: #fff; font-size: 38px; font-weight: 600;">복잡함을 단순하게 풀어내는 방식</h2>
                         </div>
-                        <div class="row" style="margin: 0;">
-                            <div class="col-lg-4" style="padding: 0;">
-                                <div style="padding: 44px 36px; border: 1px solid rgba(255,255,255,0.25); height: 100%;">
-                                    <p style="color: #fff; font-size: 32px; font-weight: 700; margin-bottom: 16px;">01</p>
+                        <div class="row g-3">
+                            <div class="col-12 col-md-4">
+                                <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 36px; height: 100%;">
+                                    <p style="color: #4d94ff; font-size: 28px; font-weight: 700; margin-bottom: 14px;">01</p>
                                     <h4 style="color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 12px;">Innovation</h4>
-                                    <p style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.8; margin: 0;">보이지 않던 문제를 드러내고, 어려웠던 방식을 더 쉬운 구조로 다시 설계합니다. 현상에 안주하지 않고 더 명쾌한 방법을 찾습니다.</p>
+                                    <p style="color: rgba(255,255,255,0.75); font-size: 14px; line-height: 1.8; margin: 0;">보이지 않던 문제를 드러내고, 어려웠던 방식을 더 쉬운 구조로 다시 설계합니다. 현상에 안주하지 않고 더 명쾌한 방법을 찾습니다.</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4" style="padding: 0;">
-                                <div style="padding: 44px 36px; border: 1px solid rgba(255,255,255,0.25); border-left: none; height: 100%;">
-                                    <p style="color: #fff; font-size: 32px; font-weight: 700; margin-bottom: 16px;">02</p>
+                            <div class="col-12 col-md-4">
+                                <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 36px; height: 100%;">
+                                    <p style="color: #4d94ff; font-size: 28px; font-weight: 700; margin-bottom: 14px;">02</p>
                                     <h4 style="color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 12px;">Connection</h4>
-                                    <p style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.8; margin: 0;">흩어진 데이터와 사람, 시스템과 현장을 하나의 화면으로 연결합니다. 분절된 것들이 이어질 때 비로소 한눈에 보입니다.</p>
+                                    <p style="color: rgba(255,255,255,0.75); font-size: 14px; line-height: 1.8; margin: 0;">흩어진 데이터와 사람, 시스템과 현장을 하나의 화면으로 연결합니다. 분절된 것들이 이어질 때 비로소 한눈에 보입니다.</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4" style="padding: 0;">
-                                <div style="padding: 44px 36px; border: 1px solid rgba(255,255,255,0.25); border-left: none; height: 100%;">
-                                    <p style="color: #fff; font-size: 32px; font-weight: 700; margin-bottom: 16px;">03</p>
+                            <div class="col-12 col-md-4">
+                                <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 36px; height: 100%;">
+                                    <p style="color: #4d94ff; font-size: 28px; font-weight: 700; margin-bottom: 14px;">03</p>
                                     <h4 style="color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 12px;">Responsibility</h4>
-                                    <p style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.8; margin: 0;">보이는 것을 숫자로 증명하고, 실행한 결과를 고객이 바로 확인할 수 있도록 책임집니다.</p>
+                                    <p style="color: rgba(255,255,255,0.75); font-size: 14px; line-height: 1.8; margin: 0;">보이는 것을 숫자로 증명하고, 실행한 결과를 고객이 바로 확인할 수 있도록 책임집니다.</p>
                                 </div>
                             </div>
                         </div>
@@ -454,7 +466,7 @@
                             <h2 style="color: #fff; font-size: 38px; font-weight: 600;">복잡함을 단순함으로, 20년의 발자취</h2>
                         </div>
                         <div class="tp-award-item-wrap p-relative">
-                            <div class="tp-award-item hover-reveal-item p-relative mb-5">
+                            <div class="tp-award-item p-relative mb-5">
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="tp-award-box-left z-index-3">
@@ -464,7 +476,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tp-award-item hover-reveal-item p-relative mb-5">
+                            <div class="tp-award-item p-relative mb-5">
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="tp-award-box-left z-index-3">
@@ -474,7 +486,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tp-award-item hover-reveal-item p-relative mb-5">
+                            <div class="tp-award-item p-relative mb-5">
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="tp-award-box-left z-index-3">
@@ -484,7 +496,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tp-award-item hover-reveal-item p-relative mb-5">
+                            <div class="tp-award-item p-relative mb-5">
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="tp-award-box-left z-index-3">
@@ -494,7 +506,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tp-award-item hover-reveal-item p-relative mb-5">
+                            <div class="tp-award-item p-relative mb-5">
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="tp-award-box-left z-index-3">
@@ -504,7 +516,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tp-award-item hover-reveal-item p-relative mb-5">
+                            <div class="tp-award-item p-relative mb-5">
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="tp-award-box-left z-index-3">
@@ -514,7 +526,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tp-award-item hover-reveal-item p-relative mb-5">
+                            <div class="tp-award-item p-relative mb-5">
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="tp-award-box-left z-index-3">
@@ -524,7 +536,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tp-award-item hover-reveal-item p-relative mb-5">
+                            <div class="tp-award-item p-relative mb-5">
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="tp-award-box-left z-index-3">
@@ -534,7 +546,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tp-award-item hover-reveal-item p-relative mb-5">
+                            <div class="tp-award-item p-relative mb-5">
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="tp-award-box-left z-index-3">
@@ -544,7 +556,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tp-award-item hover-reveal-item p-relative mb-5">
+                            <div class="tp-award-item p-relative mb-5">
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="tp-award-box-left z-index-3">

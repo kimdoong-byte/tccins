@@ -48,42 +48,49 @@
             [style*="font-size: 36px"] { font-size: 24px !important; }
             [style*="font-size: 44px"] { font-size: 26px !important; }
             [style*="padding: 100px 0"] { padding: 60px 0 !important; }
-            [style*="grid-template-columns: repeat(3, 1fr)"] { grid-template-columns: 1fr !important; }
-            [style*="grid-template-columns: repeat(4, 1fr)"] { grid-template-columns: 1fr 1fr !important; }
+            [style*="grid-template-columns: repeat(3, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
+            [style*="grid-template-columns: repeat(4, 1fr)"] { grid-template-columns: 1fr !important; }
             [style*="grid-template-columns:1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
+            /* PDCA 셀 내부 패딩 축소 */
+            [style*="padding: 40px 32px"] { padding: 20px !important; }
             [style*="background: #0958d9"] { padding: 60px 0 !important; }
             [style*="font-size: 44px"][style*="margin-bottom: 18px"] { font-size: 28px !important; }
-            [style*="border-radius: 16px; overflow: hidden;"][style*="grid-template-columns: repeat(4, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
         }
         @media (max-width: 480px) {
-            [style*="grid-template-columns: repeat(4, 1fr)"] { grid-template-columns: 1fr !important; }
+            [style*="grid-template-columns: repeat(3, 1fr)"] { grid-template-columns: 1fr !important; }
             .tp-char-animation[style*="font-size: 64px"] { font-size: 32px !important; }
             [style*="font-size: 38px"] { font-size: 22px !important; }
         }
 
         @media (max-width: 991px) {
-            /* 이미지 항상 상단, 텍스트 하단 */
-            .row.align-items-center {
-                display: flex;
-                flex-wrap: wrap;
-            }
-            /* padding-left가 있는 컬럼 = 이미지가 오른쪽인 경우 → 모바일에서 이미지를 위로 */
-            .row.align-items-center [style*="padding-left: 56px"],
-            .row.align-items-center [style*="padding-left: 48px"] {
-                order: -1 !important;
-            }
-            /* col-lg 전체 풀 너비 (main 스코프 — 헤더 col-lg-6 제외) */
+            /* 텍스트 먼저, 이미지 나중 */
+            .row.align-items-center { display: flex; flex-wrap: wrap; }
+            /* col-lg 전체 풀너비 (main 스코프 — 헤더 col-lg-6 제외) */
             main .col-lg-5, main .col-lg-6, main .col-lg-7 { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
-            /* 이미지 컬럼 하단 여백 */
+            /* 기본 여백 */
             main .row.align-items-center .col-lg-5,
             main .row.align-items-center .col-lg-6,
-            main .row.align-items-center .col-lg-7 {
-                margin-bottom: 32px;
-            }
+            main .row.align-items-center .col-lg-7 { margin-bottom: 32px; }
             main .row.align-items-center .col-lg-5:last-child,
             main .row.align-items-center .col-lg-6:last-child,
-            main .row.align-items-center .col-lg-7:last-child {
-                margin-bottom: 0;
+            main .row.align-items-center .col-lg-7:last-child { margin-bottom: 0; }
+            /* 이미지 LEFT 섹션: 이미지 col을 텍스트 아래로 */
+            main .row.align-items-center .col-lg-5:has([style*="padding-right: 56px"]),
+            main .row.align-items-center .col-lg-6:has([style*="padding-right: 56px"]),
+            main .row.align-items-center .col-lg-7:has([style*="padding-right: 56px"]),
+            main .row.align-items-center .col-lg-5:has([style*="padding-right: 48px"]),
+            main .row.align-items-center .col-lg-6:has([style*="padding-right: 48px"]),
+            main .row.align-items-center .col-lg-7:has([style*="padding-right: 48px"]) {
+                order: 2 !important; margin-bottom: 0 !important;
+            }
+            /* 이미지 LEFT 섹션: 텍스트 col 하단 여백 */
+            main .row.align-items-center:has([style*="padding-right: 56px"]) .col-lg-5:last-child,
+            main .row.align-items-center:has([style*="padding-right: 56px"]) .col-lg-6:last-child,
+            main .row.align-items-center:has([style*="padding-right: 56px"]) .col-lg-7:last-child,
+            main .row.align-items-center:has([style*="padding-right: 48px"]) .col-lg-5:last-child,
+            main .row.align-items-center:has([style*="padding-right: 48px"]) .col-lg-6:last-child,
+            main .row.align-items-center:has([style*="padding-right: 48px"]) .col-lg-7:last-child {
+                margin-bottom: 32px !important;
             }
             [style*="padding-left: 56px"] { padding-left: 0 !important; }
             [style*="padding-right: 56px"] { padding-right: 0 !important; }
@@ -321,17 +328,46 @@
                 <h2 style="color: #fff; font-size: 38px; font-weight: 700; line-height: 1.2; margin-bottom: 20px;">6개 영역, 99개 화면으로<br>복잡함을 단순화합니다.</h2>
                 <p style="color: rgba(255,255,255,0.90); font-size: 16px; line-height: 1.8; margin: 0;">복잡했던 중대재해처벌법 대응부터 흩어진 Legacy 시스템 연계까지, 현장에 필요한 모든 SHE 기능이 하나의 플랫폼에서 한눈에 보입니다.</p>
             </div>
-            <table style="width: 100%; border-collapse: collapse;">
-                <thead><tr style="border-bottom: 1px solid rgba(255,255,255,0.35);"><th style="color: rgba(255,255,255,0.82); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 20px; text-align: left; width: 60px;">No.</th><th style="color: rgba(255,255,255,0.82); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 20px; text-align: left; width: 200px;">영역</th><th style="color: rgba(255,255,255,0.82); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 20px; text-align: left;">주요 기능</th></tr></thead>
-                <tbody>
-                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.12);"><td style="color: #7ab8ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">01</td><td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">중대재해처벌법</td><td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">Dashboard · 경영방침 · 안전보건 전담조직 · 유해위험 확인·개선 · 관리책임자 평가 · 재발방지 대책 · 법령 이행 점검 · 수급인 평가</td></tr>
-                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.12);"><td style="color: #7ab8ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">02</td><td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">안전 관리</td><td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">작업허가서 · TBM 일지 · 위험성 평가 · 개선요청 · 순회점검 · 안전교육 · 위원회 · 재해현황 · 도급관리 · 자율안전관리</td></tr>
-                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.12);"><td style="color: #7ab8ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">03</td><td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">보건 관리</td><td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">건강검진 · 뇌심혈관 고위험군 · 근골격계 · 작업환경 측정 · 직무스트레스 · 유해요인 · 중증 조사표</td></tr>
-                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.12);"><td style="color: #7ab8ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">04</td><td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">환경 보호 및 관리</td><td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">폐수처리장 · Data Sheet · 수질/대기 자가측정 · 폐기물 관리 · 약품관리대장</td></tr>
-                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.12);"><td style="color: #7ab8ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">05</td><td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">지속경영 관리</td><td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">예산관리 · 조직도 · 직무수행평가 · 시정현황 · 준수평가 · 경영방침</td></tr>
-                    <tr><td style="color: #7ab8ff; font-size: 12px; padding: 22px 20px; vertical-align: top;">06</td><td style="color: #fff; font-size: 15px; font-weight: 600; padding: 22px 20px; vertical-align: top;">표준정보 · 관리자</td><td style="color: rgba(255,255,255,0.90); font-size: 14px; line-height: 1.9; padding: 22px 20px; vertical-align: top;">법령관리 · 양식 템플릿 · 권한·메뉴 · 조직·코드 · 스케줄링 · SMS·Email 알림 · 공지사항</td></tr>
-                </tbody>
-            </table>
+            <!-- 기능 카드 그리드 -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+
+                <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 24px;">
+                    <span style="color: #7ab8ff; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; display: block; margin-bottom: 12px;">01</span>
+                    <p style="color: #fff; font-size: 15px; font-weight: 600; margin: 0 0 8px;">중대재해처벌법</p>
+                    <p style="color: rgba(255,255,255,0.65); font-size: 13px; line-height: 1.7; margin: 0;">Dashboard · 경영방침 · 안전보건 전담조직 · 유해위험 확인·개선 · 관리책임자 평가 · 재발방지 대책 · 법령 이행 점검 · 수급인 평가</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 24px;">
+                    <span style="color: #7ab8ff; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; display: block; margin-bottom: 12px;">02</span>
+                    <p style="color: #fff; font-size: 15px; font-weight: 600; margin: 0 0 8px;">안전 관리</p>
+                    <p style="color: rgba(255,255,255,0.65); font-size: 13px; line-height: 1.7; margin: 0;">작업허가서 · TBM 일지 · 위험성 평가 · 개선요청 · 순회점검 · 안전교육 · 위원회 · 재해현황 · 도급관리 · 자율안전관리</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 24px;">
+                    <span style="color: #7ab8ff; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; display: block; margin-bottom: 12px;">03</span>
+                    <p style="color: #fff; font-size: 15px; font-weight: 600; margin: 0 0 8px;">보건 관리</p>
+                    <p style="color: rgba(255,255,255,0.65); font-size: 13px; line-height: 1.7; margin: 0;">건강검진 · 뇌심혈관 고위험군 · 근골격계 · 작업환경 측정 · 직무스트레스 · 유해요인 · 중증 조사표</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 24px;">
+                    <span style="color: #7ab8ff; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; display: block; margin-bottom: 12px;">04</span>
+                    <p style="color: #fff; font-size: 15px; font-weight: 600; margin: 0 0 8px;">환경 보호 및 관리</p>
+                    <p style="color: rgba(255,255,255,0.65); font-size: 13px; line-height: 1.7; margin: 0;">폐수처리장 · Data Sheet · 수질/대기 자가측정 · 폐기물 관리 · 약품관리대장</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 24px;">
+                    <span style="color: #7ab8ff; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; display: block; margin-bottom: 12px;">05</span>
+                    <p style="color: #fff; font-size: 15px; font-weight: 600; margin: 0 0 8px;">지속경영 관리</p>
+                    <p style="color: rgba(255,255,255,0.65); font-size: 13px; line-height: 1.7; margin: 0;">예산관리 · 조직도 · 직무수행평가 · 시정현황 · 준수평가 · 경영방침</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 24px;">
+                    <span style="color: #7ab8ff; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; display: block; margin-bottom: 12px;">06</span>
+                    <p style="color: #fff; font-size: 15px; font-weight: 600; margin: 0 0 8px;">표준정보 · 관리자</p>
+                    <p style="color: rgba(255,255,255,0.65); font-size: 13px; line-height: 1.7; margin: 0;">법령관리 · 양식 템플릿 · 권한·메뉴 · 조직·코드 · 스케줄링 · SMS·Email 알림 · 공지사항</p>
+                </div>
+
+            </div>
         </div>
     </div>
 
@@ -343,40 +379,50 @@
                 <h2 style="color: #fff; font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 16px;">보이지 않던 사각지대를,<br>AI가 한눈에 드러냅니다.</h2>
                 <p style="color: rgba(255,255,255,0.82); font-size: 15px; line-height: 1.9;">24시간 AI가 현장 전체를 실시간으로 가시화합니다.</p>
             </div>
-            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px;">
-                <div style="background:#0e0f11; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); border-top:3px solid #e84040;">
-                    <div>
+            <div class="row g-3">
+
+                <div class="col-12 col-md-4">
+                    <div style="background:#111113; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); border-top:3px solid #e84040; height:100%;">
                         <img src="assets/img/portfolio/portfolio-details-1/she_08.jpg" alt="화재 자동 감지" style="width:100%; height:auto; display:block;">
-                    </div>
-                    <div style="padding:32px;">
-                        <span style="color:#e84040; font-size:42px; font-weight:800; line-height:1; display:block; margin-bottom:12px;">1</span>
-                        <h4 style="color:#fff; font-size:18px; font-weight:700; margin:0 0 8px;">화재 자동 감지</h4>
-                        <p style="color:rgba(255,255,255,0.55); font-size:13px; margin:0 0 20px;">CCTV 영상에서 숨은 화염·연기 패턴 실시간 가시화</p>
-                        <p style="color:rgba(255,255,255,0.75); font-size:14px; line-height:1.7; margin:0;">· 감지 즉시 담당자 SMS·앱 알림 자동 발송<br>· 다단계 판별 알고리즘으로 오경보 최소화<br>· 24시간 무인 모니터링으로 누구나 쉽게</p>
+                        <div style="padding:24px;">
+                            <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+                                <span style="color:#e84040; font-size:22px; font-weight:800; line-height:1;">1</span>
+                                <h4 style="color:#fff; font-size:17px; font-weight:700; margin:0;">화재 자동 감지</h4>
+                            </div>
+                            <p style="color:rgba(255,255,255,0.5); font-size:13px; margin:0 0 14px;">CCTV 영상에서 화염·연기 패턴을 실시간으로 가시화</p>
+                            <p style="color:rgba(255,255,255,0.75); font-size:13px; line-height:1.8; margin:0;">· 감지 즉시 담당자 SMS·앱 알림 자동 발송<br>· 다단계 판별로 오경보 최소화<br>· 24시간 무인 모니터링</p>
+                        </div>
                     </div>
                 </div>
-                <div style="background:#0e0f11; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); border-top:3px solid #eab308;">
-                    <div>
+
+                <div class="col-12 col-md-4">
+                    <div style="background:#111113; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); border-top:3px solid #eab308; height:100%;">
                         <img src="assets/img/portfolio/portfolio-details-1/she_09.jpg" alt="낙상·쓰러짐 감지" style="width:100%; height:auto; display:block;">
-                    </div>
-                    <div style="padding:32px;">
-                        <span style="color:#eab308; font-size:42px; font-weight:800; line-height:1; display:block; margin-bottom:12px;">2</span>
-                        <h4 style="color:#fff; font-size:18px; font-weight:700; margin:0 0 8px;">낙상·쓰러짐 감지</h4>
-                        <p style="color:rgba(255,255,255,0.55); font-size:13px; margin:0 0 20px;">놓치기 쉬운 작업자 이상 자세를 AI가 한눈에 인식</p>
-                        <p style="color:rgba(255,255,255,0.75); font-size:14px; line-height:1.7; margin:0;">· 쓰러짐 감지 즉시 응급 알림 자동 발송<br>· 독립 작업·야간 무인 현장에서도 바로 대응<br>· 골든타임 내 빠른 대응을 단순화</p>
+                        <div style="padding:24px;">
+                            <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+                                <span style="color:#eab308; font-size:22px; font-weight:800; line-height:1;">2</span>
+                                <h4 style="color:#fff; font-size:17px; font-weight:700; margin:0;">낙상·쓰러짐 감지</h4>
+                            </div>
+                            <p style="color:rgba(255,255,255,0.5); font-size:13px; margin:0 0 14px;">작업자 이상 자세를 AI가 한눈에 인식</p>
+                            <p style="color:rgba(255,255,255,0.75); font-size:13px; line-height:1.8; margin:0;">· 쓰러짐 감지 즉시 응급 알림 자동 발송<br>· 야간 무인 현장에서도 바로 대응<br>· 골든타임 내 빠른 대응</p>
+                        </div>
                     </div>
                 </div>
-                <div style="background:#0e0f11; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); border-top:3px solid #f97316;">
-                    <div>
+
+                <div class="col-12 col-md-4">
+                    <div style="background:#111113; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); border-top:3px solid #f97316; height:100%;">
                         <img src="assets/img/portfolio/portfolio-details-1/she_10.jpg" alt="위험 행동 감지" style="width:100%; height:auto; display:block;">
-                    </div>
-                    <div style="padding:32px;">
-                        <span style="color:#f97316; font-size:42px; font-weight:800; line-height:1; display:block; margin-bottom:12px;">3</span>
-                        <h4 style="color:#fff; font-size:18px; font-weight:700; margin:0 0 8px;">위험 행동 감지</h4>
-                        <p style="color:rgba(255,255,255,0.55); font-size:13px; margin:0 0 20px;">숨어있던 수칙 위반·이상 행동을 자동으로 드러냄</p>
-                        <p style="color:rgba(255,255,255,0.75); font-size:14px; line-height:1.7; margin:0;">· 안전모·안전조끼 미착용 자동 감지<br>· 위험구역 무단 진입이 실시간으로 드러남<br>· 반복 위반자 이력이 한눈에 보이게 기록</p>
+                        <div style="padding:24px;">
+                            <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+                                <span style="color:#f97316; font-size:22px; font-weight:800; line-height:1;">3</span>
+                                <h4 style="color:#fff; font-size:17px; font-weight:700; margin:0;">위험 행동 감지</h4>
+                            </div>
+                            <p style="color:rgba(255,255,255,0.5); font-size:13px; margin:0 0 14px;">수칙 위반·이상 행동을 자동으로 드러냄</p>
+                            <p style="color:rgba(255,255,255,0.75); font-size:13px; line-height:1.8; margin:0;">· 안전모·안전조끼 미착용 자동 감지<br>· 위험구역 무단 진입 실시간 감지<br>· 반복 위반자 이력 자동 기록</p>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

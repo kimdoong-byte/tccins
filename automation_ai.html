@@ -128,12 +128,15 @@
             /* 두 컬럼 레이아웃 → 1열로 (col-lg-5/6/7) */
             /* 이미지 컬럼 여백 제거 */
             /* 이미지 먼저 나온 뒤 텍스트 순서 조정 */
+            /* 텍스트(시각 첫 번째) 아래 여백 → 이미지와 간격 확보 */
             .row.align-items-start .col-lg-5:last-child,
             .row.align-items-start .col-lg-6:last-child {
-                margin-top: 32px;
-            }
-            .row.align-items-start .col-lg-7:first-child {
+                margin-top: 0;
                 margin-bottom: 32px;
+            }
+            /* 이미지(시각 마지막) 아래 여백 불필요 — 섹션 패딩으로 충분 */
+            .row.align-items-start .col-lg-7:first-child {
+                margin-bottom: 0;
             }
 
             /* 스마트 스캔: 텍스트 먼저, 이미지 나중 */
@@ -144,10 +147,7 @@
                 order: 1;
             }
 
-            /* 컨설팅 4열 → 2열, 라운드 유지 */
-            [style*="border-radius: 16px; overflow: hidden;"][style*="grid-template-columns: repeat(4, 1fr)"] {
-                grid-template-columns: repeat(2, 1fr) !important;
-            }
+            /* 컨설팅 카드: Bootstrap col-sm-6 col-lg-3 사용으로 자동 반응 */
 
             /* CTA 섹션 */
             [style*="background: #0958d9"] {
@@ -160,10 +160,6 @@
 
         /* 소형 모바일 (max-width: 480px) */
         @media (max-width: 480px) {
-            /* 컨설팅 2열 → 1열 */
-            [style*="grid-template-columns: repeat(4, 1fr)"] {
-                grid-template-columns: 1fr !important;
-            }
             .tp-char-animation[style*="font-size: 64px"] {
                 font-size: 26px !important;
             }
@@ -173,28 +169,40 @@
         }
 
         @media (max-width: 991px) {
-            /* 이미지 항상 상단, 텍스트 하단 */
-            .row.align-items-center {
-                display: flex;
-                flex-wrap: wrap;
-            }
-            /* padding-left가 있는 컬럼 = 이미지가 오른쪽인 경우 → 모바일에서 이미지를 위로 */
-            .row.align-items-center [style*="padding-left: 56px"],
-            .row.align-items-center [style*="padding-left: 48px"] {
-                order: -1 !important;
-            }
-            /* col-lg 전체 풀 너비 (main 스코프 — 헤더 col-lg-6 제외) */
+            /* 텍스트 먼저, 이미지 나중 */
+            .row.align-items-center { display: flex; flex-wrap: wrap; }
+            /* col-lg 전체 풀너비 (main 스코프 — 헤더 col-lg-6 제외) */
             main .col-lg-5, main .col-lg-6, main .col-lg-7 { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
-            /* 이미지 컬럼 하단 여백 */
+            /* 기본 여백 */
             main .row.align-items-center .col-lg-5,
             main .row.align-items-center .col-lg-6,
-            main .row.align-items-center .col-lg-7 {
-                margin-bottom: 32px;
-            }
+            main .row.align-items-center .col-lg-7 { margin-bottom: 32px; }
             main .row.align-items-center .col-lg-5:last-child,
             main .row.align-items-center .col-lg-6:last-child,
-            main .row.align-items-center .col-lg-7:last-child {
-                margin-bottom: 0;
+            main .row.align-items-center .col-lg-7:last-child { margin-bottom: 0; }
+            /* 이미지 LEFT 섹션: 이미지 col을 텍스트 아래로 */
+            main .row.align-items-center .col-lg-5:has([style*="padding-right: 56px"]),
+            main .row.align-items-center .col-lg-6:has([style*="padding-right: 56px"]),
+            main .row.align-items-center .col-lg-7:has([style*="padding-right: 56px"]),
+            main .row.align-items-center .col-lg-5:has([style*="padding-right: 48px"]),
+            main .row.align-items-center .col-lg-6:has([style*="padding-right: 48px"]),
+            main .row.align-items-center .col-lg-7:has([style*="padding-right: 48px"]),
+            main .row.align-items-center .col-lg-5:has([style*="padding-right: 40px"]),
+            main .row.align-items-center .col-lg-6:has([style*="padding-right: 40px"]),
+            main .row.align-items-center .col-lg-7:has([style*="padding-right: 40px"]) {
+                order: 2 !important; margin-bottom: 0 !important;
+            }
+            /* 이미지 LEFT 섹션: 텍스트 col 하단 여백 */
+            main .row.align-items-center:has([style*="padding-right: 56px"]) .col-lg-5:last-child,
+            main .row.align-items-center:has([style*="padding-right: 56px"]) .col-lg-6:last-child,
+            main .row.align-items-center:has([style*="padding-right: 56px"]) .col-lg-7:last-child,
+            main .row.align-items-center:has([style*="padding-right: 48px"]) .col-lg-5:last-child,
+            main .row.align-items-center:has([style*="padding-right: 48px"]) .col-lg-6:last-child,
+            main .row.align-items-center:has([style*="padding-right: 48px"]) .col-lg-7:last-child,
+            main .row.align-items-center:has([style*="padding-right: 40px"]) .col-lg-5:last-child,
+            main .row.align-items-center:has([style*="padding-right: 40px"]) .col-lg-6:last-child,
+            main .row.align-items-center:has([style*="padding-right: 40px"]) .col-lg-7:last-child {
+                margin-bottom: 32px !important;
             }
             [style*="padding-left: 56px"] { padding-left: 0 !important; }
             [style*="padding-right: 56px"] { padding-right: 0 !important; }
@@ -563,35 +571,41 @@
                             <h2 style="color: #fff; font-size: 38px; font-weight: 700; line-height: 1.25; margin-bottom: 20px;">크레인·지게차·작업자의 동선,<br>실시간으로 드러납니다.</h2>
                             <p style="color: rgba(255,255,255,0.82); font-size: 15px; line-height: 1.9; margin: 0; max-width: 640px;">보이지 않던 이동 경로를 카메라가 한눈에 펼쳐 보여줍니다.<br>위험 구역 접근 감지, 구역 이탈 경보, 충돌 위험 사전 알림까지 안전 관리가 쉬워집니다.</p>
                         </div>
-                        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px;">
-                            <div style="background:#111113; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.22);">
-                                <div style="aspect-ratio:16/10; overflow:hidden;">
-                                    <img src="assets/img/portfolio/portfolio-details-1/aoto_2.jpg" alt="크레인 추적" style="width:100%; height:100%; object-fit:cover;">
-                                </div>
-                                <div style="padding:32px 36px;">
-                                    <p style="color:rgba(255,255,255,0.55); font-size:11px; letter-spacing:0.15em; text-transform:uppercase; margin:0 0 10px;">크레인</p>
-                                    <h4 style="color:#fff; font-size:18px; font-weight:700; margin:0 0 12px;">천장 크레인 동선 추적</h4>
-                                    <p style="color:rgba(255,255,255,0.75); font-size:14px; line-height:1.7; margin:0;">이동 경로 및 하역 위치 실시간 모니터링</p>
-                                </div>
-                            </div>
-                            <div style="background:#111113; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.22);">
-                                <div style="aspect-ratio:16/10; overflow:hidden;">
-                                    <img src="assets/img/portfolio/portfolio-details-1/aoto_3-2.jpg" alt="지게차 추적" style="width:100%; height:100%; object-fit:cover;">
-                                </div>
-                                <div style="padding:32px 36px;">
-                                    <p style="color:rgba(255,255,255,0.55); font-size:11px; letter-spacing:0.15em; text-transform:uppercase; margin:0 0 10px;">지게차</p>
-                                    <h4 style="color:#fff; font-size:18px; font-weight:700; margin:0 0 12px;">지게차 위치·속도 분석</h4>
-                                    <p style="color:rgba(255,255,255,0.75); font-size:14px; line-height:1.7; margin:0;">충돌 위험 사전 감지, 구역 진입 알림</p>
+                        <div class="row g-3">
+                            <div class="col-12 col-md-4">
+                                <div style="background:#111113; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.22); height:100%;">
+                                    <div style="aspect-ratio:16/10; overflow:hidden;">
+                                        <img src="assets/img/portfolio/portfolio-details-1/aoto_2.jpg" alt="크레인 추적" style="width:100%; height:100%; object-fit:cover;">
+                                    </div>
+                                    <div style="padding:24px;">
+                                        <p style="color:rgba(255,255,255,0.55); font-size:11px; letter-spacing:0.15em; text-transform:uppercase; margin:0 0 8px;">크레인</p>
+                                        <h4 style="color:#fff; font-size:17px; font-weight:700; margin:0 0 10px;">천장 크레인 동선 추적</h4>
+                                        <p style="color:rgba(255,255,255,0.75); font-size:14px; line-height:1.7; margin:0;">이동 경로 및 하역 위치 실시간 모니터링</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div style="background:#111113; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.22);">
-                                <div style="aspect-ratio:16/10; overflow:hidden;">
-                                    <img src="assets/img/portfolio/portfolio-details-1/aoto_4-1.jpg" alt="작업자 추적" style="width:100%; height:100%; object-fit:cover;">
+                            <div class="col-12 col-md-4">
+                                <div style="background:#111113; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.22); height:100%;">
+                                    <div style="aspect-ratio:16/10; overflow:hidden;">
+                                        <img src="assets/img/portfolio/portfolio-details-1/aoto_3-2.jpg" alt="지게차 추적" style="width:100%; height:100%; object-fit:cover;">
+                                    </div>
+                                    <div style="padding:24px;">
+                                        <p style="color:rgba(255,255,255,0.55); font-size:11px; letter-spacing:0.15em; text-transform:uppercase; margin:0 0 8px;">지게차</p>
+                                        <h4 style="color:#fff; font-size:17px; font-weight:700; margin:0 0 10px;">지게차 위치·속도 분석</h4>
+                                        <p style="color:rgba(255,255,255,0.75); font-size:14px; line-height:1.7; margin:0;">충돌 위험 사전 감지, 구역 진입 알림</p>
+                                    </div>
                                 </div>
-                                <div style="padding:32px 36px;">
-                                    <p style="color:rgba(255,255,255,0.55); font-size:11px; letter-spacing:0.15em; text-transform:uppercase; margin:0 0 10px;">작업자</p>
-                                    <h4 style="color:#fff; font-size:18px; font-weight:700; margin:0 0 12px;">작업자 동선 히트맵</h4>
-                                    <p style="color:rgba(255,255,255,0.75); font-size:14px; line-height:1.7; margin:0;">위험 구역 접근 시 즉각 경보, 안전 관리</p>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div style="background:#111113; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.22); height:100%;">
+                                    <div style="aspect-ratio:16/10; overflow:hidden;">
+                                        <img src="assets/img/portfolio/portfolio-details-1/aoto_4-1.jpg" alt="작업자 추적" style="width:100%; height:100%; object-fit:cover;">
+                                    </div>
+                                    <div style="padding:24px;">
+                                        <p style="color:rgba(255,255,255,0.55); font-size:11px; letter-spacing:0.15em; text-transform:uppercase; margin:0 0 8px;">작업자</p>
+                                        <h4 style="color:#fff; font-size:17px; font-weight:700; margin:0 0 10px;">작업자 동선 히트맵</h4>
+                                        <p style="color:rgba(255,255,255,0.75); font-size:14px; line-height:1.7; margin:0;">위험 구역 접근 시 즉각 경보, 안전 관리</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -697,34 +711,42 @@
                                 </div>
                             </div>
                         </div>
-                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid rgba(255,255,255,0.12); border-left: 1px solid rgba(255,255,255,0.12); border-radius: 16px; overflow: hidden;">
-                            <div style="padding: 36px 32px; border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12);">
-                                <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
-                                    <span style="color:#7ab8ff; font-size:12px; font-weight:700; letter-spacing:0.15em;">01</span>
-                                    <span style="color:#fff; font-size:16px; font-weight:600; line-height:1.4;">현장 방문 및 환경 분석</span>
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:28px; height:100%;">
+                                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+                                        <span style="color:#7ab8ff; font-size:12px; font-weight:700; letter-spacing:0.15em;">01</span>
+                                        <span style="color:#fff; font-size:16px; font-weight:600; line-height:1.4;">현장 방문 및 환경 분석</span>
+                                    </div>
+                                    <p style="color:rgba(255,255,255,0.55); font-size:13px; line-height:1.7; margin:0;">현장 구조, 장비, 운영 방식을 직접 확인하고 문제점을 파악합니다.</p>
                                 </div>
-                                <p style="color:rgba(255,255,255,0.5); font-size:13px; line-height:1.7; margin:0;">현장 구조, 장비, 운영 방식을 직접 확인하고<br>문제점을 파악합니다.</p>
                             </div>
-                            <div style="padding: 36px 32px; border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12);">
-                                <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
-                                    <span style="color:#7ab8ff; font-size:12px; font-weight:700; letter-spacing:0.15em;">02</span>
-                                    <span style="color:#fff; font-size:16px; font-weight:600; line-height:1.4;">최적 기술 조합 제안</span>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:28px; height:100%;">
+                                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+                                        <span style="color:#7ab8ff; font-size:12px; font-weight:700; letter-spacing:0.15em;">02</span>
+                                        <span style="color:#fff; font-size:16px; font-weight:600; line-height:1.4;">최적 기술 조합 제안</span>
+                                    </div>
+                                    <p style="color:rgba(255,255,255,0.55); font-size:13px; line-height:1.7; margin:0;">현장에 맞는 기술을 선별하여 솔루션을 설계합니다.</p>
                                 </div>
-                                <p style="color:rgba(255,255,255,0.5); font-size:13px; line-height:1.7; margin:0;">현장에 맞는 기술을 선별하여<br>솔루션을 설계합니다.</p>
                             </div>
-                            <div style="padding: 36px 32px; border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12);">
-                                <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
-                                    <span style="color:#7ab8ff; font-size:12px; font-weight:700; letter-spacing:0.15em;">03</span>
-                                    <span style="color:#fff; font-size:16px; font-weight:600; line-height:1.4;">파일럿 적용 및 검증</span>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:28px; height:100%;">
+                                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+                                        <span style="color:#7ab8ff; font-size:12px; font-weight:700; letter-spacing:0.15em;">03</span>
+                                        <span style="color:#fff; font-size:16px; font-weight:600; line-height:1.4;">파일럿 적용 및 검증</span>
+                                    </div>
+                                    <p style="color:rgba(255,255,255,0.55); font-size:13px; line-height:1.7; margin:0;">실제 환경에 시범 적용하여 효과를 측정하고 안정성을 검증합니다.</p>
                                 </div>
-                                <p style="color:rgba(255,255,255,0.5); font-size:13px; line-height:1.7; margin:0;">실제 환경에 시범 적용하여<br>효과를 측정하고 안정성을 검증합니다.</p>
                             </div>
-                            <div style="padding: 36px 32px; border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12);">
-                                <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
-                                    <span style="color:#7ab8ff; font-size:12px; font-weight:700; letter-spacing:0.15em;">04</span>
-                                    <span style="color:#fff; font-size:16px; font-weight:600; line-height:1.4;">본 구축 및 운영 지원</span>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:28px; height:100%;">
+                                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+                                        <span style="color:#7ab8ff; font-size:12px; font-weight:700; letter-spacing:0.15em;">04</span>
+                                        <span style="color:#fff; font-size:16px; font-weight:600; line-height:1.4;">본 구축 및 운영 지원</span>
+                                    </div>
+                                    <p style="color:rgba(255,255,255,0.55); font-size:13px; line-height:1.7; margin:0;">전체 시스템을 구축하고 안정적인 운영을 위한 지속적인 지원을 제공합니다.</p>
                                 </div>
-                                <p style="color:rgba(255,255,255,0.5); font-size:13px; line-height:1.7; margin:0;">전체 시스템을 구축하고 안정적인 운영을 위한<br>지속적인 지원을 제공합니다.</p>
                             </div>
                         </div>
                     </div>

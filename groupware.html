@@ -76,19 +76,13 @@
 
         /* 태블릿~모바일 분기 (max-width: 991px) */
         @media (max-width: 991px) {
-            /* ── 텍스트/이미지 2-col row 처리 ── */
+            /* 텍스트 먼저, 이미지 나중 */
             .row.align-items-center { display: flex; flex-wrap: wrap; }
-            /* 이미지가 오른쪽(padding-left)인 경우 → 모바일에서 위로 */
-            .row.align-items-center [style*="padding-left: 60px"],
-            .row.align-items-center [style*="padding-left: 56px"],
-            .row.align-items-center [style*="padding-left: 48px"] {
-                order: -1 !important;
-            }
             /* col-lg 전체 풀너비 (main 스코프 — 헤더 col-lg-6 제외) */
             main .col-lg-5, main .col-lg-6, main .col-lg-7 {
                 width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important;
             }
-            /* 스택 여백 */
+            /* 기본 여백 */
             main .row.align-items-center .col-lg-5,
             main .row.align-items-center .col-lg-6,
             main .row.align-items-center .col-lg-7 { margin-bottom: 32px; }
